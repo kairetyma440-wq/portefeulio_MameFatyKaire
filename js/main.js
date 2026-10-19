@@ -239,7 +239,7 @@
         try {
           var subject = encodeURIComponent('Contact depuis votre portfolio — ' + name);
           var body = encodeURIComponent(fullMessage);
-          window.location.href = 'mailto:kairetyma440@gmail.com?subject=' + subject + '&body=' + body;
+          window.location.href = 'mailto:mfaty.kaire@univ-thies.sn?subject=' + subject + '&body=' + body;
         } catch (err) {}
       });
     }
@@ -251,6 +251,31 @@
         if (outText && outText.value) {
           fallbackCopy(outText.value);
         }
+      });
+    }
+
+    // 9. Animation fluide des barres de progression des compétences
+    var skillFills = document.querySelectorAll('.skill-bar-colored-fill[data-width]');
+    if (skillFills.length > 0 && 'IntersectionObserver' in window) {
+      skillFills.forEach(function (bar) {
+        bar.style.width = '0%';
+      });
+
+      var skillsObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var bar = entry.target;
+            var targetWidth = bar.getAttribute('data-width');
+            if (targetWidth) {
+              bar.style.width = targetWidth;
+            }
+            observer.unobserve(bar);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      skillFills.forEach(function (bar) {
+        skillsObserver.observe(bar);
       });
     }
   });

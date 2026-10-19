@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mon parcours — Kaire Mame Faty</title>
-  <meta name="description" content="Formation académique et expériences professionnelles de Kaire Mame Faty.">
+  <title>Formation &amp; Expériences — Kaire Mame Faty</title>
+  <meta name="description" content="Parcours académique et expériences professionnelles de Kaire Mame Faty : UIDT, Génie Logiciel, gestion de projet et développement.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&family=Caveat:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Caveat:wght@600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
 
   <!-- HEADER -->
-  <header class="site-head">
+  <header class="site-head" id="site-header">
     <div class="wrap head-in">
       <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
-        <span class="brand-ico">&lt;/&gt;</span>
+        <span class="brand-logo-badge">KM</span>
         <span>Kaire Mame Faty</span>
       </a>
 
@@ -26,13 +26,13 @@
         <a href="apropos.html">À propos</a>
         <a href="competences.html">Compétences</a>
         <a href="projets.html">Projets</a>
-        <a href="parcours.html" aria-current="page">Parcours</a>
+        <a href="parcours.html" class="active" aria-current="page">Parcours</a>
         <a href="contact.html">Contact</a>
         <a class="btn btn-primary btn-sm mobile-only" href="assets/cv.pdf" target="_blank" rel="noopener">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>
           </svg>
-          Télécharger mon CV
+          Télécharger CV
         </a>
       </nav>
 
@@ -42,7 +42,7 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
         </button>
-        <a class="btn btn-dark btn-sm btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
+        <a class="btn btn-primary btn-sm btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>
           </svg>
@@ -58,158 +58,159 @@
   </header>
 
   <main>
-    <!-- PAGE HEAD -->
-    <section class="sec" style="padding-bottom: 20px;">
+    <!-- SECTION FORMATION FIDÈLE À LA MAQUETTE BAS-GAUCHE -->
+    <section class="sec" style="padding-top: 48px;">
       <div class="wrap">
-        <div class="eyebrow">Mon parcours</div>
+        <div class="eyebrow-pill">
+          <span class="pill-ico">🎓</span> Parcours
+        </div>
         <h1 class="sec-title" style="margin-top:4px;">
-          Mon parcours
+          Formation
         </h1>
         <p class="sec-lead" style="margin-bottom:0;">
-          Un parcours académique et des expériences qui renforcent mes compétences.
+          Mon parcours académique
         </p>
-      </div>
-    </section>
 
-    <!-- 2 COLUMNS (SCREEN 6 IN MOCKUP) -->
-    <section class="sec tight" style="padding-top:14px;">
-      <div class="wrap parcours-grid">
-        <!-- LEFT COLUMN: FORMATION + EXPÉRIENCE / PROJETS -->
-        <div style="display: flex; flex-direction: column; gap: 20px;">
-          <!-- Card: Formation -->
-          <div class="card" style="padding: 24px 28px;">
-            <h2 style="font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
-              <svg class="ico" style="color:var(--blue);width:22px;height:22px" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-              </svg>
-              Formation
-            </h2>
-
-            <ol class="timeline">
-              <li>
-                <div style="display:flex;justify-content:space-between;align-items:center;">
-                  <h3>Licence 3 — Génie Logiciel</h3>
-                  <span class="yr">2025 – 2026</span>
+        <div class="formation-layout">
+          <!-- Colonne Gauche : Timeline académique -->
+          <div>
+            <ol class="formation-timeline">
+              <!-- 2025 - 2026 -->
+              <li class="formation-timeline-item">
+                <div class="formation-item-header">
+                  <span class="formation-year">2025 – 2026</span>
+                  <h2 class="formation-degree">Licence 3 — Génie Logiciel</h2>
                 </div>
-                <p>UIDT · UFR SET · Département Informatique</p>
+                <div class="formation-place">UIDT - UFR SET - Département Informatique</div>
               </li>
 
-              <li>
-                <div style="display:flex;justify-content:space-between;align-items:center;">
-                  <h3>Licence 2 — Informatique</h3>
-                  <span class="yr">2024 – 2025</span>
+              <!-- 2024 - 2025 -->
+              <li class="formation-timeline-item">
+                <div class="formation-item-header">
+                  <span class="formation-year">2024 – 2025</span>
+                  <h2 class="formation-degree">Licence 2 — Informatique</h2>
                 </div>
-                <p>UIDT · UFR SET · Département Informatique</p>
+                <div class="formation-place">UIDT - UFR SET - Département Informatique</div>
               </li>
 
-              <li>
-                <div style="display:flex;justify-content:space-between;align-items:center;">
-                  <h3>Licence 1 — Informatique</h3>
-                  <span class="yr">2023 – 2024</span>
+              <!-- 2023 - 2024 -->
+              <li class="formation-timeline-item">
+                <div class="formation-item-header">
+                  <span class="formation-year">2023 – 2024</span>
+                  <h2 class="formation-degree">Licence 1 — Informatique</h2>
                 </div>
-                <p>UIDT · UFR SET · Département Informatique</p>
+                <div class="formation-place">UIDT - UFR SET - Département Informatique</div>
               </li>
 
-              <li>
-                <div style="display:flex;justify-content:space-between;align-items:center;">
-                  <h3>Baccalauréat Scientifique — Série S2</h3>
-                  <span class="yr">2021 – 2022</span>
+              <!-- 2022 - 2023 -->
+              <li class="formation-timeline-item">
+                <div class="formation-item-header">
+                  <span class="formation-year">2022 – 2023</span>
+                  <h2 class="formation-degree">Baccalauréat Scientifique — Série S2</h2>
                 </div>
-                <p>Lycée de Diourbel</p>
+                <div class="formation-place">Lycée de Mbacké</div>
               </li>
             </ol>
           </div>
 
-          <!-- Card: Expérience / Projets -->
-          <div class="card" style="padding: 24px 28px;">
-            <h2 style="font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 10px; margin-bottom: 18px;">
-              <svg class="ico" style="color:var(--blue);width:22px;height:22px" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
-              </svg>
-              Expérience / Projets
-            </h2>
-
-            <div class="list-item-row">
-              <div>
-                <h3>Chef de projet — Gestion des locaux</h3>
-                <p>Conception et développement sous Flask et MySQL</p>
-              </div>
-              <span class="yr">2025</span>
-            </div>
-
-            <div class="list-item-row">
-              <div>
-                <h3>Chef de projet — Système de livraisons</h3>
-                <p>Pilotage et développement avec PHP</p>
-              </div>
-              <span class="yr">2024</span>
-            </div>
-
-            <div class="list-item-row">
-              <div>
-                <h3>Stage — Port de transaction</h3>
-                <p>Gestion d'un projet de transaction</p>
-              </div>
-              <span class="yr">2024</span>
+          <!-- Colonne Droite : Illustration 3D & Citation manuscrite -->
+          <div class="formation-illus-panel">
+            <img class="formation-illus-img" src="assets/illustration-formation.jpg" alt="Livres et toque de graduation pour le parcours académique" loading="lazy" width="460" height="345">
+            <div class="formation-hand-quote">
+              « Apprendre aujourd'hui pour construire demain. »
+              <div class="quote-swoosh" aria-hidden="true"></div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- RIGHT COLUMN: AUTRES PROJETS + CITATION -->
-        <div style="display: flex; flex-direction: column; gap: 20px;">
-          <!-- Card: Autres projets -->
-          <div class="card" style="padding: 24px 28px;">
-            <h2 style="font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 10px; margin-bottom: 18px;">
-              <svg class="ico" style="color:var(--blue);width:22px;height:22px" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2l9 4.9V17L12 22 3 17V6.9z"/>
+    <!-- SECTION EXPÉRIENCE & PROJETS FIDÈLE À LA MAQUETTE BAS-MILIEU -->
+    <section class="sec" style="border-top: 1px solid var(--line); padding-top: 60px;">
+      <div class="wrap">
+        <div class="eyebrow-pill">
+          <span class="pill-ico">💼</span> Expérience
+        </div>
+        <h2 class="sec-title" style="margin-top:4px;">
+          Expérience &amp; Projets
+        </h2>
+        <p class="sec-lead" style="margin-bottom:0;">
+          Des expériences qui renforcent mes compétences et mon professionnalisme.
+        </p>
+
+        <div class="exp-timeline-list">
+          <!-- 1. Purple : Chef de projet - Gestion des locaux -->
+          <div class="exp-card-item">
+            <div class="exp-icon-node purple">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
               </svg>
-              Autres projets
-            </h2>
-
-            <div class="list-item-row">
-              <div>
-                <h3>Projet Bibliothèque</h3>
-                <p>Système de prêt de livres avec base de données</p>
-              </div>
-              <span class="yr">2024</span>
             </div>
-
-            <div class="list-item-row">
-              <div>
-                <h3>Projet Java</h3>
-                <p>Planification des cours et gestion des ressources</p>
-              </div>
-              <span class="yr">2024</span>
+            <div class="exp-content">
+              <h3>Chef de projet — Gestion des locaux</h3>
+              <ul class="exp-bullets">
+                <li>Conception et développement d'une application de gestion des locaux (Flask, MySQL).</li>
+                <li>Tests sur Google Colab.</li>
+              </ul>
             </div>
-
-            <div class="list-item-row">
-              <div>
-                <h3>Développement Full Stack</h3>
-                <p>Site vitrine HTML, CSS, JavaScript</p>
-              </div>
-              <span class="yr">2024</span>
-            </div>
-
-            <div class="list-item-row">
-              <div>
-                <h3>Création graphique</h3>
-                <p>Affiches publicitaires</p>
-              </div>
-              <span class="yr">2023</span>
-            </div>
+            <div class="exp-year-badge">2025</div>
           </div>
 
-          <!-- Card: Citation finale -->
-          <div class="card" style="padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
-            <div style="display: flex; align-items: center; gap: 14px;">
-              <span style="color:var(--blue);font-size:2.4rem;line-height:0.8;font-family:var(--f-display);">“</span>
-              <p style="font-weight: 600; font-size: 0.98rem; color: var(--ink);">
-                « Chaque projet est une nouvelle opportunité d'apprendre et de progresser. »
-              </p>
+          <!-- 2. Green : Chef de projet - Système de livraisons -->
+          <div class="exp-card-item">
+            <div class="exp-icon-node green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
             </div>
-            <span style="color:var(--blue);font-weight:800;font-family:var(--f-mono);">&lt;/&gt;</span>
+            <div class="exp-content">
+              <h3>Chef de projet — Système de livraisons</h3>
+              <ul class="exp-bullets">
+                <li>Pilotage du projet de suivi des livraisons locales.</li>
+                <li>Développement avec PHP.</li>
+              </ul>
+            </div>
+            <div class="exp-year-badge">2025</div>
+          </div>
+
+          <!-- 3. Cyan : Stage - Point de transaction -->
+          <div class="exp-card-item">
+            <div class="exp-icon-node cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <div class="exp-content">
+              <h3>Stage — Point de transaction</h3>
+              <ul class="exp-bullets">
+                <li>Gestion d'un point de transaction.</li>
+              </ul>
+            </div>
+            <div class="exp-year-badge">2024</div>
+          </div>
+
+          <!-- 4. Blue : Travail collaboratif en équipe -->
+          <div class="exp-card-item">
+            <div class="exp-icon-node blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <div class="exp-content">
+              <h3>Travail collaboratif en équipe</h3>
+              <ul class="exp-bullets">
+                <li>Projets académiques en groupe.</li>
+                <li>Esprit d'équipe et organisation.</li>
+              </ul>
+            </div>
+            <div class="exp-year-badge">2023 – 2024</div>
           </div>
         </div>
       </div>
@@ -219,7 +220,7 @@
   <!-- FOOTER -->
   <footer class="foot">
     <div class="wrap foot-in">
-      <p>© 2026 Kaire Mame Faty · Étudiante en Génie Logiciel · Touba, Sénégal</p>
+      <p>© 2026 Kaire Mame Faty · Développeuse Full-Stack · Touba, Sénégal</p>
       <nav aria-label="Liens">
         <a href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">GitHub</a>
         <a href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">LinkedIn</a>
