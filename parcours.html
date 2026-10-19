@@ -49,94 +49,265 @@
   </header>
 
   <main>
-    <!-- SECTION PARCOURS ACADÉMIQUE FIDÈLE À LA MAQUETTE -->
-    <section class="parcours-sec" style="padding-top: 50px;">
+    <!-- SECTION PARCOURS ACADÉMIQUE & EXPÉRIENCE FIDÈLE À LA MAQUETTE -->
+    <section class="parcours-sec-v2" style="padding-top: 50px;">
       <div class="wrap">
-        <div class="eyebrow-tag">PARCOURS ACADÉMIQUE</div>
-        <h1 class="sec-heading">Mon parcours</h1>
-        <p class="sec-sub">Mon cheminement académique et mes expériences professionnelles.</p>
+        <!-- En-tête : Avatar Portrait + Titre & Subtitle + Cursive Quote à droite -->
+        <div class="parcours-header-wrap">
+          <div class="parcours-header-left">
+            <div class="parcours-avatar-circle">
+              <img src="assets/avatar-hero.jpg" alt="Portrait Kaire Mame Faty" width="90" height="90" loading="lazy">
+            </div>
+            <div>
+              <div class="eyebrow-tag">MON PARCOURS</div>
+              <h1 class="sec-heading" style="margin-bottom: 4px;">Parcours académique &amp; Expérience</h1>
+              <p class="sec-sub" style="margin-bottom: 0;">
+                Une formation solide, des projets concrets et une volonté constante d'apprendre et d'évoluer.
+              </p>
+            </div>
+          </div>
 
-        <!-- Bloc supérieur : Timeline & Photo Mortier -->
-        <div class="parcours-top-container">
-          <div class="timeline-col">
-            <ol class="academic-timeline">
-              <li class="timeline-milestone">
-                <div class="milestone-title-row">
-                  <h2 class="milestone-degree">Licence 3 — Génie Logiciel</h2>
-                  <span class="milestone-year">2025 - 2026</span>
+          <div class="parcours-quote-top" aria-hidden="true">
+            Apprendre<br>Créer<br>Réussir ♡
+          </div>
+        </div>
+
+        <!-- Ligne 1 : Parcours académique (Gauche) vs Expérience professionnelle (Droite) -->
+        <div class="parcours-row-2col">
+          <!-- Carte 1 : Parcours académique -->
+          <div class="parcours-box-card">
+            <div class="parcours-box-head">
+              <div class="tech-icon-circle">🎓</div>
+              <h2 class="tech-card-title">Parcours académique</h2>
+            </div>
+
+            <ol class="timeline-list-v2">
+              <li class="timeline-node-v2">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+                  <span class="milestone-year">2025 — 2026</span>
+                  <span class="en-cours-pill">En cours</span>
                 </div>
-                <p class="milestone-place">UIDT - UFR SET - Département Informatique</p>
+                <h3 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 3px;">
+                  Licence 3 — Génie Logiciel
+                </h3>
+                <p style="font-size: 0.86rem; color: var(--text-muted);">UIDT - UFR SET - Département Informatique</p>
               </li>
 
-              <li class="timeline-milestone">
-                <div class="milestone-title-row">
-                  <h2 class="milestone-degree">Licence 2 — Informatique</h2>
-                  <span class="milestone-year">2024 - 2025</span>
+              <li class="timeline-node-v2">
+                <div style="margin-bottom: 4px;">
+                  <span class="milestone-year">2024 — 2025</span>
                 </div>
-                <p class="milestone-place">UIDT - UFR SET - Département Informatique</p>
+                <h3 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 3px;">
+                  Licence 2 — Informatique
+                </h3>
+                <p style="font-size: 0.86rem; color: var(--text-muted);">UIDT - UFR SET - Département Informatique</p>
               </li>
 
-              <li class="timeline-milestone">
-                <div class="milestone-title-row">
-                  <h2 class="milestone-degree">Licence 1 — Informatique</h2>
-                  <span class="milestone-year">2023 - 2024</span>
+              <li class="timeline-node-v2">
+                <div style="margin-bottom: 4px;">
+                  <span class="milestone-year">2023 — 2024</span>
                 </div>
-                <p class="milestone-place">UIDT - UFR SET - Département Informatique</p>
+                <h3 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 3px;">
+                  Licence 1 — Informatique
+                </h3>
+                <p style="font-size: 0.86rem; color: var(--text-muted);">UIDT - UFR SET - Département Informatique</p>
               </li>
 
-              <li class="timeline-milestone">
-                <div class="milestone-title-row">
-                  <h2 class="milestone-degree">Baccalauréat scientifique — Série S2</h2>
-                  <span class="milestone-year">2022 - 2023</span>
+              <li class="timeline-node-v2">
+                <div style="margin-bottom: 4px;">
+                  <span class="milestone-year">2022 — 2023</span>
                 </div>
-                <p class="milestone-place">Lycée de Mbacké</p>
+                <h3 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 3px;">
+                  Baccalauréat scientifique — Série S2
+                </h3>
+                <p style="font-size: 0.86rem; color: var(--text-muted);">Lycée de Mbacké</p>
               </li>
             </ol>
           </div>
 
-          <div class="parcours-photo-col" style="text-align: center;">
-            <div class="parcours-photo-frame">
-              <img src="assets/parcours-academic.jpg" alt="Toque de diplômée et livres académiques" width="460" height="310" loading="lazy">
+          <!-- Carte 2 : Expérience professionnelle / Projets -->
+          <div class="parcours-box-card">
+            <div class="parcours-box-head">
+              <div class="tech-icon-circle cyan">💼</div>
+              <h2 class="tech-card-title">Expérience professionnelle / Projets</h2>
             </div>
-            <div class="handwritten-quote" style="margin-top: 14px; font-size: 1.35rem;">
-              « Apprendre aujourd'hui pour construire demain. »
+
+            <div class="exp-cards-column">
+              <!-- Expérience 1 : Gestion des locaux -->
+              <div class="exp-single-item">
+                <div class="exp-item-header">
+                  <div class="exp-title-group">
+                    <div class="exp-ico-badge">🐍</div>
+                    <h4>Chef de projet — Gestion des locaux</h4>
+                  </div>
+                  <span class="exp-year-badge">2024</span>
+                </div>
+                <ul class="exp-bullets-list">
+                  <li>Conception et développement d'une application de gestion des locaux avec Flask (Python) et MySQL.</li>
+                  <li>Tests effectués sur environnement Google Colab.</li>
+                </ul>
+              </div>
+
+              <!-- Expérience 2 : Système de livraisons -->
+              <div class="exp-single-item">
+                <div class="exp-item-header">
+                  <div class="exp-title-group">
+                    <div class="exp-ico-badge" style="color: #C084FC;">🐘</div>
+                    <h4>Chef de projet — Système de livraisons</h4>
+                  </div>
+                  <span class="exp-year-badge">2024</span>
+                </div>
+                <ul class="exp-bullets-list">
+                  <li>Pilotage du projet de conception d'un système de suivi des livraisons locales.</li>
+                  <li>Développement de la solution avec PHP.</li>
+                </ul>
+              </div>
+
+              <!-- Expérience 3 : Point de transaction -->
+              <div class="exp-single-item">
+                <div class="exp-item-header">
+                  <div class="exp-title-group">
+                    <div class="exp-ico-badge" style="color: #38BDF8;">🏛️</div>
+                    <h4>Stage — Point de transaction</h4>
+                  </div>
+                  <span class="exp-year-badge">2024</span>
+                </div>
+                <ul class="exp-bullets-list">
+                  <li>Stage pratique portant sur la gestion d'un point de transaction.</li>
+                </ul>
+              </div>
+
+              <!-- Expérience 4 : Travail collaboratif -->
+              <div class="exp-single-item">
+                <div class="exp-item-header">
+                  <div class="exp-title-group">
+                    <div class="exp-ico-badge">👥</div>
+                    <h4>Travail collaboratif en équipe</h4>
+                  </div>
+                  <span class="exp-year-badge">2023</span>
+                </div>
+                <ul class="exp-bullets-list">
+                  <li>Participation à des projets académiques en groupe.</li>
+                  <li>Développement de l'esprit d'équipe et du sens de l'organisation.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Bloc inférieur : EXPÉRIENCE / PROJETS (4 cartes 2x2) -->
-        <div class="exp-subpart" style="margin-top: 40px;">
-          <div class="exp-heading-label">EXPÉRIENCE / PROJETS</div>
-          <div class="exp-2x2-grid">
-            <div class="exp-badge-card">
-              <div class="exp-star-icon">★</div>
-              <div class="exp-card-info">
-                <h3>Chef de projet - Gestion des locaux</h3>
-                <p>Conception et développement avec Flask (Python) et MySQL. Tests sur Google Colab.</p>
-              </div>
+        <!-- Ligne 2 : Projets réalisés (Gauche) vs Mon parcours en un coup d'œil (Droite) -->
+        <div class="parcours-row-2col">
+          <!-- Carte 3 : Projets réalisés (2x2) -->
+          <div class="parcours-box-card">
+            <div class="parcours-box-head">
+              <div class="tech-icon-circle">📁</div>
+              <h2 class="tech-card-title">Projets réalisés</h2>
             </div>
 
-            <div class="exp-badge-card">
-              <div class="exp-star-icon">★</div>
-              <div class="exp-card-info">
-                <h3>Chef de projet - Système de livraisons</h3>
-                <p>Pilotage du projet de suivi des livraisons locales. Développement en PHP.</p>
-              </div>
+            <div class="mini-projects-grid">
+              <!-- Mini projet 1 -->
+              <a class="mini-project-box" href="projet-biblio.html">
+                <div class="mini-proj-head">
+                  <span style="font-size: 1.2rem;">📚</span>
+                  <div class="mini-proj-title">Projet Bibliothèque</div>
+                </div>
+                <p class="mini-proj-desc">Système de gestion de prêt de livres (base de données).</p>
+                <div class="mini-proj-tags">
+                  <span class="tag-badge">Python</span>
+                  <span class="tag-badge">MySQL</span>
+                  <span class="exp-year-badge" style="font-size: 0.72rem;">2024</span>
+                </div>
+              </a>
+
+              <!-- Mini projet 2 -->
+              <a class="mini-project-box" href="projet-java.html">
+                <div class="mini-proj-head">
+                  <span style="font-size: 1.2rem;">☕</span>
+                  <div class="mini-proj-title">Projet Java</div>
+                </div>
+                <p class="mini-proj-desc">Application de planification des cours et gestion des ressources universitaires.</p>
+                <div class="mini-proj-tags">
+                  <span class="tag-badge purple">Java</span>
+                  <span class="exp-year-badge" style="font-size: 0.72rem;">2024</span>
+                </div>
+              </a>
+
+              <!-- Mini projet 3 -->
+              <a class="mini-project-box" href="projet-vitrine.html">
+                <div class="mini-proj-head">
+                  <span style="font-size: 1.2rem;">💻</span>
+                  <div class="mini-proj-title">Développement Full-Stack</div>
+                </div>
+                <p class="mini-proj-desc">Site web avec HTML, CSS et JavaScript.</p>
+                <div class="mini-proj-tags">
+                  <span class="tag-badge">HTML</span>
+                  <span class="tag-badge">CSS</span>
+                  <span class="tag-badge">JavaScript</span>
+                  <span class="exp-year-badge" style="font-size: 0.72rem;">2024</span>
+                </div>
+              </a>
+
+              <!-- Mini projet 4 -->
+              <a class="mini-project-box" href="projet-affiches.html">
+                <div class="mini-proj-head">
+                  <span style="font-size: 1.2rem;">🎨</span>
+                  <div class="mini-proj-title">Création graphique</div>
+                </div>
+                <p class="mini-proj-desc">Affiches publicitaires (projets collaboratifs).</p>
+                <div class="mini-proj-tags">
+                  <span class="tag-badge purple">Design</span>
+                  <span class="tag-badge purple">Créativité</span>
+                  <span class="exp-year-badge" style="font-size: 0.72rem;">2023</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Carte 4 : Mon parcours en un coup d'œil -->
+          <div class="parcours-box-card coup-oeil-card">
+            <div class="parcours-box-head">
+              <div class="tech-icon-circle cyan">👁️</div>
+              <h2 class="tech-card-title">Mon parcours en un coup d'œil</h2>
             </div>
 
-            <div class="exp-badge-card">
-              <div class="exp-star-icon">★</div>
-              <div class="exp-card-info">
-                <h3>Stage : Point de transaction</h3>
-                <p>Gestion d'un point de transaction.</p>
-              </div>
-            </div>
+            <ul class="coup-oeil-list">
+              <li class="coup-oeil-item">
+                <div class="coup-oeil-check">✓</div>
+                <span>4 années d'études universitaires</span>
+              </li>
+              <li class="coup-oeil-item">
+                <div class="coup-oeil-check">✓</div>
+                <span>+4 projets académiques</span>
+              </li>
+              <li class="coup-oeil-item">
+                <div class="coup-oeil-check">✓</div>
+                <span>1 stage en entreprise</span>
+              </li>
+              <li class="coup-oeil-item">
+                <div class="coup-oeil-check">✓</div>
+                <span>Une expérience en gestion de projet</span>
+              </li>
+              <li class="coup-oeil-item">
+                <div class="coup-oeil-check">✓</div>
+                <span>Une forte capacité d'apprentissage</span>
+              </li>
+              <li class="coup-oeil-item">
+                <div class="coup-oeil-check">✓</div>
+                <span>Une vision claire : devenir une développeuse Fullstack et contribuer à des solutions innovantes.</span>
+              </li>
+            </ul>
 
-            <div class="exp-badge-card">
-              <div class="exp-star-icon">★</div>
-              <div class="exp-card-info">
-                <h3>Travail collaboratif en équipe</h3>
-                <p>Projets académiques en groupe.</p>
+            <div class="coup-oeil-footer">
+              <div class="coup-oeil-hand">
+                Toujours prête à apprendre<br>et à relever de nouveaux défis ! ♡
+              </div>
+              <div class="botanical-leaf-decor" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z" stroke="none" fill="rgba(168, 85, 247, 0.12)"/>
+                  <path d="M7 17L17 7"/>
+                  <path d="M17 7C14 7 10 9 9 12"/>
+                  <path d="M17 7C17 10 15 14 12 15"/>
+                </svg>
               </div>
             </div>
           </div>
