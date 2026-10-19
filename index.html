@@ -128,7 +128,7 @@
     </section>
 
     <!-- ================= 2. SECTION À PROPOS ("QUI SUIS-JE ?") ================= -->
-    <section class="about-sec" id="apropos">
+    <section class="about-sec light-section" id="apropos">
       <div class="wrap">
         <div class="about-card-container">
           <!-- Colonne Gauche : Bio & Coordonnées directes -->
@@ -320,7 +320,7 @@
     </section>
 
     <!-- ================= 4. SECTION PROJETS ("MES RÉALISATIONS") ================= -->
-    <section class="projects-sec" id="projets">
+    <section class="projects-sec light-section" id="projets">
       <div class="wrap">
         <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
           <div>
@@ -542,7 +542,7 @@
     </section>
 
     <!-- ================= 6. SECTION INFORMATIONS COMPLÉMENTAIRES ================= -->
-    <section class="infos-sec" id="infos">
+    <section class="infos-sec light-section" id="infos">
       <div class="wrap">
         <div class="eyebrow-tag">INFORMATIONS COMPLÉMENTAIRES</div>
         <h2 class="sec-heading">Langues, Qualités et Centres d'intérêt</h2>
@@ -570,10 +570,10 @@
               <h3 class="info-card-title">Qualités</h3>
             </div>
             <ul class="info-list">
-              <li class="info-item"><span class="bullet-check">✓</span> Rigoureuse</li>
-              <li class="info-item"><span class="bullet-check">✓</span> Créative</li>
-              <li class="info-item"><span class="bullet-check">✓</span> Investie dans les projets</li>
-              <li class="info-item"><span class="bullet-check">✓</span> Sens du détail</li>
+              <li class="info-item"><span class="bullet-check green">✓</span> Rigoureuse</li>
+              <li class="info-item"><span class="bullet-check green">✓</span> Créative</li>
+              <li class="info-item"><span class="bullet-check green">✓</span> Investie dans les projets</li>
+              <li class="info-item"><span class="bullet-check green">✓</span> Sens du détail</li>
             </ul>
           </div>
 
@@ -598,16 +598,24 @@
               <h3 class="info-card-title">Centres d'intérêt</h3>
             </div>
             <ul class="info-list">
-              <li class="info-item">🤖 Intelligence artificielle</li>
-              <li class="info-item">💻 Développement logiciel</li>
-              <li class="info-item">📊 Data</li>
-              <li class="info-item">📖 Lecture</li>
-              <li class="info-item">✈️ Voyage</li>
+              <li class="info-item"><span class="bullet-heart">♡</span> Intelligence artificielle</li>
+              <li class="info-item"><span class="bullet-heart">♡</span> Développement logiciel</li>
+              <li class="info-item"><span class="bullet-heart">♡</span> Data</li>
+              <li class="info-item"><span class="bullet-heart">♡</span> Lecture</li>
+              <li class="info-item"><span class="bullet-heart">♡</span> Voyage</li>
             </ul>
           </div>
         </div>
 
         <div class="info-footer-signature">
+          <div class="botanical-leaf-decor" aria-hidden="true">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z" stroke="none" fill="rgba(168, 85, 247, 0.12)"/>
+              <path d="M7 17L17 7"/>
+              <path d="M17 7C14 7 10 9 9 12"/>
+              <path d="M17 7C17 10 15 14 12 15"/>
+            </svg>
+          </div>
           <div class="handwritten-quote">
             Toujours prête à apprendre et à relever de nouveaux défis ! ♡
           </div>
@@ -622,7 +630,7 @@
         <h2 class="sec-heading">Me contacter</h2>
         <p class="sec-sub">Une question, une collaboration ou un projet ? N'hésitez pas à me contacter !</p>
 
-        <div class="contact-2col-grid">
+        <div class="contact-3col-grid">
           <!-- Colonne Gauche : Pastilles Coordonnées -->
           <div class="contact-left-col">
             <div class="contact-pills-list">
@@ -679,8 +687,8 @@
             </div>
           </div>
 
-          <!-- Colonne Droite : Formulaire Moderne -->
-          <div class="contact-right-col">
+          <!-- Colonne Centre : Formulaire Moderne -->
+          <div class="contact-form-col">
             <div class="contact-form-glass-card">
               <form id="contact-form" novalidate>
                 <div class="form-group-unit">
@@ -702,6 +710,17 @@
                   Envoyer ✈
                 </button>
               </form>
+            </div>
+          </div>
+
+          <!-- Colonne Droite : Photo Ambiance Bureau & Good Vibes Mug -->
+          <div class="contact-photo-col">
+            <div class="contact-desk-card">
+              <img src="assets/about-desk.jpg" alt="Espace de travail et code" width="420" height="340" loading="lazy">
+              <div class="contact-desk-badge">
+                <div class="mug-icon">☕</div>
+                <div class="mug-text">Good Vibes<br>Code<br>Success</div>
+              </div>
             </div>
           </div>
         </div>

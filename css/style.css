@@ -1975,3 +1975,278 @@ textarea.form-input-field {
   color: #FFFFFF;
 }
 
+/* ================= RYTHME ALTERNÉ SOMBRE / CLAIR DE LA MAQUETTE ================= */
+.light-section {
+  background: #F8F9FE;
+  color: #0F172A;
+  border-top: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+  position: relative;
+  z-index: 1;
+}
+
+.light-section .sec-heading {
+  color: #0F172A;
+}
+
+.light-section .sec-sub {
+  color: #64748B;
+}
+
+.light-section .eyebrow-tag {
+  color: #7C3AED;
+}
+
+.light-section .eyebrow-tag::before {
+  background: #7C3AED;
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.5);
+}
+
+.light-section .about-card-container,
+.light-section .project-mockup-card,
+.light-section .info-glass-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.light-section .about-card-container:hover,
+.light-section .project-mockup-card:hover,
+.light-section .info-glass-card:hover {
+  background: #FFFFFF;
+  border-color: rgba(168, 85, 247, 0.45);
+  box-shadow: 0 16px 36px -4px rgba(124, 58, 237, 0.12), 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.light-section .about-bio-text {
+  color: #334155;
+}
+
+.light-section .about-contact-row {
+  color: #334155;
+}
+
+.light-section .about-contact-row:hover {
+  color: #7C3AED;
+}
+
+.light-section .about-contact-ico {
+  background: #F3E8FF;
+  border-color: #E9D5FF;
+  color: #7C3AED;
+}
+
+.light-section .about-quote-card {
+  background: #FAF5FF;
+  border-color: #E9D5FF;
+  color: #475569;
+}
+
+.light-section .handwritten-sig {
+  color: #6D28D9;
+  font-family: var(--font-script);
+  font-size: 2.3rem;
+  text-shadow: none;
+}
+
+.light-section .about-stat-pill {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.light-section .about-stat-pill:hover {
+  background: #FAF5FF;
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.light-section .stat-label {
+  color: #1E293B;
+}
+
+.light-section .project-title,
+.light-section .info-card-title {
+  color: #0F172A;
+}
+
+.light-section .project-desc {
+  color: #64748B;
+}
+
+.light-section .tag-badge {
+  background: #F0F9FF;
+  border-color: #BAE6FD;
+  color: #0284C7;
+}
+
+.light-section .tag-badge.purple {
+  background: #FAF5FF;
+  border-color: #E9D5FF;
+  color: #7C3AED;
+}
+
+.light-section .btn-arrow-circle {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+  color: #334155;
+}
+
+.light-section .project-mockup-card:hover .btn-arrow-circle {
+  background: var(--purple-gradient);
+  color: #FFFFFF;
+  border-color: transparent;
+}
+
+.light-section .info-item {
+  color: #334155;
+}
+
+.light-section .info-header-icon {
+  background: #F3E8FF;
+  border-color: #E9D5FF;
+  color: #7C3AED;
+}
+
+.light-section .info-header-icon.cyan {
+  background: #E0F2FE;
+  border-color: #BAE6FD;
+  color: #0284C7;
+}
+
+.light-section .bullet-check {
+  color: #0284C7;
+  font-weight: 700;
+}
+
+.light-section .bullet-check.green {
+  color: #10B981 !important;
+}
+
+.light-section .bullet-heart {
+  color: #A855F7;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+.light-section .handwritten-quote {
+  color: #1E1B4B;
+  text-shadow: none;
+}
+
+.botanical-leaf-decor {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.75;
+  transition: transform 0.3s ease;
+}
+
+.botanical-leaf-decor:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.info-footer-signature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0 0;
+  margin-top: 10px;
+}
+
+/* ================= SECTION CONTACT AVANCÉE (ÉCRAN 7) ================= */
+.contact-3col-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.15fr 0.95fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.contact-form-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-photo-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-desk-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 100%;
+  min-height: 380px;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(168, 85, 247, 0.25);
+  background: #0d1424;
+}
+
+.contact-desk-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: brightness(0.88) contrast(1.05);
+}
+
+.contact-desk-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Badge Tasse "Good Vibes Code Success" fidèle à la maquette */
+.contact-desk-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(13, 20, 36, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(168, 85, 247, 0.3);
+}
+
+.mug-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.mug-text {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+
+@media (max-width: 1100px) {
+  .contact-3col-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-photo-col {
+    grid-column: 1 / -1;
+    max-height: 300px;
+  }
+  .contact-desk-card {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-3col-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-photo-col {
+    grid-column: auto;
+  }
+}
+
+
