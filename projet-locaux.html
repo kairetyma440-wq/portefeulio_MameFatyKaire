@@ -1,0 +1,190 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestion des locaux — Kaire Mame Faty</title>
+  <meta name="description" content="Application web pour la gestion des locaux avec Flask et MySQL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&family=Caveat:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-head">
+    <div class="wrap head-in">
+      <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
+        <span class="brand-ico">&lt;/&gt;</span>
+        <span>Kaire Mame Faty</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="competences.html">Compétences</a>
+        <a href="projets.html" aria-current="page">Projets</a>
+        <a href="parcours.html">Parcours</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary btn-sm mobile-only" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>
+          </svg>
+          Télécharger mon CV
+        </a>
+      </nav>
+
+      <div class="head-tools">
+        <button class="theme-btn" id="theme-btn" type="button" aria-label="Changer de thème">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <a class="btn btn-dark btn-sm btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>
+          </svg>
+          Télécharger CV
+        </a>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PROJECT TOP -->
+    <section class="sec" style="padding-bottom: 16px;">
+      <div class="wrap">
+        <a class="back-link" href="projets.html">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Retour aux projets
+        </a>
+
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px">
+          <h1 class="sec-title" style="margin-bottom:0;">Gestion des locaux</h1>
+          <span class="tag" style="font-size:0.85rem;padding:4px 14px;">Web</span>
+        </div>
+        <p class="sec-lead" style="margin-bottom:0;">
+          Application web pour la gestion des locaux avec Flask et MySQL.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECT CONTENT -->
+    <section class="sec tight" style="padding-top:12px;">
+      <div class="wrap detail-grid">
+        <!-- LEFT COLUMN -->
+        <div>
+          <div class="detail-img-card">
+            <img src="assets/mockup-locaux.jpg" alt="Aperçu Gestion des locaux" loading="lazy">
+          </div>
+
+          <h2 style="font-size: 1.4rem; font-weight: 800; margin-top: 32px; margin-bottom: 10px;">
+            À propos du projet
+          </h2>
+          <p style="color: var(--muted); font-size: 0.98rem; line-height: 1.7; margin-bottom: 24px;">
+            Cette application permet de gérer les locaux d'une structure : réservation, suivi des disponibilités, utilisateurs et historique des réservations. Le projet a été développé avec Flask et une base de données MySQL, et testé sur Google Colab.
+          </p>
+
+          <h2 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 12px;">
+            Fonctionnalités principales
+          </h2>
+          <ul class="feat-list">
+            <li>
+              <span class="feat-check">✓</span>
+              <span>Gestion des utilisateurs</span>
+            </li>
+            <li>
+              <span class="feat-check">✓</span>
+              <span>Réservation des locaux</span>
+            </li>
+            <li>
+              <span class="feat-check">✓</span>
+              <span>Statistiques en temps réel</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 28px;">
+            <a class="btn btn-primary" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">
+              Voir le projet en ligne
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <aside>
+          <div class="card" style="padding: 24px; margin-bottom: 20px;">
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 14px;">Technologies utilisées</h3>
+
+            <div class="tech-detail-row">
+              <span class="tech-badge-sm" style="background:#3776AB;">Py</span>
+              <span>Python</span>
+            </div>
+            <div class="tech-detail-row">
+              <span class="tech-badge-sm" style="background:#1F2937;">Fl</span>
+              <span>Flask</span>
+            </div>
+            <div class="tech-detail-row">
+              <span class="tech-badge-sm" style="background:#00758F;">SQL</span>
+              <span>MySQL</span>
+            </div>
+            <div class="tech-detail-row">
+              <span class="tech-badge-sm" style="background:#E44D26;">5</span>
+              <span>HTML5</span>
+            </div>
+            <div class="tech-detail-row">
+              <span class="tech-badge-sm" style="background:#1572B6;">3</span>
+              <span>CSS3</span>
+            </div>
+            <div class="tech-detail-row">
+              <span class="tech-badge-sm" style="background:#F7C600;color:#1A1A1A;">JS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+
+          <div class="detail-img-card">
+            <img src="assets/mockup-locaux-detail.jpg" alt="Aperçu écran détaillé" loading="lazy">
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <p>© 2026 Kaire Mame Faty · Étudiante en Génie Logiciel · Touba, Sénégal</p>
+      <nav aria-label="Liens">
+        <a href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary btn-sm mobile-only" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>
+          </svg>
+          Télécharger mon CV
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut de page">
+    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+</body>
+</html>
