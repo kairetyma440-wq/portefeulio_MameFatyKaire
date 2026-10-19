@@ -1,6 +1,6 @@
 /**
  * Kaire Mame Faty — Portfolio
- * Interactions: Thème Sombre/Clair, Navigation fluide, ScrollSpy, Filtres & Contact
+ * Interactions: Thème Sombre/Clair, Navigation fluide, ScrollSpy & Contact
  */
 
 (function () {
@@ -8,12 +8,12 @@
 
   var root = document.documentElement;
 
-  // 1. Initialiser le thème le plus tôt possible
-  var savedTheme = 'light';
+  // 1. Initialiser le thème par défaut sur SOMBRE fidèle à la maquette
+  var savedTheme = 'dark';
   try {
-    savedTheme = localStorage.getItem('kmf-theme');
-    if (!savedTheme) {
-      savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    var stored = localStorage.getItem('kmf-theme');
+    if (stored) {
+      savedTheme = stored;
     }
     root.setAttribute('data-theme', savedTheme);
   } catch (e) {}
@@ -37,11 +37,11 @@
       var isDark = theme === 'dark';
       themeBtn.setAttribute('aria-label', isDark ? 'Passer au mode clair' : 'Passer au mode sombre');
       themeBtn.innerHTML = isDark
-        ? '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
-        : '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+        : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
     }
 
-    var currentTheme = root.getAttribute('data-theme') || 'light';
+    var currentTheme = root.getAttribute('data-theme') || 'dark';
     updateThemeBtnIcon(currentTheme);
 
     if (themeBtn) {
@@ -105,14 +105,14 @@
       });
     }
 
-    // 5. ScrollSpy automatique pour les ancres sur la page d'accueil
+    // 5. ScrollSpy automatique pour les ancres de la barre de navigation
     var sections = document.querySelectorAll('main > section[id]');
     var navLinks = document.querySelectorAll('#nav a[href^="#"]');
 
     if (sections.length > 0 && navLinks.length > 0) {
       var observerOptions = {
         root: null,
-        rootMargin: '-20% 0px -60% 0px',
+        rootMargin: '-20% 0px -55% 0px',
         threshold: 0
       };
 
@@ -139,63 +139,7 @@
       });
     }
 
-    // 6. Filtrage dynamique des projets
-    var filterBtns = document.querySelectorAll('.filter');
-    var projectCards = document.querySelectorAll('[data-cats]');
-
-    filterBtns.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        filterBtns.forEach(function (b) {
-          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
-        });
-        var category = btn.getAttribute('data-filter');
-
-        projectCards.forEach(function (card) {
-          if (category === 'all') {
-            card.hidden = false;
-          } else {
-            var cats = ' ' + (card.getAttribute('data-cats') || '') + ' ';
-            card.hidden = cats.indexOf(' ' + category + ' ') === -1;
-          }
-        });
-      });
-    });
-
-    // 7. Boutons de copie rapide dans le presse-papier
-    document.querySelectorAll('[data-copy]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var text = btn.getAttribute('data-copy');
-        if (!text) return;
-
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(function () {
-            showToast('Copié : ' + text);
-          }).catch(function () {
-            fallbackCopy(text);
-          });
-        } else {
-          fallbackCopy(text);
-        }
-      });
-    });
-
-    function fallbackCopy(text) {
-      var temp = document.createElement('textarea');
-      temp.value = text;
-      temp.style.position = 'fixed';
-      temp.style.opacity = '0';
-      document.body.appendChild(temp);
-      temp.select();
-      try {
-        document.execCommand('copy');
-        showToast('Copié : ' + text);
-      } catch (e) {
-        showToast('Sélectionné : ' + text);
-      }
-      document.body.removeChild(temp);
-    }
-
-    // 8. Formulaire de contact interactif
+    // 6. Formulaire de contact interactif
     var contactForm = document.getElementById('contact-form');
     if (contactForm) {
       contactForm.addEventListener('submit', function (e) {
@@ -210,14 +154,13 @@
         var message = msgEl ? msgEl.value.trim() : '';
 
         if (!name || !email || !message) {
-          showToast('Veuillez remplir tous les champs obligatoires (*)');
+          showToast('Veuillez remplir tous les champs obligatoires');
           if (!name && nameEl) nameEl.focus();
           else if (!email && emailEl) emailEl.focus();
           else if (!message && msgEl) msgEl.focus();
           return;
         }
 
-        // Vérification email sommaire
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
           showToast('Veuillez saisir une adresse email valide');
@@ -226,56 +169,13 @@
         }
 
         var fullMessage = 'Bonjour Kaire Mame Faty,\n\n' + message + '\n\nDe : ' + name + ' (' + email + ')';
-        var out = document.getElementById('out');
-        var outText = document.getElementById('out-text');
-
-        if (out && outText) {
-          outText.value = fullMessage;
-          out.hidden = false;
-        }
-
-        showToast('Message préparé ! Ouverture de votre messagerie...');
+        showToast('Message prêt ! Redirection vers votre client email...');
 
         try {
           var subject = encodeURIComponent('Contact depuis votre portfolio — ' + name);
           var body = encodeURIComponent(fullMessage);
           window.location.href = 'mailto:mfaty.kaire@univ-thies.sn?subject=' + subject + '&body=' + body;
         } catch (err) {}
-      });
-    }
-
-    var copyOutBtn = document.getElementById('out-copy');
-    if (copyOutBtn) {
-      copyOutBtn.addEventListener('click', function () {
-        var outText = document.getElementById('out-text');
-        if (outText && outText.value) {
-          fallbackCopy(outText.value);
-        }
-      });
-    }
-
-    // 9. Animation fluide des barres de progression des compétences
-    var skillFills = document.querySelectorAll('.skill-bar-colored-fill[data-width]');
-    if (skillFills.length > 0 && 'IntersectionObserver' in window) {
-      skillFills.forEach(function (bar) {
-        bar.style.width = '0%';
-      });
-
-      var skillsObserver = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            var bar = entry.target;
-            var targetWidth = bar.getAttribute('data-width');
-            if (targetWidth) {
-              bar.style.width = targetWidth;
-            }
-            observer.unobserve(bar);
-          }
-        });
-      }, { threshold: 0.15 });
-
-      skillFills.forEach(function (bar) {
-        skillsObserver.observe(bar);
       });
     }
   });
