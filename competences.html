@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mes compétences — Kaire Mame Faty</title>
-  <meta name="description" content="Technologies et compétences de Kaire Mame Faty : Développement Web, Programmation, Bases de données, Outils & DevOps, et Autres compétences.">
+  <meta name="description" content="Compétences techniques et qualités personnelles de Kaire Mame Faty, Développeuse Fullstack.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800;1,900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -17,30 +17,31 @@
   <header class="site-head" id="site-header">
     <div class="wrap head-in">
       <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
-        <div class="brand-badge" aria-hidden="true">MK</div>
+        <span class="brand-monogram">KM</span>
+        <div class="brand-info">
+          <span class="brand-name">Kaire Mame Faty</span>
+          <span class="brand-role">Développeuse Fullstack</span>
+        </div>
       </a>
 
       <nav class="nav-menu" id="nav" aria-label="Navigation principale">
         <a href="index.html" class="nav-link">Accueil</a>
         <a href="apropos.html" class="nav-link">À propos</a>
         <a href="competences.html" class="nav-link active" aria-current="page">Compétences</a>
-        <a href="projets.html" class="nav-link">Projets</a>
         <a href="parcours.html" class="nav-link">Parcours</a>
+        <a href="projets.html" class="nav-link">Projets</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="head-actions">
-        <button class="btn-theme-toggle" id="theme-btn" type="button" aria-label="Changer de thème">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"/>
-            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-          </svg>
-        </button>
         <a class="btn-cv-pill btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
           Télécharger CV
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
         </a>
         <button class="btn-menu-mobile" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 7h16M4 12h16M4 17h16"/>
           </svg>
         </button>
@@ -49,323 +50,143 @@
   </header>
 
   <main>
-    <section class="skills-sec-v2" style="padding-top: 50px;">
+    <!-- ================= SCREEN 3 : PAGE COMPÉTENCES ================= -->
+    <section class="skills-v3-sec">
       <div class="wrap">
-        <!-- En-tête : Titre & Présentation à gauche + Carte Bureau Code à droite -->
-        <div class="skills-header-grid">
+        <div class="skills-top-grid">
           <div>
-            <div class="eyebrow-tag">COMPÉTENCES TECHNIQUES</div>
-            <h1 class="sec-heading">Mes Compétences</h1>
-            <p class="sec-sub" style="margin-bottom: 0;">
-              Un mélange de rigueur, de curiosité et de passion pour les technologies. Je maîtrise un large éventail d'outils et de langages pour concevoir des solutions numériques performantes et innovantes.
+            <div class="eyebrow-tag">
+              <span>🛠️</span> Mes compétences
+            </div>
+            <h1 class="sec-title-main">
+              Des compétences variées<br>au service <span style="color: var(--blue-electric);">de</span> vos projets
+            </h1>
+            <p class="sec-desc-main" style="margin-bottom: 0;">
+              Je mets mes connaissances et mon savoir-faire au service de vos idées, avec rigueur, créativité et engagement.
             </p>
           </div>
 
-          <div class="skills-laptop-card">
-            <img src="assets/about-desk.jpg" alt="Espace de travail et code" width="340" height="160" loading="lazy">
-            <div class="skills-hand-doodle" aria-hidden="true">
-              Coder<br>Créer<br>Innover ♡
-            </div>
+          <div class="skills-laptop-frame">
+            <img src="assets/about-desk.jpg" alt="Espace de travail et code" width="480" height="240" loading="lazy">
           </div>
         </div>
 
-        <!-- Bandeau horizontal des 4 stats clés -->
-        <div class="skills-stats-strip">
-          <div class="skills-stat-pill-card">
-            <div class="skills-stat-circle">⚡</div>
-            <div>
-              <div class="skills-stat-num">+5</div>
-              <div class="skills-stat-desc">Langages de programmation</div>
-            </div>
-          </div>
+        <div class="skills-2col-layout">
+          <!-- Colonne Gauche : Compétences Techniques (Jauges Circulaires) -->
+          <div>
+            <h2 class="skills-block-title">Compétences techniques</h2>
+            <div class="tech-gauges-list">
+              <!-- 90% Dévelopement Web -->
+              <div class="gauge-row-item">
+                <div class="circular-gauge-box">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill-bar" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="gauge-pct-text">90%</span>
+                </div>
+                <div class="gauge-detail">
+                  <h4>Développement Web</h4>
+                  <p>HTML5, CSS3, JavaScript, React, Django, Laravel</p>
+                </div>
+              </div>
 
-          <div class="skills-stat-pill-card">
-            <div class="skills-stat-circle">🧩</div>
-            <div>
-              <div class="skills-stat-num">+10</div>
-              <div class="skills-stat-desc">Outils &amp; Frameworks</div>
-            </div>
-          </div>
+              <!-- 85% Programmation -->
+              <div class="gauge-row-item">
+                <div class="circular-gauge-box">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill-bar" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="gauge-pct-text">85%</span>
+                </div>
+                <div class="gauge-detail">
+                  <h4>Programmation</h4>
+                  <p>Java, Python, PHP</p>
+                </div>
+              </div>
 
-          <div class="skills-stat-pill-card">
-            <div class="skills-stat-circle">💾</div>
-            <div>
-              <div class="skills-stat-num">+8</div>
-              <div class="skills-stat-desc">Bases de données &amp; Cloud</div>
-            </div>
-          </div>
+              <!-- 80% Gestion de projets -->
+              <div class="gauge-row-item">
+                <div class="circular-gauge-box">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill-bar" stroke-dasharray="80, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="gauge-pct-text">80%</span>
+                </div>
+                <div class="gauge-detail">
+                  <h4>Gestion de projets</h4>
+                  <p>Organisation, Planification, Méthodologies agile</p>
+                </div>
+              </div>
 
-          <div class="skills-stat-pill-card">
-            <div class="skills-stat-circle">🎯</div>
-            <div>
-              <div class="skills-stat-num">+5</div>
-              <div class="skills-stat-desc">Années d'apprentissage</div>
-            </div>
-          </div>
-        </div>
+              <!-- 75% Bases de données -->
+              <div class="gauge-row-item">
+                <div class="circular-gauge-box">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill-bar" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="gauge-pct-text">75%</span>
+                </div>
+                <div class="gauge-detail">
+                  <h4>Bases de données</h4>
+                  <p>MySQL, PostgreSQL</p>
+                </div>
+              </div>
 
-        <!-- Grille 2x2 des 4 blocs de compétences techniques -->
-        <div class="skills-main-2x2-grid">
-          <!-- Bloc 1 : Développement Web -->
-          <div class="tech-group-card">
-            <div class="tech-card-header">
-              <div class="tech-icon-circle">&lt;/&gt;</div>
-              <h2 class="tech-card-title">Développement Web</h2>
-            </div>
-            <p class="tech-card-sub">Des interfaces modernes et des applications web performantes.</p>
-
-            <div class="tech-badges-flow">
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(249, 115, 22, 0.15); color: #F97316;">HTML</div>
-                <div class="tech-badge-name">HTML5</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(14, 165, 233, 0.15); color: #0EA5E9;">CSS</div>
-                <div class="tech-badge-name">CSS3</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(234, 179, 8, 0.15); color: #EAB308;">JS</div>
-                <div class="tech-badge-name">JavaScript</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(16, 185, 129, 0.15); color: #10B981;">dj</div>
-                <div class="tech-badge-name">Django</div>
-                <span class="tech-badge-level purple">Bon niveau</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(239, 68, 68, 0.15); color: #EF4444;">Lv</div>
-                <div class="tech-badge-name">Laravel</div>
-                <span class="tech-badge-level purple">Bon niveau</span>
-              </div>
-            </div>
-
-            <!-- Barres de progression avec pourcentages -->
-            <div class="tech-progress-list">
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">HTML5</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill" style="width: 95%;"></div></div>
-                <span class="tech-prog-pct">95%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">CSS3</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill" style="width: 90%;"></div></div>
-                <span class="tech-prog-pct">90%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">JavaScript</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill" style="width: 85%;"></div></div>
-                <span class="tech-prog-pct">85%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">Django</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill" style="width: 75%;"></div></div>
-                <span class="tech-prog-pct">75%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">Laravel</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill" style="width: 70%;"></div></div>
-                <span class="tech-prog-pct">70%</span>
+              <!-- 70% Outils & Environnements -->
+              <div class="gauge-row-item">
+                <div class="circular-gauge-box">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill-bar" stroke-dasharray="70, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="gauge-pct-text">70%</span>
+                </div>
+                <div class="gauge-detail">
+                  <h4>Outils &amp; Environnements</h4>
+                  <p>Git, GitHub, GitLab, VS Code, Docker</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Bloc 2 : Programmation -->
-          <div class="tech-group-card">
-            <div class="tech-card-header">
-              <div class="tech-icon-circle">⚙️</div>
-              <h2 class="tech-card-title">Programmation</h2>
-            </div>
-            <p class="tech-card-sub">Des bases solides pour des solutions robustes.</p>
-
-            <div class="tech-badges-flow">
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(239, 68, 68, 0.15); color: #F87171;">☕</div>
-                <div class="tech-badge-name">Java</div>
-                <span class="tech-badge-level purple">Bon niveau</span>
+          <!-- Colonne Droite : Compétences Personnelles -->
+          <div>
+            <div class="soft-skills-card">
+              <h2 class="skills-block-title" style="margin-bottom: 24px;">Compétences personnelles</h2>
+              <div class="soft-skills-list">
+                <div class="soft-skill-row">
+                  <div class="soft-skill-icon-circle">👥</div>
+                  <div class="soft-skill-text">
+                    <h4>Esprit d'équipe</h4>
+                    <p>Facilité à travailler en groupe</p>
+                  </div>
+                </div>
+                <div class="soft-skill-row">
+                  <div class="soft-skill-icon-circle">🏆</div>
+                  <div class="soft-skill-text">
+                    <h4>Leadership</h4>
+                    <p>Prise d'initiative et responsabilité</p>
+                  </div>
+                </div>
+                <div class="soft-skill-row">
+                  <div class="soft-skill-icon-circle">💬</div>
+                  <div class="soft-skill-text">
+                    <h4>Communication</h4>
+                    <p>Écoute active et expression claire</p>
+                  </div>
+                </div>
+                <div class="soft-skill-row">
+                  <div class="soft-skill-icon-circle">🔄</div>
+                  <div class="soft-skill-text">
+                    <h4>Adaptabilité</h4>
+                    <p>S'adapter rapidement aux changements</p>
+                  </div>
+                </div>
               </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8;">🐍</div>
-                <div class="tech-badge-name">Python</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(168, 85, 247, 0.15); color: #C084FC;">🐘</div>
-                <div class="tech-badge-name">PHP</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-            </div>
-
-            <!-- Barres de progression Programmation -->
-            <div class="tech-progress-list" style="margin-top: 10px;">
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">Java</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill purple" style="width: 80%;"></div></div>
-                <span class="tech-prog-pct">80%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">Python</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill purple" style="width: 90%;"></div></div>
-                <span class="tech-prog-pct">90%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">PHP</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill purple" style="width: 85%;"></div></div>
-                <span class="tech-prog-pct">85%</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bloc 3 : Outils & Bases de données -->
-          <div class="tech-group-card">
-            <div class="tech-card-header">
-              <div class="tech-icon-circle cyan">🗄️</div>
-              <h2 class="tech-card-title">Outils &amp; Bases de données</h2>
-            </div>
-            <p class="tech-card-sub">Des outils essentiels pour gérer et collaborer efficacement.</p>
-
-            <div class="tech-badges-flow">
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8;">🐬</div>
-                <div class="tech-badge-name">MySQL</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(59, 130, 246, 0.15); color: #60A5FA;">🐘</div>
-                <div class="tech-badge-name">PostgreSQL</div>
-                <span class="tech-badge-level purple">Bon niveau</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(249, 115, 22, 0.15); color: #FB923C;">🌱</div>
-                <div class="tech-badge-name">Git</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(255, 255, 255, 0.15); color: #FFFFFF;">🐙</div>
-                <div class="tech-badge-name">GitHub</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(249, 115, 22, 0.15); color: #F97316;">🦊</div>
-                <div class="tech-badge-name">GitLab</div>
-                <span class="tech-badge-level purple">Bon niveau</span>
-              </div>
-            </div>
-
-            <!-- Sous-section Autres outils -->
-            <div class="sub-tools-section">
-              <div class="sub-tools-label">Autres outils</div>
-              <div class="sub-chips-flow">
-                <span class="tool-chip">💻 VS Code</span>
-                <span class="tool-chip">🎨 Figma</span>
-                <span class="tool-chip">♾️ Google Colab</span>
-                <span class="tool-chip">🐳 Docker</span>
-                <span class="tool-chip">🐧 Linux</span>
-                <span class="tool-chip">📄 Google Docs</span>
-                <span class="tool-chip">📊 Google Sheets</span>
-                <span class="tool-chip">☁️ Google Drive</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bloc 4 : Langues & Frameworks -->
-          <div class="tech-group-card">
-            <div class="tech-card-header">
-              <div class="tech-icon-circle">🌐</div>
-              <h2 class="tech-card-title">Langues &amp; Frameworks</h2>
-            </div>
-            <p class="tech-card-sub">Communiquer et développer sans frontières.</p>
-
-            <div class="tech-badges-flow">
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="font-size: 1.1rem;">🇫🇷</div>
-                <div class="tech-badge-name">Français</div>
-                <span class="tech-badge-level">Courant</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="font-size: 1.1rem;">🇬🇧</div>
-                <div class="tech-badge-name">Anglais</div>
-                <span class="tech-badge-level purple">Intermédiaire</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="font-size: 1.1rem;">🇸🇳</div>
-                <div class="tech-badge-name">Wolof</div>
-                <span class="tech-badge-level">Maternelle</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="font-size: 1.1rem;">🇸🇦</div>
-                <div class="tech-badge-name">Arabe</div>
-                <span class="tech-badge-level purple">Intermédiaire</span>
-              </div>
-            </div>
-
-            <!-- Sous-section Frameworks & Bibliothèques -->
-            <div class="sub-tools-section">
-              <div class="sub-tools-label">Frameworks &amp; Bibliothèques</div>
-              <div class="sub-chips-flow">
-                <span class="tool-chip">⚛️ React <small style="color: var(--cyan-primary);">(En cours)</small></span>
-                <span class="tool-chip">🌊 Tailwind CSS <small style="color: var(--purple-light);">(Bon niveau)</small></span>
-                <span class="tool-chip">🅱️ Bootstrap <small style="color: var(--cyan-primary);">(Avancé)</small></span>
-                <span class="tool-chip">🌶️ Flask <small style="color: var(--purple-light);">(Bon niveau)</small></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ligne Inférieure : Mes atouts techniques + Citation Inspirationnelle -->
-        <div class="skills-bottom-2col">
-          <!-- Carte Atouts techniques -->
-          <div class="atouts-card">
-            <div class="tech-card-header">
-              <div class="tech-icon-circle">★</div>
-              <h2 class="tech-card-title">Mes atouts techniques</h2>
-            </div>
-            <div class="atouts-checklist-grid">
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Développement d'applications web et mobiles</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Tests et débogage</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Gestion de bases de données</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Déploiement (PythonAnywhere, Vercel)</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Intégration d'API</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Versioning avec Git</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Conception d'architecture logicielle</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Méthodologies agiles (Scrum)</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carte Citation Inspirationnelle -->
-          <div class="inspiration-quote-card">
-            <div class="quote-mark-ico">❝</div>
-            <p class="quote-text-in">
-              La technologie est un outil puissant lorsqu'elle est mise au service de l'humain.
-            </p>
-            <div class="quote-sig-in">
-              Kaire Mame Faty ♡
             </div>
           </div>
         </div>
@@ -373,24 +194,39 @@
     </section>
   </main>
 
-  <footer class="foot">
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
     <div class="wrap foot-in">
-      <p>© 2025 Kaire Mame Faty · Développeuse Full-Stack · Touba, Sénégal</p>
-      <nav aria-label="Liens rapides">
-        <a href="index.html">Accueil</a>
-        <a href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="foot-left">
+        <span class="foot-brand-mono">KM</span>
+        <span class="foot-copy">© 2025 Kaire Mame Faty. Tous droits réservés.</span>
+      </div>
+
+      <div class="foot-socials">
+        <a class="foot-social-link" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="https://x.com" target="_blank" rel="noopener" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut de page">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
-  </button>
 </body>
 </html>

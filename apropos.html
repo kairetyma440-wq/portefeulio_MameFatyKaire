@@ -3,45 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>À propos de moi — Kaire Mame Faty</title>
-  <meta name="description" content="Qui est Kaire Mame Faty : profil, qualités, objectifs et centres d'intérêt.">
+  <title>À propos — Kaire Mame Faty</title>
+  <meta name="description" content="Qui est Kaire Mame Faty : profil, objectifs, qualités et passion pour la tech et l'innovation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800;1,900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-<body class="page-light">
-
+<body>
 
   <!-- ================= HEADER ================= -->
   <header class="site-head" id="site-header">
     <div class="wrap head-in">
       <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
-        <div class="brand-badge" aria-hidden="true">MK</div>
+        <span class="brand-monogram">KM</span>
+        <div class="brand-info">
+          <span class="brand-name">Kaire Mame Faty</span>
+          <span class="brand-role">Développeuse Fullstack</span>
+        </div>
       </a>
 
       <nav class="nav-menu" id="nav" aria-label="Navigation principale">
         <a href="index.html" class="nav-link">Accueil</a>
         <a href="apropos.html" class="nav-link active" aria-current="page">À propos</a>
         <a href="competences.html" class="nav-link">Compétences</a>
-        <a href="projets.html" class="nav-link">Projets</a>
         <a href="parcours.html" class="nav-link">Parcours</a>
+        <a href="projets.html" class="nav-link">Projets</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="head-actions">
-        <button class="btn-theme-toggle" id="theme-btn" type="button" aria-label="Changer de thème">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"/>
-            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-          </svg>
-        </button>
         <a class="btn-cv-pill btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
           Télécharger CV
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
         </a>
         <button class="btn-menu-mobile" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 7h16M4 12h16M4 17h16"/>
           </svg>
         </button>
@@ -50,183 +50,98 @@
   </header>
 
   <main>
-    <section class="about-sec light-section" style="padding-top: 50px;">
+    <!-- ================= SCREEN 2 : PAGE À PROPOS ================= -->
+    <section class="about-v3-sec">
       <div class="wrap">
-        <div class="about-card-container">
-          <!-- Colonne Gauche : Bio & Coordonnées directes -->
-          <div class="about-left-col">
-            <div class="eyebrow-tag">À PROPOS</div>
-            <h1 class="sec-heading">Qui <span class="purple-gradient-text">suis-je ?</span></h1>
-            
-            <p class="about-bio-text">
+        <div class="about-top-grid">
+          <div>
+            <div class="eyebrow-tag">
+              <span>👤</span> À propos de moi
+            </div>
+            <h1 class="sec-title-main">
+              Une étudiante passionnée<br>par la tech et l'innovation
+            </h1>
+            <p class="sec-desc-main" style="margin-bottom: 24px;">
               Je suis Kaire Mame Faty, étudiante en Licence 3 Génie Logiciel, passionnée par le développement logiciel et les technologies numériques. Rigoureuse, autonome et curieuse, dotée d'un bon esprit d'analyse, je m'intéresse particulièrement à l'intelligence artificielle et à la conception de solutions numériques répondant à des besoins concrets.
             </p>
 
-            <!-- Liste des coordonnées directes avec icônes violettes -->
-            <div class="about-contacts-block">
-              <a class="about-contact-row" href="tel:+221784081210">
-                <div class="about-contact-ico">📞</div>
-                <span>78 408 12 10</span>
-              </a>
-              <a class="about-contact-row" href="mailto:mfaty.kaire@univ-thies.sn">
-                <div class="about-contact-ico">✉️</div>
-                <span>mfaty.kaire@univ-thies.sn</span>
-              </a>
-              <a class="about-contact-row" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">
-                <div class="about-contact-ico">🐙</div>
-                <span>github.com/kairetyma440-wq</span>
-              </a>
-              <a class="about-contact-row" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">
-                <div class="about-contact-ico">💼</div>
-                <span>linkedin.com/in/mamefatykaire</span>
-              </a>
-              <div class="about-contact-row">
-                <div class="about-contact-ico">📍</div>
-                <span>Touba, Sénégal</span>
+            <div class="about-tags-row">
+              <span class="about-tag-pill">📊 Analyse</span>
+              <span class="about-tag-pill">💡 Innovation</span>
+              <span class="about-tag-pill">🎯 Apprentissage</span>
+              <span class="about-tag-pill">⚡ Impact</span>
+            </div>
+          </div>
+
+          <div class="about-visual-box">
+            <div class="about-portrait-card">
+              <img src="assets/photo.jpg" alt="Kaire Mame Faty" width="340" height="380" loading="lazy">
+              <div class="about-hand-doodle" aria-hidden="true">
+                Rêver<br>Apprendre<br>Réussir ♡
               </div>
             </div>
           </div>
-
-          <!-- Colonne Droite : Photo Mockup Bureau, Citation & Signature -->
-          <div class="about-right-col">
-            <div class="about-mockup-frame">
-              <img src="assets/about-desk.jpg" alt="Espace de travail avec ordinateur et code" width="480" height="330" loading="lazy">
-            </div>
-
-            <!-- Bloc citation encadré -->
-            <div class="about-quote-card">
-              « Chaque ligne de code est une opportunité de créer un meilleur demain. »
-            </div>
-
-            <div class="about-sig-wrapper">
-              <div class="handwritten-sig">Kaire Mame Faty</div>
-            </div>
-          </div>
         </div>
 
-        <!-- 4 Qualités clés -->
-        <div class="about-stats-grid" style="margin-top: 24px;">
-          <div class="about-stat-pill">
-            <span class="stat-icon">🎓</span>
-            <span class="stat-label">Passionnée</span>
-          </div>
-          <div class="about-stat-pill">
-            <span class="stat-icon">🎯</span>
-            <span class="stat-label">Rigoureuse</span>
-          </div>
-          <div class="about-stat-pill">
-            <span class="stat-icon">💡</span>
-            <span class="stat-label">Autonome</span>
-          </div>
-          <div class="about-stat-pill">
-            <span class="stat-icon">🔍</span>
-            <span class="stat-label">Curieuse</span>
-          </div>
+        <!-- Mes objectifs -->
+        <div class="objectives-heading">
+          <span>🎯</span> Mes objectifs
         </div>
-      </div>
-    </section>
-
-    <!-- ================= SECTION INFORMATIONS COMPLÉMENTAIRES SUR FOND CLAIR ================= -->
-    <section class="infos-sec light-section" style="padding-top: 10px; padding-bottom: 70px;">
-      <div class="wrap">
-        <div class="eyebrow-tag">INFORMATIONS COMPLÉMENTAIRES</div>
-        <h2 class="sec-heading">Langues, Qualités et Centres d'intérêt</h2>
-
-        <!-- Grille 2x2 des 4 blocs -->
-        <div class="infos-2x2-grid">
-          <!-- 1. Langues -->
-          <div class="info-glass-card">
-            <div class="info-card-header">
-              <div class="info-header-icon">★</div>
-              <h3 class="info-card-title">Langues</h3>
-            </div>
-            <ul class="info-list">
-              <li class="info-item">🇫🇷 Français : Courant</li>
-              <li class="info-item">🇬🇧 Anglais : Intermédiaire</li>
-              <li class="info-item">🇸🇳 Wolof : Langue maternelle</li>
-              <li class="info-item">🇸🇦 Arabe : Intermédiaire</li>
-            </ul>
+        <div class="objectives-4grid">
+          <div class="objective-card">
+            <div class="objective-icon-bubble">&lt;/&gt;</div>
+            <p class="objective-text">Développer mes compétences et acquérir plus d'expérience</p>
           </div>
-
-          <!-- 2. Qualités -->
-          <div class="info-glass-card">
-            <div class="info-card-header">
-              <div class="info-header-icon cyan">✓</div>
-              <h3 class="info-card-title">Qualités</h3>
-            </div>
-            <ul class="info-list">
-              <li class="info-item"><span class="bullet-check green">✓</span> Rigoureuse</li>
-              <li class="info-item"><span class="bullet-check green">✓</span> Créative</li>
-              <li class="info-item"><span class="bullet-check green">✓</span> Investie dans les projets</li>
-              <li class="info-item"><span class="bullet-check green">✓</span> Sens du détail</li>
-            </ul>
+          <div class="objective-card">
+            <div class="objective-icon-bubble">💡</div>
+            <p class="objective-text">Contribuer à des projets à fort impact</p>
           </div>
-
-          <!-- 3. Atouts -->
-          <div class="info-glass-card">
-            <div class="info-card-header">
-              <div class="info-header-icon">★</div>
-              <h3 class="info-card-title">Atouts</h3>
-            </div>
-            <ul class="info-list">
-              <li class="info-item"><span class="bullet-check">✓</span> Esprit d'équipe</li>
-              <li class="info-item"><span class="bullet-check">✓</span> Sens de l'organisation</li>
-              <li class="info-item"><span class="bullet-check">✓</span> Expérience en gestion de projet</li>
-              <li class="info-item"><span class="bullet-check">✓</span> Autonomie</li>
-            </ul>
+          <div class="objective-card">
+            <div class="objective-icon-bubble">🎓</div>
+            <p class="objective-text">Poursuivre mes études en master</p>
           </div>
-
-          <!-- 4. Centres d'intérêt -->
-          <div class="info-glass-card">
-            <div class="info-card-header">
-              <div class="info-header-icon cyan">♥</div>
-              <h3 class="info-card-title">Centres d'intérêt</h3>
-            </div>
-            <ul class="info-list">
-              <li class="info-item"><span class="bullet-heart">♡</span> Intelligence artificielle</li>
-              <li class="info-item"><span class="bullet-heart">♡</span> Développement logiciel</li>
-              <li class="info-item"><span class="bullet-heart">♡</span> Data</li>
-              <li class="info-item"><span class="bullet-heart">♡</span> Lecture</li>
-              <li class="info-item"><span class="bullet-heart">♡</span> Voyage</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="info-footer-signature">
-          <div class="botanical-leaf-decor" aria-hidden="true">
-            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z" stroke="none" fill="rgba(168, 85, 247, 0.12)"/>
-              <path d="M7 17L17 7"/>
-              <path d="M17 7C14 7 10 9 9 12"/>
-              <path d="M17 7C17 10 15 14 12 15"/>
-            </svg>
-          </div>
-          <div class="handwritten-quote">
-            Toujours prête à apprendre et à relever de nouveaux défis ! ♡
+          <div class="objective-card">
+            <div class="objective-icon-bubble">🎯</div>
+            <p class="objective-text">Devenir une experte dans l'IA et l'innovation</p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="foot">
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
     <div class="wrap foot-in">
-      <p>© 2025 Kaire Mame Faty · Développeuse Full-Stack · Touba, Sénégal</p>
-      <nav aria-label="Liens rapides">
-        <a href="index.html">Accueil</a>
-        <a href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="foot-left">
+        <span class="foot-brand-mono">KM</span>
+        <span class="foot-copy">© 2025 Kaire Mame Faty. Tous droits réservés.</span>
+      </div>
+
+      <div class="foot-socials">
+        <a class="foot-social-link" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="https://x.com" target="_blank" rel="noopener" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut de page">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
-  </button>
 </body>
 </html>

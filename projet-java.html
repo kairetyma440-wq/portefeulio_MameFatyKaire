@@ -3,53 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projet Java — Kaire Mame Faty</title>
-  <meta name="description" content="Développement d'applications et services backend en Java : POO avancée, architecture modulaire et persistance de données.">
+  <title>Application Java — Kaire Mame Faty</title>
+  <meta name="description" content="Application Java de planification des cours et gestion des ressources universitaires développée par Kaire Mame Faty.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&family=Caveat:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800;1,900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-<body class="page-light">
+<body>
 
-  <!-- HEADER -->
-  <header class="site-head">
+  <!-- ================= HEADER ================= -->
+  <header class="site-head" id="site-header">
     <div class="wrap head-in">
       <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
-        <span class="brand-logo-badge">KM</span>
-        <span>Kaire Mame Faty</span>
+        <span class="brand-monogram">KM</span>
+        <div class="brand-info">
+          <span class="brand-name">Kaire Mame Faty</span>
+          <span class="brand-role">Développeuse Fullstack</span>
+        </div>
       </a>
 
-      <nav class="nav" id="nav" aria-label="Navigation principale">
-        <a href="index.html">Accueil</a>
-        <a href="apropos.html">À propos</a>
-        <a href="competences.html">Compétences</a>
-        <a href="projets.html" aria-current="page">Projets</a>
-        <a href="parcours.html">Parcours</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn-primary btn-sm mobile-only" href="assets/cv.pdf" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>
-          </svg>
-          Télécharger mon CV
-        </a>
+      <nav class="nav-menu" id="nav" aria-label="Navigation principale">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
+        <a href="competences.html" class="nav-link">Compétences</a>
+        <a href="parcours.html" class="nav-link">Parcours</a>
+        <a href="projets.html" class="nav-link active" aria-current="page">Projets</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
-      <div class="head-tools">
-        <button class="theme-btn" id="theme-btn" type="button" aria-label="Changer de thème">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-        </button>
-        <a class="btn btn-primary btn-sm btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>
-          </svg>
+      <div class="head-actions">
+        <a class="btn-cv-pill btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
           Télécharger CV
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
         </a>
-        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+        <button class="btn-menu-mobile" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 7h16M4 12h16M4 17h16"/>
           </svg>
         </button>
@@ -58,146 +50,118 @@
   </header>
 
   <main>
-    <!-- PROJECT HEADER -->
-    <section class="sec" style="padding-bottom: 24px;">
+    <section class="detail-page-sec">
       <div class="wrap">
         <a class="back-link" href="projets.html">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M19 12H5M12 19l-7-7 7-7"/>
-          </svg>
-          Retour aux projets
+          ← Retour aux projets
         </a>
 
-        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:8px">
-          <h1 style="font-size: clamp(2.2rem, 4.4vw, 3.2rem);">Projet Java</h1>
-          <span class="tag" style="font-size:0.9rem;padding:6px 16px;">Java &amp; Backend</span>
+        <div class="detail-top-title-row">
+          <h1 class="detail-main-title">Application Java</h1>
+          <div class="proj-v3-tags" style="margin-bottom:0;">
+            <span class="proj-tag-badge">Java</span>
+            <span class="proj-tag-badge">Planning</span>
+            <span class="proj-tag-badge">MySQL</span>
+          </div>
         </div>
-        <p style="color: var(--muted); font-size: 1.15rem;">
-          Conception d'une application d'entreprise robuste avec Java, programmation orientée objet et gestion de données.
+        <p class="sec-desc-main" style="margin-bottom: 24px;">
+          Planification automatisée des cours, emploi du temps et gestion des ressources universitaires.
         </p>
-      </div>
-    </section>
 
-    <!-- PROJECT CONTENT -->
-    <section class="sec tight">
-      <div class="wrap detail-grid">
-        <!-- LEFT COLUMN -->
-        <div>
-          <div class="detail-img-card">
-            <img src="assets/mockup-code-java.jpg" alt="Aperçu du code source Java sous IDE" loading="lazy">
+        <div class="detail-grid-layout">
+          <!-- Contenu Principal (Gauche) -->
+          <div>
+            <div class="detail-img-card">
+              <img src="assets/mockup-code-java.jpg" alt="Aperçu Application Java">
+            </div>
+
+            <div class="detail-content-card">
+              <h2>À propos du projet</h2>
+              <p>
+                Cette application logicielle en Java permet de résoudre les défis complexes liés à l'organisation des emplois du temps universitaires : planification des modules, gestion des disponibilités des enseignants, répartition des salles de cours et prévention automatisée des conflits horaires.
+              </p>
+              <p>
+                Développée selon les principes du génie logiciel avec une architecture en couches (Controller, Service, DAO), elle intègre la programmation orientée objet avancée et une persistance robuste assurée par JDBC et MySQL.
+              </p>
+
+              <h3 style="margin-top: 24px;">Fonctionnalités principales</h3>
+              <ul class="feat-list">
+                <li>Génération dynamique et visualisation des plannings par filière et par semestre</li>
+                <li>Moteur de détection d'incompatibilités horaires et de surcharge de créneaux</li>
+                <li>Module de gestion des enseignants, modules et affectations de salles</li>
+                <li>Export des emplois du temps aux formats imprimables et consultables</li>
+              </ul>
+            </div>
           </div>
 
-          <h2 class="h2" style="font-size: 1.6rem; margin-top: 36px; margin-bottom: 12px;">
-            À propos du projet
-          </h2>
-          <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.75;">
-            Ce projet Java met en application les principes fondamentaux du génie logiciel : structuration en couches logiques (Controller, Service, Repository), encapsulation rigoureuse, design patterns et manipulation de flux de données. Développé dans le cadre de projets académiques avancés en Licence Génie Logiciel.
-          </p>
+          <!-- Barre Latérale d'Informations (Droite) -->
+          <aside>
+            <div class="detail-sidebar-card">
+              <h3 style="font-size:1.15rem;font-weight:800;color:var(--blue-night);margin-bottom:6px;">Fiche technique</h3>
 
-          <h2 class="h2" style="font-size: 1.6rem; margin-top: 32px; margin-bottom: 14px;">
-            Fonctionnalités principales
-          </h2>
-          <ul class="feat-list">
-            <li>
-              <span class="feat-check">✓</span>
-              <span>Architecture modulaire MVC avec séparation stricte des responsabilités</span>
-            </li>
-            <li>
-              <span class="feat-check">✓</span>
-              <span>Gestion des entités métiers et persistance relationnelle avec JDBC / JPA</span>
-            </li>
-            <li>
-              <span class="feat-check">✓</span>
-              <span>Traitement des exceptions personnalisées et validation stricte des entrées</span>
-            </li>
-            <li>
-              <span class="feat-check">✓</span>
-              <span>Tests unitaires et documentation technique des composants</span>
-            </li>
-          </ul>
+              <div class="detail-meta-item">
+                <div class="detail-meta-label">Rôle</div>
+                <div class="detail-meta-value">Développeuse Logiciel Backend</div>
+              </div>
 
-          <div style="margin-top: 32px;">
-            <a class="btn btn-primary" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">
-              Voir sur GitHub
-              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 12h14M13 6l6 6-6 6"/>
-              </svg>
-            </a>
-          </div>
+              <div class="detail-meta-item">
+                <div class="detail-meta-label">Année</div>
+                <div class="detail-meta-value">2024 — 2025</div>
+              </div>
+
+              <div class="detail-meta-item">
+                <div class="detail-meta-label">Technologies</div>
+                <div class="detail-meta-value">Java, POO, JDBC, MySQL, Algorithmes d'ordonnancement</div>
+              </div>
+
+              <div class="detail-meta-item">
+                <div class="detail-meta-label">Contexte</div>
+                <div class="detail-meta-value">Projet académique UIDT - UFR SET</div>
+              </div>
+
+              <a class="btn-sidebar-action" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">
+                Voir le code sur GitHub ↗
+              </a>
+            </div>
+          </aside>
         </div>
-
-        <!-- RIGHT COLUMN -->
-        <aside>
-          <div class="card" style="padding: 28px;">
-            <h3 style="font-size: 1.2rem; margin-bottom: 18px;">Technologies &amp; Outils</h3>
-
-            <div class="tech-detail-row">
-              <span class="tech-badge-sm" style="background:#E76F00;">Jv</span>
-              <span>Java 17 / 21</span>
-            </div>
-            <div class="tech-detail-row">
-              <span class="tech-badge-sm" style="background:#6DB33F;">Sp</span>
-              <span>Spring / Spring Boot</span>
-            </div>
-            <div class="tech-detail-row">
-              <span class="tech-badge-sm" style="background:#C71A36;">Mv</span>
-              <span>Maven</span>
-            </div>
-            <div class="tech-detail-row">
-              <span class="tech-badge-sm" style="background:#00758F;">SQL</span>
-              <span>MySQL / PostgreSQL</span>
-            </div>
-
-            <div class="detail-meta-box">
-              <div>
-                <strong>Année</strong>
-                <span>2024 – 2025</span>
-              </div>
-              <div>
-                <strong>Rôle</strong>
-                <span>Développeuse Java</span>
-              </div>
-              <div>
-                <strong>Statut</strong>
-                <span>Projet achevé</span>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </div>
-
-      <!-- PREV / NEXT -->
-      <div class="wrap" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;">
-        <a class="btn btn-line btn-sm" href="projet-vitrine.html">
-          <svg class="ico" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-          Site vitrine / Portefolio
-        </a>
-        <a class="btn btn-line btn-sm" href="projets.html">
-          Tous les projets
-          <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="foot">
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
     <div class="wrap foot-in">
-      <p>© 2026 Kaire Mame Faty · Étudiante en Génie Logiciel · Touba, Sénégal</p>
-      <nav aria-label="Liens">
-        <a href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn-primary btn-sm mobile-only" href="assets/cv.pdf" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>
+      <div class="foot-left">
+        <span class="foot-brand-mono">KM</span>
+        <span class="foot-copy">© 2025 Kaire Mame Faty. Tous droits réservés.</span>
+      </div>
+
+      <div class="foot-socials">
+        <a class="foot-social-link" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
           </svg>
-          Télécharger mon CV
         </a>
-      </nav>
+        <a class="foot-social-link" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="https://x.com" target="_blank" rel="noopener" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

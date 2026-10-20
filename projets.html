@@ -3,45 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mes réalisations — Kaire Mame Faty</title>
-  <meta name="description" content="Projets concrets de Kaire Mame Faty : Bibliothèque, Projet Java, Stage transaction, Travail collaboratif, Site vitrine, Création graphique.">
+  <title>Mes projets &amp; réalisations — Kaire Mame Faty</title>
+  <meta name="description" content="Découvrez les projets informatiques et réalisations de Kaire Mame Faty : Gestion des locaux, Système de livraisons, Bibliothèque, Site web, Java, Graphisme.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800;1,900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-<body class="page-light">
-
+<body>
 
   <!-- ================= HEADER ================= -->
   <header class="site-head" id="site-header">
     <div class="wrap head-in">
       <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
-        <div class="brand-badge" aria-hidden="true">MK</div>
+        <span class="brand-monogram">KM</span>
+        <div class="brand-info">
+          <span class="brand-name">Kaire Mame Faty</span>
+          <span class="brand-role">Développeuse Fullstack</span>
+        </div>
       </a>
 
       <nav class="nav-menu" id="nav" aria-label="Navigation principale">
         <a href="index.html" class="nav-link">Accueil</a>
         <a href="apropos.html" class="nav-link">À propos</a>
         <a href="competences.html" class="nav-link">Compétences</a>
-        <a href="projets.html" class="nav-link active" aria-current="page">Projets</a>
         <a href="parcours.html" class="nav-link">Parcours</a>
+        <a href="projets.html" class="nav-link active" aria-current="page">Projets</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="head-actions">
-        <button class="btn-theme-toggle" id="theme-btn" type="button" aria-label="Changer de thème">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"/>
-            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-          </svg>
-        </button>
         <a class="btn-cv-pill btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
           Télécharger CV
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
         </a>
         <button class="btn-menu-mobile" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 7h16M4 12h16M4 17h16"/>
           </svg>
         </button>
@@ -50,153 +50,162 @@
   </header>
 
   <main>
-    <section class="projects-sec light-section" style="padding-top: 50px;">
+    <!-- ================= SCREEN 5 : PAGE PROJETS ================= -->
+    <section class="projects-v3-sec">
       <div class="wrap">
-        <div class="eyebrow-tag">MES PROJETS</div>
-        <h1 class="sec-heading">Mes réalisations</h1>
-        <p class="sec-sub">Voici quelques projets sur lesquels j'ai travaillé dans le cadre de mes études et de mes expériences.</p>
-
-        <!-- Filtres interactifs stylisés -->
-        <div class="footer-services-row" style="justify-content: flex-start; margin-bottom: 30px;">
-          <button class="footer-service-pill filter" type="button" data-filter="all" aria-pressed="true" style="cursor: pointer;">Tous les projets</button>
-          <button class="footer-service-pill filter" type="button" data-filter="web" aria-pressed="false" style="cursor: pointer;">Web</button>
-          <button class="footer-service-pill filter" type="button" data-filter="python" aria-pressed="false" style="cursor: pointer;">Python</button>
-          <button class="footer-service-pill filter" type="button" data-filter="java" aria-pressed="false" style="cursor: pointer;">Java</button>
-          <button class="footer-service-pill filter" type="button" data-filter="bdd" aria-pressed="false" style="cursor: pointer;">Base de données</button>
+        <div style="margin-bottom: 40px;">
+          <h1 class="sec-title-main" style="margin-bottom: 8px;">Mes projets &amp; réalisations</h1>
+          <p class="sec-desc-main" style="margin-bottom: 0;">Des idées concrètes, des solutions digitales</p>
         </div>
 
-        <!-- Grille 3x2 des 6 Projets fidèles à la maquette -->
-        <div class="projects-3x2-grid">
-          <!-- 1. Projet Bibliothèque -->
-          <a class="project-mockup-card" href="projet-biblio.html" data-cats="python bdd" id="proj-biblio">
-            <div class="project-image-box">
-              <img src="assets/mockup-biblio-shelves.jpg" alt="Projet Bibliothèque universitaire" loading="lazy">
+        <div class="projects-6grid">
+          <!-- 1. Gestion des locaux -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/mockup-locaux.jpg" alt="Gestion des locaux" loading="lazy">
             </div>
-            <div class="project-body">
-              <h2 class="project-title">Projet Bibliothèque</h2>
-              <p class="project-desc">Système de gestion de prêt de livres (base de données)</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge">Python</span>
-                  <span class="tag-badge">MySQL</span>
-                </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
+            <div class="proj-v3-body">
+              <h2 class="proj-v3-title">Gestion des locaux</h2>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">Flask</span>
+                <span class="proj-tag-badge">Python</span>
+                <span class="proj-tag-badge">MySQL</span>
               </div>
+              <p class="proj-v3-desc">Application de gestion des locaux avec Flask et MySQL.</p>
+              <a class="btn-proj-view" href="projet-locaux.html">
+                Voir le projet ➔
+              </a>
             </div>
-          </a>
+          </div>
 
-          <!-- 2. Projet Java -->
-          <a class="project-mockup-card" href="projet-java.html" data-cats="java" id="proj-java">
-            <div class="project-image-box">
-              <img src="assets/mockup-code-java.jpg" alt="Projet Java planification" loading="lazy">
+          <!-- 2. Système de livraisons -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/mockup-livraisons-van.jpg" alt="Système de livraisons" loading="lazy">
             </div>
-            <div class="project-body">
-              <h2 class="project-title">Projet Java</h2>
-              <p class="project-desc">Application de planification des cours et gestion des ressources universitaires</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge purple">Java</span>
-                </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
+            <div class="proj-v3-body">
+              <h2 class="proj-v3-title">Système de livraisons</h2>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">PHP</span>
+                <span class="proj-tag-badge">Web</span>
               </div>
+              <p class="proj-v3-desc">Suivi des livraisons locales.</p>
+              <a class="btn-proj-view" href="projet-livraisons.html">
+                Voir le projet ➔
+              </a>
             </div>
-          </a>
+          </div>
 
-          <!-- 3. Stage - Point de transaction -->
-          <a class="project-mockup-card" href="projet-locaux.html" data-cats="web bdd" id="proj-locaux">
-            <div class="project-image-box">
-              <img src="assets/mockup-locaux.jpg" alt="Stage point de transaction" loading="lazy">
+          <!-- 3. Bibliothèque -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/mockup-biblio-shelves.jpg" alt="Bibliothèque universitaire" loading="lazy">
             </div>
-            <div class="project-body">
-              <h2 class="project-title">Stage - Point de transaction</h2>
-              <p class="project-desc">Gestion d'un point de transaction</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge">Gestion</span>
-                  <span class="tag-badge">Transaction</span>
-                </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
+            <div class="proj-v3-body">
+              <h2 class="proj-v3-title">Bibliothèque</h2>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">Java</span>
+                <span class="proj-tag-badge">MySQL</span>
               </div>
+              <p class="proj-v3-desc">Gestion de prêt de livres (base de données).</p>
+              <a class="btn-proj-view" href="projet-biblio.html">
+                Voir le projet ➔
+              </a>
             </div>
-          </a>
+          </div>
 
-          <!-- 4. Travail collaboratif en équipe -->
-          <a class="project-mockup-card" href="projet-cours.html" data-cats="java" id="proj-collab">
-            <div class="project-image-box">
-              <img src="assets/team-collab.jpg" alt="Travail collaboratif en équipe" loading="lazy">
+          <!-- 4. Site web -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/mockup-dev-web.jpg" alt="Site web Full-stack" loading="lazy">
             </div>
-            <div class="project-body">
-              <h2 class="project-title">Travail collaboratif en équipe</h2>
-              <p class="project-desc">Participation à des projets académiques en groupe</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge purple">Esprit d'équipe</span>
-                  <span class="tag-badge purple">Organisation</span>
-                </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
+            <div class="proj-v3-body">
+              <h2 class="proj-v3-title">Site web</h2>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">HTML</span>
+                <span class="proj-tag-badge">CSS</span>
+                <span class="proj-tag-badge">JavaScript</span>
               </div>
+              <p class="proj-v3-desc">Site web moderne et responsive.</p>
+              <a class="btn-proj-view" href="projet-vitrine.html">
+                Voir le projet ➔
+              </a>
             </div>
-          </a>
+          </div>
 
-          <!-- 5. Développeuse Full-stack -->
-          <a class="project-mockup-card" href="projet-vitrine.html" data-cats="web" id="proj-fullstack">
-            <div class="project-image-box">
-              <img src="assets/mockup-dev-web.jpg" alt="Développeuse Full-stack web" loading="lazy">
+          <!-- 5. Application Java -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/mockup-code-java.jpg" alt="Application Java Planification" loading="lazy">
             </div>
-            <div class="project-body">
-              <h2 class="project-title">Développeuse Full-stack</h2>
-              <p class="project-desc">Site web avec HTML, CSS et JavaScript</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge">HTML</span>
-                  <span class="tag-badge">CSS</span>
-                  <span class="tag-badge">Javascript</span>
-                </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
+            <div class="proj-v3-body">
+              <h2 class="proj-v3-title">Application Java</h2>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">Java</span>
+                <span class="proj-tag-badge">Planning</span>
               </div>
+              <p class="proj-v3-desc">Planification des cours et gestion des ressources.</p>
+              <a class="btn-proj-view" href="projet-java.html">
+                Voir le projet ➔
+              </a>
             </div>
-          </a>
+          </div>
 
-          <!-- 6. Création graphique -->
-          <a class="project-mockup-card" href="projet-affiches.html" data-cats="web" id="proj-graphique">
-            <div class="project-image-box">
-              <img src="assets/illustration-formation.jpg" alt="Création graphique et affiches" loading="lazy">
+          <!-- 6. Design graphique -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/illustration-formation.jpg" alt="Design graphique publicitaire" loading="lazy">
             </div>
-            <div class="project-body">
-              <h2 class="project-title">Création graphique</h2>
-              <p class="project-desc">Affiches publicitaires (projets collaboratifs)</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge purple">Design</span>
-                  <span class="tag-badge purple">Créativité</span>
-                </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
+            <div class="proj-v3-body">
+              <h2 class="proj-v3-title">Design graphique</h2>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">Canva</span>
+                <span class="proj-tag-badge">Photoshop</span>
               </div>
+              <p class="proj-v3-desc">Affiches publicitaires et visuels pour projets.</p>
+              <a class="btn-proj-view" href="projet-affiches.html">
+                Voir le projet ➔
+              </a>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="foot">
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
     <div class="wrap foot-in">
-      <p>© 2025 Kaire Mame Faty · Développeuse Full-Stack · Touba &amp; Thiès, Sénégal</p>
-      <nav aria-label="Liens rapides">
-        <a href="index.html">Accueil</a>
-        <a href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="foot-left">
+        <span class="foot-brand-mono">KM</span>
+        <span class="foot-copy">© 2025 Kaire Mame Faty. Tous droits réservés.</span>
+      </div>
+
+      <div class="foot-socials">
+        <a class="foot-social-link" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="https://x.com" target="_blank" rel="noopener" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut de page">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
-  </button>
 </body>
 </html>

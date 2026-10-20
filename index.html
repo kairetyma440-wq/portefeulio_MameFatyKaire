@@ -3,52 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kaire Mame Faty — Développeuse Full-Stack | Portfolio</title>
-  <meta name="description" content="Portfolio de Kaire Mame Faty, Développeuse Fullstack et étudiante en Licence 3 Génie Logiciel à l'UIDT. Découvrez mes projets, compétences et parcours.">
-  
-  <!-- Polices Google : Plus Jakarta Sans (UI moderne) et Caveat (Touches manuscrites fidèles à la maquette) -->
+  <title>Kaire Mame Faty — Développeuse Fullstack</title>
+  <meta name="description" content="Portfolio officiel de Kaire Mame Faty, Développeuse Fullstack : projets, compétences, parcours académique et contact.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
-  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800;1,900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
 
-  <!-- ================= HEADER / BARRE DE NAVIGATION ================= -->
+  <!-- ================= HEADER (NAVBAR COMMUNE) ================= -->
   <header class="site-head" id="site-header">
     <div class="wrap head-in">
-      <a class="brand" href="#accueil" aria-label="Kaire Mame Faty, accueil">
-        <div class="brand-badge" aria-hidden="true">MK</div>
+      <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
+        <span class="brand-monogram">KM</span>
+        <div class="brand-info">
+          <span class="brand-name">Kaire Mame Faty</span>
+          <span class="brand-role">Développeuse Fullstack</span>
+        </div>
       </a>
 
       <nav class="nav-menu" id="nav" aria-label="Navigation principale">
-        <a href="#accueil" class="nav-link active" aria-current="page">Accueil</a>
-        <a href="#apropos" class="nav-link">À propos</a>
-        <a href="#competences" class="nav-link">Compétences</a>
-        <a href="#projets" class="nav-link">Projets</a>
-        <a href="#parcours" class="nav-link">Parcours</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="index.html" class="nav-link active" aria-current="page">Accueil</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
+        <a href="competences.html" class="nav-link">Compétences</a>
+        <a href="parcours.html" class="nav-link">Parcours</a>
+        <a href="projets.html" class="nav-link">Projets</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="head-actions">
-        <!-- Bouton Thème Sombre / Clair -->
-        <button class="btn-theme-toggle" id="theme-btn" type="button" aria-label="Changer de thème">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"/>
-            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-          </svg>
-        </button>
-
-        <!-- Bouton Télécharger CV (Bureau) -->
         <a class="btn-cv-pill btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
           Télécharger CV
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
         </a>
-
-        <!-- Bouton Menu Mobile Hamburger -->
         <button class="btn-menu-mobile" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 7h16M4 12h16M4 17h16"/>
           </svg>
         </button>
@@ -57,1132 +50,683 @@
   </header>
 
   <main>
-    <!-- ================= 1. SECTION ACCUEIL / HERO (PANEL 1) ================= -->
-    <section class="hero-sec" id="accueil">
+    <!-- ================= 1. PAGE D'ACCUEIL / HERO SECTION (SCREEN 1) ================= -->
+    <section class="hero-v3-sec" id="accueil">
       <div class="wrap">
-        <div class="hero-card-container">
-          <!-- Colonne Gauche : Présentation & Titres -->
-          <div class="hero-content-col">
-            <p class="hero-intro-text">Bonjour, je suis</p>
-            <h1 class="hero-name-heading">Kaire <span class="purple-gradient-text">Mame Faty</span></h1>
-            <div class="hero-role-badge">DÉVELOPPEUSE FULLSTACK</div>
+        <div class="hero-v3-grid">
+          <!-- Colonne Gauche -->
+          <div class="hero-v3-content">
+            <div class="hero-v3-greeting">
+              <span>👋</span> Bonjour, je suis
+            </div>
 
-            <p class="hero-lead-paragraph">
-              Étudiante en Licence 3 Génie Logiciel, passionnée par le développement logiciel et les technologies numériques. Je conçois des solutions innovantes et efficaces pour répondre à des besoins concrets.
+            <h1 class="hero-v3-title">
+              KAIRE<br>
+              <span>MAME FATY</span>
+            </h1>
+
+            <div class="hero-v3-role">Développeuse Fullstack</div>
+
+            <p class="hero-v3-bio">
+              Étudiante en Licence 3 Génie Logiciel, passionnée par le développement logiciel et les technologies numériques. Je conçois des solutions innovantes pour répondre à des besoins concrets.
             </p>
 
-            <div class="hero-cta-buttons">
-              <a class="btn-primary-hero" href="#projets" id="btn-hero-projects">
-                Voir mes projets <span>➔</span>
+            <div class="hero-v3-buttons">
+              <a class="btn-primary-v3" href="contact.html">
+                Me contacter ✉
               </a>
-              <a class="btn-outline-hero" href="#contact" id="btn-hero-contact">
-                <span>💬</span> Me contacter
+              <a class="btn-outline-v3" href="parcours.html">
+                Voir mon parcours ↓
               </a>
             </div>
 
-            <!-- Bandeau réseaux sociaux en pastilles circulaires -->
-            <div class="hero-social-row">
-              <a class="social-circle-link" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
+            <!-- Réseaux sociaux -->
+            <div class="hero-v3-socials">
+              <a class="hero-social-circle" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                   <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
                 </svg>
               </a>
-              <a class="social-circle-link" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+              <a class="hero-social-circle" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
               </a>
-              <a class="social-circle-link" href="https://x.com" target="_blank" rel="noopener" aria-label="X / Twitter">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-              <a class="social-circle-link" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email direct">
-                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <a class="hero-social-circle" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                   <polyline points="22,6 12,13 2,6"/>
                 </svg>
               </a>
+              <a class="hero-social-circle" href="tel:+221784081210" aria-label="Téléphone">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </a>
             </div>
           </div>
 
-          <!-- Colonne Droite : Visuel Aura & Portrait Mame Faty avec Hijab & Ordinateur -->
-          <div class="hero-visual-col">
-            <div class="hero-aura-glow" aria-hidden="true"></div>
-            <div class="hero-orbital-arc" aria-hidden="true"></div>
-            <div class="hero-avatar-frame">
-              <img class="hero-avatar-img" src="assets/avatar-hero.jpg" alt="Portrait de Kaire Mame Faty" width="320" height="320" fetchpriority="high">
-            </div>
-            <div class="hero-floating-doodle" aria-hidden="true">
-              Code<br>Create<br>Improve
+          <!-- Colonne Droite : Photo avec motif et mot manuscrit -->
+          <div class="hero-v3-visual">
+            <div class="hero-photo-wrap">
+              <img src="assets/avatar-hero.jpg" alt="Kaire Mame Faty, Développeuse Fullstack" width="440" height="480">
+              <div class="hero-hand-doodle" aria-hidden="true">
+                Code<br>Créer<br>Innover ♡
+              </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Indicateur Découvrir plus -->
-          <a class="hero-scroll-discover" href="#apropos" aria-label="Découvrir la suite">
-            <div class="mouse-scroll-icon"></div>
-            <span>Découvrir plus</span>
-          </a>
+      <!-- Vague SVG de séparation -->
+      <div class="hero-wave-divider">
+        <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
+          <path d="M0,40 C320,80 640,10 960,50 C1200,80 1360,30 1440,40 L1440,80 L0,80 Z" fill="#FFFFFF"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- BANDEAU DES 4 CARTES CLÉS (BAS DE L'ÉCRAN 1) -->
+    <section class="hero-strip-section">
+      <div class="wrap">
+        <div class="hero-strip-grid">
+          <div class="hero-strip-card">
+            <div class="hero-strip-icon">💻</div>
+            <div class="hero-strip-title">Développement<br>Web &amp; Mobile</div>
+          </div>
+          <div class="hero-strip-card">
+            <div class="hero-strip-icon">🧠</div>
+            <div class="hero-strip-title">Intelligence<br>Artificielle</div>
+          </div>
+          <div class="hero-strip-card">
+            <div class="hero-strip-icon">⚙️</div>
+            <div class="hero-strip-title">Gestion<br>de projets</div>
+          </div>
+          <div class="hero-strip-card">
+            <div class="hero-strip-icon">📊</div>
+            <div class="hero-strip-title">Esprit<br>d'analyse</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= 2. SECTION À PROPOS ("QUI SUIS-JE ?") ================= -->
-    <section class="about-sec light-section" id="apropos">
+    <!-- ================= 2. PAGE À PROPOS (APERÇU ÉCRAN 2) ================= -->
+    <section class="about-v3-sec" id="apropos">
       <div class="wrap">
-        <div class="about-card-container">
-          <!-- Colonne Gauche : Bio & Coordonnées directes -->
-          <div class="about-left-col">
-            <div class="eyebrow-tag">À PROPOS</div>
-            <h2 class="sec-heading">Qui <span class="purple-gradient-text">suis-je ?</span></h2>
-            
-            <p class="about-bio-text">
+        <div class="about-top-grid">
+          <div>
+            <div class="eyebrow-tag">
+              <span>👤</span> À propos de moi
+            </div>
+            <h2 class="sec-title-main">
+              Une étudiante passionnée<br>par la tech et l'innovation
+            </h2>
+            <p class="sec-desc-main" style="margin-bottom: 20px;">
               Je suis Kaire Mame Faty, étudiante en Licence 3 Génie Logiciel, passionnée par le développement logiciel et les technologies numériques. Rigoureuse, autonome et curieuse, dotée d'un bon esprit d'analyse, je m'intéresse particulièrement à l'intelligence artificielle et à la conception de solutions numériques répondant à des besoins concrets.
             </p>
 
-            <!-- Liste des coordonnées directes avec icônes violettes -->
-            <div class="about-contacts-block">
-              <a class="about-contact-row" href="tel:+221784081210">
-                <div class="about-contact-ico">📞</div>
-                <span>78 408 12 10</span>
-              </a>
-              <a class="about-contact-row" href="mailto:mfaty.kaire@univ-thies.sn">
-                <div class="about-contact-ico">✉️</div>
-                <span>mfaty.kaire@univ-thies.sn</span>
-              </a>
-              <a class="about-contact-row" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">
-                <div class="about-contact-ico">🐙</div>
-                <span>github.com/kairetyma440-wq</span>
-              </a>
-              <a class="about-contact-row" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">
-                <div class="about-contact-ico">💼</div>
-                <span>linkedin.com/in/mamefatykaire</span>
-              </a>
-              <div class="about-contact-row">
-                <div class="about-contact-ico">📍</div>
-                <span>Touba, Sénégal</span>
-              </div>
+            <div class="about-tags-row">
+              <span class="about-tag-pill">📊 Analyse</span>
+              <span class="about-tag-pill">💡 Innovation</span>
+              <span class="about-tag-pill">🎯 Apprentissage</span>
+              <span class="about-tag-pill">⚡ Impact</span>
             </div>
           </div>
 
-          <!-- Colonne Droite : Photo Mockup Bureau, Citation & Signature -->
-          <div class="about-right-col">
-            <div class="about-mockup-frame">
-              <img src="assets/about-desk.jpg" alt="Espace de travail avec ordinateur et code" width="480" height="330" loading="lazy">
-            </div>
-
-            <!-- Bloc citation encadré -->
-            <div class="about-quote-card">
-              « Chaque ligne de code est une opportunité de créer un meilleur demain. »
-            </div>
-
-            <div class="about-sig-wrapper">
-              <div class="handwritten-sig">Kaire Mame Faty</div>
+          <div class="about-visual-box">
+            <div class="about-portrait-card">
+              <img src="assets/photo.jpg" alt="Kaire Mame Faty" width="340" height="380" loading="lazy">
+              <div class="about-hand-doodle" aria-hidden="true">
+                Rêver<br>Apprendre<br>Réussir ♡
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 4 Qualités clés sous la carte À Propos -->
-        <div class="about-stats-grid" style="margin-top: 24px;">
-          <div class="about-stat-pill">
-            <span class="stat-icon">🎓</span>
-            <span class="stat-label">Passionnée</span>
+        <!-- Mes objectifs -->
+        <div class="objectives-heading">
+          <span>🎯</span> Mes objectifs
+        </div>
+        <div class="objectives-4grid">
+          <div class="objective-card">
+            <div class="objective-icon-bubble">&lt;/&gt;</div>
+            <p class="objective-text">Développer mes compétences et acquérir plus d'expérience</p>
           </div>
-          <div class="about-stat-pill">
-            <span class="stat-icon">🎯</span>
-            <span class="stat-label">Rigoureuse</span>
+          <div class="objective-card">
+            <div class="objective-icon-bubble">💡</div>
+            <p class="objective-text">Contribuer à des projets à fort impact</p>
           </div>
-          <div class="about-stat-pill">
-            <span class="stat-icon">💡</span>
-            <span class="stat-label">Autonome</span>
+          <div class="objective-card">
+            <div class="objective-icon-bubble">🎓</div>
+            <p class="objective-text">Poursuivre mes études en master</p>
           </div>
-          <div class="about-stat-pill">
-            <span class="stat-icon">🔍</span>
-            <span class="stat-label">Curieuse</span>
+          <div class="objective-card">
+            <div class="objective-icon-bubble">🎯</div>
+            <p class="objective-text">Devenir une experte dans l'IA et l'innovation</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= 3. SECTION COMPÉTENCES ================= -->
-    <section class="skills-sec-v2" id="competences">
+    <!-- ================= 3. PAGE COMPÉTENCES (APERÇU ÉCRAN 3) ================= -->
+    <section class="skills-v3-sec" id="competences" style="background: var(--white);">
       <div class="wrap">
-        <!-- En-tête : Titre & Présentation à gauche + Carte Bureau Code à droite -->
-        <div class="skills-header-grid">
+        <div class="skills-top-grid">
           <div>
-            <div class="eyebrow-tag">COMPÉTENCES TECHNIQUES</div>
-            <h2 class="sec-heading">Mes Compétences</h2>
-            <p class="sec-sub" style="margin-bottom: 0;">
-              Un mélange de rigueur, de curiosité et de passion pour les technologies. Je maîtrise un large éventail d'outils et de langages pour concevoir des solutions numériques performantes et innovantes.
+            <div class="eyebrow-tag">
+              <span>🛠️</span> Mes compétences
+            </div>
+            <h2 class="sec-title-main">
+              Des compétences variées<br>au service <span style="color: var(--blue-electric);">de</span> vos projets
+            </h2>
+            <p class="sec-desc-main" style="margin-bottom: 0;">
+              Je mets mes connaissances et mon savoir-faire au service de vos idées, avec rigueur, créativité et engagement.
             </p>
           </div>
 
-          <div class="skills-laptop-card">
-            <img src="assets/about-desk.jpg" alt="Espace de travail et code" width="340" height="160" loading="lazy">
-            <div class="skills-hand-doodle" aria-hidden="true">
-              Coder<br>Créer<br>Innover ♡
-            </div>
+          <div class="skills-laptop-frame">
+            <img src="assets/about-desk.jpg" alt="Ordinateur avec code" width="480" height="240" loading="lazy">
           </div>
         </div>
 
-        <!-- Bandeau horizontal des 4 stats clés -->
-        <div class="skills-stats-strip">
-          <div class="skills-stat-pill-card">
-            <div class="skills-stat-circle">⚡</div>
-            <div>
-              <div class="skills-stat-num">+5</div>
-              <div class="skills-stat-desc">Langages de programmation</div>
-            </div>
-          </div>
-
-          <div class="skills-stat-pill-card">
-            <div class="skills-stat-circle">🧩</div>
-            <div>
-              <div class="skills-stat-num">+10</div>
-              <div class="skills-stat-desc">Outils &amp; Frameworks</div>
-            </div>
-          </div>
-
-          <div class="skills-stat-pill-card">
-            <div class="skills-stat-circle">💾</div>
-            <div>
-              <div class="skills-stat-num">+8</div>
-              <div class="skills-stat-desc">Bases de données &amp; Cloud</div>
-            </div>
-          </div>
-
-          <div class="skills-stat-pill-card">
-            <div class="skills-stat-circle">🎯</div>
-            <div>
-              <div class="skills-stat-num">+5</div>
-              <div class="skills-stat-desc">Années d'apprentissage</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Grille 2x2 des 4 blocs de compétences techniques -->
-        <div class="skills-main-2x2-grid">
-          <!-- Bloc 1 : Développement Web -->
-          <div class="tech-group-card">
-            <div class="tech-card-header">
-              <div class="tech-icon-circle">&lt;/&gt;</div>
-              <h3 class="tech-card-title">Développement Web</h3>
-            </div>
-            <p class="tech-card-sub">Des interfaces modernes et des applications web performantes.</p>
-
-            <div class="tech-badges-flow">
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(249, 115, 22, 0.15); color: #F97316;">HTML</div>
-                <div class="tech-badge-name">HTML5</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(14, 165, 233, 0.15); color: #0EA5E9;">CSS</div>
-                <div class="tech-badge-name">CSS3</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(234, 179, 8, 0.15); color: #EAB308;">JS</div>
-                <div class="tech-badge-name">JavaScript</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(16, 185, 129, 0.15); color: #10B981;">dj</div>
-                <div class="tech-badge-name">Django</div>
-                <span class="tech-badge-level purple">Bon niveau</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(239, 68, 68, 0.15); color: #EF4444;">Lv</div>
-                <div class="tech-badge-name">Laravel</div>
-                <span class="tech-badge-level purple">Bon niveau</span>
-              </div>
-            </div>
-
-            <!-- Barres de progression avec pourcentages -->
-            <div class="tech-progress-list">
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">HTML5</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill" style="width: 95%;"></div></div>
-                <span class="tech-prog-pct">95%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">CSS3</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill" style="width: 90%;"></div></div>
-                <span class="tech-prog-pct">90%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">JavaScript</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill" style="width: 85%;"></div></div>
-                <span class="tech-prog-pct">85%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">Django</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill" style="width: 75%;"></div></div>
-                <span class="tech-prog-pct">75%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">Laravel</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill" style="width: 70%;"></div></div>
-                <span class="tech-prog-pct">70%</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bloc 2 : Programmation -->
-          <div class="tech-group-card">
-            <div class="tech-card-header">
-              <div class="tech-icon-circle">⚙️</div>
-              <h3 class="tech-card-title">Programmation</h3>
-            </div>
-            <p class="tech-card-sub">Des bases solides pour des solutions robustes.</p>
-
-            <div class="tech-badges-flow">
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(239, 68, 68, 0.15); color: #F87171;">☕</div>
-                <div class="tech-badge-name">Java</div>
-                <span class="tech-badge-level purple">Bon niveau</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8;">🐍</div>
-                <div class="tech-badge-name">Python</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(168, 85, 247, 0.15); color: #C084FC;">🐘</div>
-                <div class="tech-badge-name">PHP</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-            </div>
-
-            <!-- Barres de progression Programmation -->
-            <div class="tech-progress-list" style="margin-top: 10px;">
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">Java</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill purple" style="width: 80%;"></div></div>
-                <span class="tech-prog-pct">80%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">Python</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill purple" style="width: 90%;"></div></div>
-                <span class="tech-prog-pct">90%</span>
-              </div>
-              <div class="tech-progress-row">
-                <span class="tech-prog-label">PHP</span>
-                <div class="tech-prog-track"><div class="tech-prog-fill purple" style="width: 85%;"></div></div>
-                <span class="tech-prog-pct">85%</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bloc 3 : Outils & Bases de données -->
-          <div class="tech-group-card">
-            <div class="tech-card-header">
-              <div class="tech-icon-circle cyan">🗄️</div>
-              <h3 class="tech-card-title">Outils &amp; Bases de données</h3>
-            </div>
-            <p class="tech-card-sub">Des outils essentiels pour gérer et collaborer efficacement.</p>
-
-            <div class="tech-badges-flow">
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8;">🐬</div>
-                <div class="tech-badge-name">MySQL</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(59, 130, 246, 0.15); color: #60A5FA;">🐘</div>
-                <div class="tech-badge-name">PostgreSQL</div>
-                <span class="tech-badge-level purple">Bon niveau</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(249, 115, 22, 0.15); color: #FB923C;">🌱</div>
-                <div class="tech-badge-name">Git</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(255, 255, 255, 0.15); color: #FFFFFF;">🐙</div>
-                <div class="tech-badge-name">GitHub</div>
-                <span class="tech-badge-level">Avancé</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="background: rgba(249, 115, 22, 0.15); color: #F97316;">🦊</div>
-                <div class="tech-badge-name">GitLab</div>
-                <span class="tech-badge-level purple">Bon niveau</span>
-              </div>
-            </div>
-
-            <!-- Sous-section Autres outils -->
-            <div class="sub-tools-section">
-              <div class="sub-tools-label">Autres outils</div>
-              <div class="sub-chips-flow">
-                <span class="tool-chip">💻 VS Code</span>
-                <span class="tool-chip">🎨 Figma</span>
-                <span class="tool-chip">♾️ Google Colab</span>
-                <span class="tool-chip">🐳 Docker</span>
-                <span class="tool-chip">🐧 Linux</span>
-                <span class="tool-chip">📄 Google Docs</span>
-                <span class="tool-chip">📊 Google Sheets</span>
-                <span class="tool-chip">☁️ Google Drive</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bloc 4 : Langues & Frameworks -->
-          <div class="tech-group-card">
-            <div class="tech-card-header">
-              <div class="tech-icon-circle">🌐</div>
-              <h3 class="tech-card-title">Langues &amp; Frameworks</h3>
-            </div>
-            <p class="tech-card-sub">Communiquer et développer sans frontières.</p>
-
-            <div class="tech-badges-flow">
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="font-size: 1.1rem;">🇫🇷</div>
-                <div class="tech-badge-name">Français</div>
-                <span class="tech-badge-level">Courant</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="font-size: 1.1rem;">🇬🇧</div>
-                <div class="tech-badge-name">Anglais</div>
-                <span class="tech-badge-level purple">Intermédiaire</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="font-size: 1.1rem;">🇸🇳</div>
-                <div class="tech-badge-name">Wolof</div>
-                <span class="tech-badge-level">Maternelle</span>
-              </div>
-              <div class="tech-item-badge">
-                <div class="tech-badge-icon" style="font-size: 1.1rem;">🇸🇦</div>
-                <div class="tech-badge-name">Arabe</div>
-                <span class="tech-badge-level purple">Intermédiaire</span>
-              </div>
-            </div>
-
-            <!-- Sous-section Frameworks & Bibliothèques -->
-            <div class="sub-tools-section">
-              <div class="sub-tools-label">Frameworks &amp; Bibliothèques</div>
-              <div class="sub-chips-flow">
-                <span class="tool-chip">⚛️ React <small style="color: var(--cyan-primary);">(En cours)</small></span>
-                <span class="tool-chip">🌊 Tailwind CSS <small style="color: var(--purple-light);">(Bon niveau)</small></span>
-                <span class="tool-chip">🅱️ Bootstrap <small style="color: var(--cyan-primary);">(Avancé)</small></span>
-                <span class="tool-chip">🌶️ Flask <small style="color: var(--purple-light);">(Bon niveau)</small></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ligne Inférieure : Mes atouts techniques + Citation Inspirationnelle -->
-        <div class="skills-bottom-2col">
-          <!-- Carte Atouts techniques -->
-          <div class="atouts-card">
-            <div class="tech-card-header">
-              <div class="tech-icon-circle">★</div>
-              <h3 class="tech-card-title">Mes atouts techniques</h3>
-            </div>
-            <div class="atouts-checklist-grid">
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Développement d'applications web et mobiles</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Tests et débogage</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Gestion de bases de données</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Déploiement (PythonAnywhere, Vercel)</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Intégration d'API</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Versioning avec Git</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Conception d'architecture logicielle</span>
-              </div>
-              <div class="atout-check-item">
-                <div class="atout-check-bullet">✓</div>
-                <span>Méthodologies agiles (Scrum)</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Carte Citation Inspirationnelle -->
-          <div class="inspiration-quote-card">
-            <div class="quote-mark-ico">❝</div>
-            <p class="quote-text-in">
-              La technologie est un outil puissant lorsqu'elle est mise au service de l'humain.
-            </p>
-            <div class="quote-sig-in">
-              Kaire Mame Faty ♡
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 4. SECTION PROJETS ("MES RÉALISATIONS") ================= -->
-    <section class="projects-sec light-section" id="projets">
-      <div class="wrap">
-        <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+        <div class="skills-2col-layout">
+          <!-- Colonne Gauche : Compétences Techniques (Jauges Circulaires) -->
           <div>
-            <div class="eyebrow-tag">MES PROJETS</div>
-            <h2 class="sec-heading" style="margin-bottom: 4px;">Mes réalisations</h2>
-            <p class="sec-sub" style="margin-bottom: 0;">Voici quelques projets sur lesquels j'ai travaillé dans le cadre de mes études et de mes expériences.</p>
+            <h3 class="skills-block-title">Compétences techniques</h3>
+            <div class="tech-gauges-list">
+              <!-- 90% Dévelopement Web -->
+              <div class="gauge-row-item">
+                <div class="circular-gauge-box">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill-bar" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="gauge-pct-text">90%</span>
+                </div>
+                <div class="gauge-detail">
+                  <h4>Développement Web</h4>
+                  <p>HTML5, CSS3, JavaScript, React, Django, Laravel</p>
+                </div>
+              </div>
+
+              <!-- 85% Programmation -->
+              <div class="gauge-row-item">
+                <div class="circular-gauge-box">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill-bar" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="gauge-pct-text">85%</span>
+                </div>
+                <div class="gauge-detail">
+                  <h4>Programmation</h4>
+                  <p>Java, Python, PHP</p>
+                </div>
+              </div>
+
+              <!-- 80% Gestion de projets -->
+              <div class="gauge-row-item">
+                <div class="circular-gauge-box">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill-bar" stroke-dasharray="80, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="gauge-pct-text">80%</span>
+                </div>
+                <div class="gauge-detail">
+                  <h4>Gestion de projets</h4>
+                  <p>Organisation, Planification, Méthodologies agile</p>
+                </div>
+              </div>
+
+              <!-- 75% Bases de données -->
+              <div class="gauge-row-item">
+                <div class="circular-gauge-box">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill-bar" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="gauge-pct-text">75%</span>
+                </div>
+                <div class="gauge-detail">
+                  <h4>Bases de données</h4>
+                  <p>MySQL, PostgreSQL</p>
+                </div>
+              </div>
+
+              <!-- 70% Outils & Environnements -->
+              <div class="gauge-row-item">
+                <div class="circular-gauge-box">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-fill-bar" stroke-dasharray="70, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span class="gauge-pct-text">70%</span>
+                </div>
+                <div class="gauge-detail">
+                  <h4>Outils &amp; Environnements</h4>
+                  <p>Git, GitHub, GitLab, VS Code, Docker</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <a class="btn-cv-pill" href="projets.html">
-            Voir tous les projets ➔
-          </a>
-        </div>
 
-        <!-- Grille 3x2 des 6 Projets fidèles à la maquette -->
-        <div class="projects-3x2-grid">
-          <!-- 1. Projet Bibliothèque -->
-          <a class="project-mockup-card" href="projet-biblio.html" id="card-proj-biblio">
-            <div class="project-image-box">
-              <img src="assets/mockup-biblio-shelves.jpg" alt="Projet Bibliothèque universitaire" loading="lazy">
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Projet Bibliothèque</h3>
-              <p class="project-desc">Système de gestion de prêt de livres (base de données)</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge">Python</span>
-                  <span class="tag-badge">MySQL</span>
+          <!-- Colonne Droite : Compétences Personnelles -->
+          <div>
+            <div class="soft-skills-card">
+              <h3 class="skills-block-title" style="margin-bottom: 24px;">Compétences personnelles</h3>
+              <div class="soft-skills-list">
+                <div class="soft-skill-row">
+                  <div class="soft-skill-icon-circle">👥</div>
+                  <div class="soft-skill-text">
+                    <h4>Esprit d'équipe</h4>
+                    <p>Facilité à travailler en groupe</p>
+                  </div>
                 </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
+                <div class="soft-skill-row">
+                  <div class="soft-skill-icon-circle">🏆</div>
+                  <div class="soft-skill-text">
+                    <h4>Leadership</h4>
+                    <p>Prise d'initiative et responsabilité</p>
+                  </div>
+                </div>
+                <div class="soft-skill-row">
+                  <div class="soft-skill-icon-circle">💬</div>
+                  <div class="soft-skill-text">
+                    <h4>Communication</h4>
+                    <p>Écoute active et expression claire</p>
+                  </div>
+                </div>
+                <div class="soft-skill-row">
+                  <div class="soft-skill-icon-circle">🔄</div>
+                  <div class="soft-skill-text">
+                    <h4>Adaptabilité</h4>
+                    <p>S'adapter rapidement aux changements</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </a>
-
-          <!-- 2. Projet Java -->
-          <a class="project-mockup-card" href="projet-java.html" id="card-proj-java">
-            <div class="project-image-box">
-              <img src="assets/mockup-code-java.jpg" alt="Projet Java planification" loading="lazy">
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Projet Java</h3>
-              <p class="project-desc">Application de planification des cours et gestion des ressources universitaires</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge purple">Java</span>
-                </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
-              </div>
-            </div>
-          </a>
-
-          <!-- 3. Stage - Point de transaction -->
-          <a class="project-mockup-card" href="projet-locaux.html" id="card-proj-locaux">
-            <div class="project-image-box">
-              <img src="assets/mockup-locaux.jpg" alt="Stage point de transaction" loading="lazy">
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Stage - Point de transaction</h3>
-              <p class="project-desc">Gestion d'un point de transaction</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge">Gestion</span>
-                  <span class="tag-badge">Transaction</span>
-                </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
-              </div>
-            </div>
-          </a>
-
-          <!-- 4. Travail collaboratif en équipe -->
-          <a class="project-mockup-card" href="projet-cours.html" id="card-proj-collab">
-            <div class="project-image-box">
-              <img src="assets/team-collab.jpg" alt="Travail collaboratif en équipe" loading="lazy">
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Travail collaboratif en équipe</h3>
-              <p class="project-desc">Participation à des projets académiques en groupe</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge purple">Esprit d'équipe</span>
-                  <span class="tag-badge purple">Organisation</span>
-                </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
-              </div>
-            </div>
-          </a>
-
-          <!-- 5. Développeuse Full-stack -->
-          <a class="project-mockup-card" href="projet-vitrine.html" id="card-proj-fullstack">
-            <div class="project-image-box">
-              <img src="assets/mockup-dev-web.jpg" alt="Développeuse Full-stack web" loading="lazy">
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Développeuse Full-stack</h3>
-              <p class="project-desc">Site web avec HTML, CSS et JavaScript</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge">HTML</span>
-                  <span class="tag-badge">CSS</span>
-                  <span class="tag-badge">Javascript</span>
-                </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
-              </div>
-            </div>
-          </a>
-
-          <!-- 6. Création graphique -->
-          <a class="project-mockup-card" href="projet-affiches.html" id="card-proj-graphique">
-            <div class="project-image-box">
-              <img src="assets/illustration-formation.jpg" alt="Création graphique et affiches" loading="lazy">
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Création graphique</h3>
-              <p class="project-desc">Affiches publicitaires (projets collaboratifs)</p>
-              <div class="project-footer-row">
-                <div class="project-tags-wrap">
-                  <span class="tag-badge purple">Design</span>
-                  <span class="tag-badge purple">Créativité</span>
-                </div>
-                <div class="btn-arrow-circle" aria-hidden="true">→</div>
-              </div>
-            </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= 5. SECTION PARCOURS ACADÉMIQUE & EXPÉRIENCE ================= -->
-    <section class="parcours-sec-v2" id="parcours">
+    <!-- ================= 4. PAGE PARCOURS (APERÇU ÉCRAN 4) ================= -->
+    <section class="parcours-v3-sec" id="parcours">
       <div class="wrap">
-        <!-- En-tête : Avatar Portrait + Titre & Subtitle + Cursive Quote à droite -->
-        <div class="parcours-header-wrap">
-          <div class="parcours-header-left">
-            <div class="parcours-avatar-circle">
-              <img src="assets/avatar-hero.jpg" alt="Portrait Kaire Mame Faty" width="90" height="90" loading="lazy">
+        <div class="parcours-header-row">
+          <div>
+            <div class="eyebrow-tag">
+              <span>🎓</span> Mon parcours
             </div>
-            <div>
-              <div class="eyebrow-tag">MON PARCOURS</div>
-              <h2 class="sec-heading" style="margin-bottom: 4px;">Parcours académique &amp; Expérience</h2>
-              <p class="sec-sub" style="margin-bottom: 0;">
-                Une formation solide, des projets concrets et une volonté constante d'apprendre et d'évoluer.
-              </p>
-            </div>
+            <h2 class="sec-title-main">
+              Une évolution guidée<br>par la passion et la persévérance
+            </h2>
+            <p class="sec-desc-main" style="margin-bottom: 0;">
+              Chaque étape de mon parcours m'a permis d'acquérir de nouvelles compétences et de renforcer ma détermination.
+            </p>
           </div>
 
-          <div class="parcours-quote-top" aria-hidden="true">
-            Apprendre<br>Créer<br>Réussir ♡
+          <!-- Illustration végétale cyan/bleu -->
+          <div class="parcours-botanical-decor" aria-hidden="true">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 80 Q 50 50 80 20"/>
+              <path d="M50 50 Q 70 35 75 25 Q 65 30 50 50" fill="rgba(37, 99, 235, 0.15)"/>
+              <path d="M35 65 Q 45 45 60 45 Q 50 55 35 65" fill="rgba(37, 99, 235, 0.15)"/>
+              <path d="M65 35 Q 85 30 85 15 Q 70 25 65 35" fill="rgba(37, 99, 235, 0.15)"/>
+            </svg>
           </div>
         </div>
 
-        <!-- Ligne 1 : Parcours académique (Gauche) vs Expérience professionnelle (Droite) -->
-        <div class="parcours-row-2col">
-          <!-- Carte 1 : Parcours académique -->
-          <div class="parcours-box-card">
-            <div class="parcours-box-head">
-              <div class="tech-icon-circle">🎓</div>
-              <h3 class="tech-card-title">Parcours académique</h3>
+        <div class="parcours-2col-layout">
+          <!-- Parcours Académique -->
+          <div class="parcours-white-card">
+            <div class="parcours-card-title">
+              <span>🎓</span> Parcours académique
             </div>
-
-            <ol class="timeline-list-v2">
-              <li class="timeline-node-v2">
-                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
-                  <span class="milestone-year">2025 — 2026</span>
-                  <span class="en-cours-pill">En cours</span>
-                </div>
-                <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 3px;">
-                  Licence 3 — Génie Logiciel
-                </h4>
-                <p style="font-size: 0.86rem; color: var(--text-muted);">UIDT - UFR SET - Département Informatique</p>
+            <ol class="timeline-track-v3">
+              <li class="timeline-step-v3">
+                <div class="timeline-step-year">2025 — 2026</div>
+                <h4 class="timeline-step-title">Licence 3 — Génie Logiciel</h4>
+                <p class="timeline-step-desc">UIDT - UFR SET - Département Informatique</p>
               </li>
-
-              <li class="timeline-node-v2">
-                <div style="margin-bottom: 4px;">
-                  <span class="milestone-year">2024 — 2025</span>
-                </div>
-                <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 3px;">
-                  Licence 2 — Informatique
-                </h4>
-                <p style="font-size: 0.86rem; color: var(--text-muted);">UIDT - UFR SET - Département Informatique</p>
+              <li class="timeline-step-v3">
+                <div class="timeline-step-year">2024 — 2025</div>
+                <h4 class="timeline-step-title">Licence 2 — Informatique</h4>
+                <p class="timeline-step-desc">UIDT - UFR SET - Département Informatique</p>
               </li>
-
-              <li class="timeline-node-v2">
-                <div style="margin-bottom: 4px;">
-                  <span class="milestone-year">2023 — 2024</span>
-                </div>
-                <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 3px;">
-                  Licence 1 — Informatique
-                </h4>
-                <p style="font-size: 0.86rem; color: var(--text-muted);">UIDT - UFR SET - Département Informatique</p>
+              <li class="timeline-step-v3">
+                <div class="timeline-step-year">2023 — 2024</div>
+                <h4 class="timeline-step-title">Licence 1 — Informatique</h4>
+                <p class="timeline-step-desc">UIDT - UFR SET - Département Informatique</p>
               </li>
-
-              <li class="timeline-node-v2">
-                <div style="margin-bottom: 4px;">
-                  <span class="milestone-year">2022 — 2023</span>
-                </div>
-                <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin-bottom: 3px;">
-                  Baccalauréat scientifique — Série S2
-                </h4>
-                <p style="font-size: 0.86rem; color: var(--text-muted);">Lycée de Mbacké</p>
+              <li class="timeline-step-v3">
+                <div class="timeline-step-year">2022 — 2023</div>
+                <h4 class="timeline-step-title">Baccalauréat Scientifique — Série S2</h4>
+                <p class="timeline-step-desc">Lycée de Mbacké</p>
               </li>
             </ol>
           </div>
 
-          <!-- Carte 2 : Expérience professionnelle / Projets -->
-          <div class="parcours-box-card">
-            <div class="parcours-box-head">
-              <div class="tech-icon-circle cyan">💼</div>
-              <h3 class="tech-card-title">Expérience professionnelle / Projets</h3>
+          <!-- Expériences / Projets -->
+          <div class="parcours-white-card">
+            <div class="parcours-card-title">
+              <span>💼</span> Expériences / Projets
             </div>
-
-            <div class="exp-cards-column">
-              <!-- Expérience 1 : Gestion des locaux -->
-              <div class="exp-single-item">
-                <div class="exp-item-header">
-                  <div class="exp-title-group">
-                    <div class="exp-ico-badge">🐍</div>
-                    <h4>Chef de projet — Gestion des locaux</h4>
-                  </div>
-                  <span class="exp-year-badge">2024</span>
+            <div class="exp-v3-list">
+              <div class="exp-v3-item">
+                <div class="exp-v3-icon">🏢</div>
+                <div class="exp-v3-info">
+                  <h4>Chef de projet — Gestion des locaux</h4>
+                  <p>Conception d'une application de gestion des locaux avec Flask et MySQL.</p>
                 </div>
-                <ul class="exp-bullets-list">
-                  <li>Conception et développement d'une application de gestion des locaux avec Flask (Python) et MySQL.</li>
-                  <li>Tests effectués sur environnement Google Colab.</li>
-                </ul>
               </div>
-
-              <!-- Expérience 2 : Système de livraisons -->
-              <div class="exp-single-item">
-                <div class="exp-item-header">
-                  <div class="exp-title-group">
-                    <div class="exp-ico-badge" style="color: #C084FC;">🐘</div>
-                    <h4>Chef de projet — Système de livraisons</h4>
-                  </div>
-                  <span class="exp-year-badge">2024</span>
+              <div class="exp-v3-item">
+                <div class="exp-v3-icon">🚚</div>
+                <div class="exp-v3-info">
+                  <h4>Chef de projet — Système de livraisons</h4>
+                  <p>Pilotage d'un système de suivi des livraisons (PHP).</p>
                 </div>
-                <ul class="exp-bullets-list">
-                  <li>Pilotage du projet de conception d'un système de suivi des livraisons locales.</li>
-                  <li>Développement de la solution avec PHP.</li>
-                </ul>
               </div>
-
-              <!-- Expérience 3 : Point de transaction -->
-              <div class="exp-single-item">
-                <div class="exp-item-header">
-                  <div class="exp-title-group">
-                    <div class="exp-ico-badge" style="color: #38BDF8;">🏛️</div>
-                    <h4>Stage — Point de transaction</h4>
-                  </div>
-                  <span class="exp-year-badge">2024</span>
+              <div class="exp-v3-item">
+                <div class="exp-v3-icon">🏛️</div>
+                <div class="exp-v3-info">
+                  <h4>Stage — Point de transaction</h4>
+                  <p>Gestion d'un point de transaction.</p>
                 </div>
-                <ul class="exp-bullets-list">
-                  <li>Stage pratique portant sur la gestion d'un point de transaction.</li>
-                </ul>
               </div>
-
-              <!-- Expérience 4 : Travail collaboratif -->
-              <div class="exp-single-item">
-                <div class="exp-item-header">
-                  <div class="exp-title-group">
-                    <div class="exp-ico-badge">👥</div>
-                    <h4>Travail collaboratif en équipe</h4>
-                  </div>
-                  <span class="exp-year-badge">2023</span>
+              <div class="exp-v3-item">
+                <div class="exp-v3-icon">👥</div>
+                <div class="exp-v3-info">
+                  <h4>Travail collaboratif en équipe</h4>
+                  <p>Projets académiques en groupe.</p>
                 </div>
-                <ul class="exp-bullets-list">
-                  <li>Participation à des projets académiques en groupe.</li>
-                  <li>Développement de l'esprit d'équipe et du sens de l'organisation.</li>
-                </ul>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Ligne 2 : Projets réalisés (Gauche) vs Mon parcours en un coup d'œil (Droite) -->
-        <div class="parcours-row-2col">
-          <!-- Carte 3 : Projets réalisés (2x2) -->
-          <div class="parcours-box-card">
-            <div class="parcours-box-head">
-              <div class="tech-icon-circle">📁</div>
-              <h3 class="tech-card-title">Projets réalisés</h3>
-            </div>
+        <!-- 3 Cartes Inférieures : Langues, Permis, Centres d'intérêt -->
+        <div class="parcours-bottom-3grid">
+          <div class="parcours-bottom-card">
+            <h4 class="parcours-subcard-title">🌐 Langues</h4>
+            <ul class="lang-list">
+              <li>🇫🇷 Français : Courant</li>
+              <li>🇬🇧 Anglais : Intermédiaire</li>
+              <li>🇸🇳 Wolof : Langue maternelle</li>
+              <li>🇸🇦 Arabe : Intermédiaire</li>
+            </ul>
+          </div>
 
-            <div class="mini-projects-grid">
-              <!-- Mini projet 1 -->
-              <a class="mini-project-box" href="projet-biblio.html">
-                <div class="mini-proj-head">
-                  <span style="font-size: 1.2rem;">📚</span>
-                  <div class="mini-proj-title">Projet Bibliothèque</div>
-                </div>
-                <p class="mini-proj-desc">Système de gestion de prêt de livres (base de données).</p>
-                <div class="mini-proj-tags">
-                  <span class="tag-badge">Python</span>
-                  <span class="tag-badge">MySQL</span>
-                  <span class="exp-year-badge" style="font-size: 0.72rem;">2024</span>
-                </div>
-              </a>
-
-              <!-- Mini projet 2 -->
-              <a class="mini-project-box" href="projet-java.html">
-                <div class="mini-proj-head">
-                  <span style="font-size: 1.2rem;">☕</span>
-                  <div class="mini-proj-title">Projet Java</div>
-                </div>
-                <p class="mini-proj-desc">Application de planification des cours et gestion des ressources universitaires.</p>
-                <div class="mini-proj-tags">
-                  <span class="tag-badge purple">Java</span>
-                  <span class="exp-year-badge" style="font-size: 0.72rem;">2024</span>
-                </div>
-              </a>
-
-              <!-- Mini projet 3 -->
-              <a class="mini-project-box" href="projet-vitrine.html">
-                <div class="mini-proj-head">
-                  <span style="font-size: 1.2rem;">💻</span>
-                  <div class="mini-proj-title">Développement Full-Stack</div>
-                </div>
-                <p class="mini-proj-desc">Site web avec HTML, CSS et JavaScript.</p>
-                <div class="mini-proj-tags">
-                  <span class="tag-badge">HTML</span>
-                  <span class="tag-badge">CSS</span>
-                  <span class="tag-badge">JavaScript</span>
-                  <span class="exp-year-badge" style="font-size: 0.72rem;">2024</span>
-                </div>
-              </a>
-
-              <!-- Mini projet 4 -->
-              <a class="mini-project-box" href="projet-affiches.html">
-                <div class="mini-proj-head">
-                  <span style="font-size: 1.2rem;">🎨</span>
-                  <div class="mini-proj-title">Création graphique</div>
-                </div>
-                <p class="mini-proj-desc">Affiches publicitaires (projets collaboratifs).</p>
-                <div class="mini-proj-tags">
-                  <span class="tag-badge purple">Design</span>
-                  <span class="tag-badge purple">Créativité</span>
-                  <span class="exp-year-badge" style="font-size: 0.72rem;">2023</span>
-                </div>
-              </a>
+          <div class="parcours-bottom-card">
+            <h4 class="parcours-subcard-title">🚗 Permis</h4>
+            <div class="permis-row">
+              <span class="permis-ico">🚘</span>
+              <span>Permis B — Véhicule léger</span>
             </div>
           </div>
 
-          <!-- Carte 4 : Mon parcours en un coup d'œil -->
-          <div class="parcours-box-card coup-oeil-card">
-            <div class="parcours-box-head">
-              <div class="tech-icon-circle cyan">👁️</div>
-              <h3 class="tech-card-title">Mon parcours en un coup d'œil</h3>
-            </div>
-
-            <ul class="coup-oeil-list">
-              <li class="coup-oeil-item">
-                <div class="coup-oeil-check">✓</div>
-                <span>4 années d'études universitaires</span>
-              </li>
-              <li class="coup-oeil-item">
-                <div class="coup-oeil-check">✓</div>
-                <span>+4 projets académiques</span>
-              </li>
-              <li class="coup-oeil-item">
-                <div class="coup-oeil-check">✓</div>
-                <span>1 stage en entreprise</span>
-              </li>
-              <li class="coup-oeil-item">
-                <div class="coup-oeil-check">✓</div>
-                <span>Une expérience en gestion de projet</span>
-              </li>
-              <li class="coup-oeil-item">
-                <div class="coup-oeil-check">✓</div>
-                <span>Une forte capacité d'apprentissage</span>
-              </li>
-              <li class="coup-oeil-item">
-                <div class="coup-oeil-check">✓</div>
-                <span>Une vision claire : devenir une développeuse Fullstack et contribuer à des solutions innovantes.</span>
-              </li>
-            </ul>
-
-            <div class="coup-oeil-footer">
-              <div class="coup-oeil-hand">
-                Toujours prête à apprendre<br>et à relever de nouveaux défis ! ♡
-              </div>
-              <div class="botanical-leaf-decor" aria-hidden="true">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z" stroke="none" fill="rgba(168, 85, 247, 0.12)"/>
-                  <path d="M7 17L17 7"/>
-                  <path d="M17 7C14 7 10 9 9 12"/>
-                  <path d="M17 7C17 10 15 14 12 15"/>
-                </svg>
-              </div>
+          <div class="parcours-bottom-card">
+            <h4 class="parcours-subcard-title">💡 Centres d'intérêt</h4>
+            <div class="interests-chips-wrap">
+              <span class="interest-chip">🤖 IA</span>
+              <span class="interest-chip">💻 Développement logiciel</span>
+              <span class="interest-chip">📊 Data</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= 6. SECTION INFORMATIONS COMPLÉMENTAIRES ================= -->
-    <section class="infos-sec light-section" id="infos">
+    <!-- ================= 5. PAGE PROJETS (APERÇU ÉCRAN 5) ================= -->
+    <section class="projects-v3-sec" id="projets" style="background: var(--white);">
       <div class="wrap">
-        <div class="eyebrow-tag">INFORMATIONS COMPLÉMENTAIRES</div>
-        <h2 class="sec-heading">Langues, Qualités et Centres d'intérêt</h2>
-
-        <!-- Grille 2x2 des 4 blocs -->
-        <div class="infos-2x2-grid">
-          <!-- 1. Langues -->
-          <div class="info-glass-card">
-            <div class="info-card-header">
-              <div class="info-header-icon">★</div>
-              <h3 class="info-card-title">Langues</h3>
-            </div>
-            <ul class="info-list">
-              <li class="info-item">🇫🇷 Français : Courant</li>
-              <li class="info-item">🇬🇧 Anglais : Intermédiaire</li>
-              <li class="info-item">🇸🇳 Wolof : Langue maternelle</li>
-              <li class="info-item">🇸🇦 Arabe : Intermédiaire</li>
-            </ul>
-          </div>
-
-          <!-- 2. Qualités -->
-          <div class="info-glass-card">
-            <div class="info-card-header">
-              <div class="info-header-icon cyan">✓</div>
-              <h3 class="info-card-title">Qualités</h3>
-            </div>
-            <ul class="info-list">
-              <li class="info-item"><span class="bullet-check green">✓</span> Rigoureuse</li>
-              <li class="info-item"><span class="bullet-check green">✓</span> Créative</li>
-              <li class="info-item"><span class="bullet-check green">✓</span> Investie dans les projets</li>
-              <li class="info-item"><span class="bullet-check green">✓</span> Sens du détail</li>
-            </ul>
-          </div>
-
-          <!-- 3. Atouts -->
-          <div class="info-glass-card">
-            <div class="info-card-header">
-              <div class="info-header-icon">★</div>
-              <h3 class="info-card-title">Atouts</h3>
-            </div>
-            <ul class="info-list">
-              <li class="info-item"><span class="bullet-check">✓</span> Esprit d'équipe</li>
-              <li class="info-item"><span class="bullet-check">✓</span> Sens de l'organisation</li>
-              <li class="info-item"><span class="bullet-check">✓</span> Expérience en gestion de projet</li>
-              <li class="info-item"><span class="bullet-check">✓</span> Autonomie</li>
-            </ul>
-          </div>
-
-          <!-- 4. Centres d'intérêt -->
-          <div class="info-glass-card">
-            <div class="info-card-header">
-              <div class="info-header-icon cyan">♥</div>
-              <h3 class="info-card-title">Centres d'intérêt</h3>
-            </div>
-            <ul class="info-list">
-              <li class="info-item"><span class="bullet-heart">♡</span> Intelligence artificielle</li>
-              <li class="info-item"><span class="bullet-heart">♡</span> Développement logiciel</li>
-              <li class="info-item"><span class="bullet-heart">♡</span> Data</li>
-              <li class="info-item"><span class="bullet-heart">♡</span> Lecture</li>
-              <li class="info-item"><span class="bullet-heart">♡</span> Voyage</li>
-            </ul>
-          </div>
+        <div style="margin-bottom: 36px;">
+          <h2 class="sec-title-main" style="margin-bottom: 6px;">Mes projets &amp; réalisations</h2>
+          <p class="sec-desc-main" style="margin-bottom: 0;">Des idées concrètes, des solutions digitales</p>
         </div>
 
-        <div class="info-footer-signature">
-          <div class="botanical-leaf-decor" aria-hidden="true">
-            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z" stroke="none" fill="rgba(168, 85, 247, 0.12)"/>
-              <path d="M7 17L17 7"/>
-              <path d="M17 7C14 7 10 9 9 12"/>
-              <path d="M17 7C17 10 15 14 12 15"/>
-            </svg>
-          </div>
-          <div class="handwritten-quote">
-            Toujours prête à apprendre et à relever de nouveaux défis ! ♡
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 7. SECTION CONTACT ("ME CONTACTER") ================= -->
-    <section class="contact-sec" id="contact">
-      <div class="wrap">
-        <div class="eyebrow-tag">CONTACT</div>
-        <h2 class="sec-heading">Me contacter</h2>
-        <p class="sec-sub">Une question, une collaboration ou un projet ? N'hésitez pas à me contacter !</p>
-
-        <div class="contact-3col-grid">
-          <!-- Colonne Gauche : Pastilles Coordonnées -->
-          <div class="contact-left-col">
-            <div class="contact-pills-list">
-              <a class="contact-pill-item" href="tel:+221784081210">
-                <div class="contact-icon-bubble">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-                  </svg>
-                </div>
-                <span class="contact-item-value">78 408 12 10</span>
-              </a>
-
-              <a class="contact-pill-item" href="mailto:mfaty.kaire@univ-thies.sn">
-                <div class="contact-icon-bubble">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                  </svg>
-                </div>
-                <span class="contact-item-value">mfaty.kaire@univ-thies.sn</span>
-              </a>
-
-              <a class="contact-pill-item" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">
-                <div class="contact-icon-bubble">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                  </svg>
-                </div>
-                <span class="contact-item-value">github.com/kairetyma440-wq</span>
-              </a>
-
-              <a class="contact-pill-item" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">
-                <div class="contact-icon-bubble">
-                  <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                  </svg>
-                </div>
-                <span class="contact-item-value">linkedin.com/in/mamefatykaire</span>
-              </a>
-
-              <div class="contact-pill-item">
-                <div class="contact-icon-bubble">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                  </svg>
-                </div>
-                <span class="contact-item-value">Touba, Sénégal</span>
+        <div class="projects-6grid">
+          <!-- 1. Gestion des locaux -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/mockup-locaux.jpg" alt="Gestion des locaux" loading="lazy">
+            </div>
+            <div class="proj-v3-body">
+              <h3 class="proj-v3-title">Gestion des locaux</h3>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">Flask</span>
+                <span class="proj-tag-badge">Python</span>
+                <span class="proj-tag-badge">MySQL</span>
               </div>
-            </div>
-
-            <div class="contact-thanks-doodle">
-              Merci de votre visite ! ♡
-            </div>
-          </div>
-
-          <!-- Colonne Centre : Formulaire Moderne -->
-          <div class="contact-form-col">
-            <div class="contact-form-glass-card">
-              <form id="contact-form" novalidate>
-                <div class="form-group-unit">
-                  <label for="f-name">Nom</label>
-                  <input class="form-input-field" id="f-name" type="text" autocomplete="name" placeholder="Votre nom" required>
-                </div>
-
-                <div class="form-group-unit">
-                  <label for="f-mail">Email</label>
-                  <input class="form-input-field" id="f-mail" type="email" autocomplete="email" placeholder="Votre email" required>
-                </div>
-
-                <div class="form-group-unit">
-                  <label for="f-msg">Message</label>
-                  <textarea class="form-input-field" id="f-msg" placeholder="Votre message..." required></textarea>
-                </div>
-
-                <button class="btn-send-message" type="submit" id="btn-submit-contact">
-                  Envoyer ✈
-                </button>
-              </form>
+              <p class="proj-v3-desc">Application de gestion des locaux avec Flask et MySQL.</p>
+              <a class="btn-proj-view" href="projet-locaux.html">
+                Voir le projet ➔
+              </a>
             </div>
           </div>
 
-          <!-- Colonne Droite : Photo Ambiance Bureau & Good Vibes Mug -->
-          <div class="contact-photo-col">
-            <div class="contact-desk-card">
-              <img src="assets/about-desk.jpg" alt="Espace de travail et code" width="420" height="340" loading="lazy">
-              <div class="contact-desk-badge">
-                <div class="mug-icon">☕</div>
-                <div class="mug-text">Good Vibes<br>Code<br>Success</div>
+          <!-- 2. Système de livraisons -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/mockup-livraisons-van.jpg" alt="Système de livraisons" loading="lazy">
+            </div>
+            <div class="proj-v3-body">
+              <h3 class="proj-v3-title">Système de livraisons</h3>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">PHP</span>
+                <span class="proj-tag-badge">Web</span>
               </div>
+              <p class="proj-v3-desc">Suivi des livraisons locales.</p>
+              <a class="btn-proj-view" href="projet-livraisons.html">
+                Voir le projet ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Bibliothèque -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/mockup-biblio-shelves.jpg" alt="Bibliothèque universitaire" loading="lazy">
+            </div>
+            <div class="proj-v3-body">
+              <h3 class="proj-v3-title">Bibliothèque</h3>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">Java</span>
+                <span class="proj-tag-badge">MySQL</span>
+              </div>
+              <p class="proj-v3-desc">Gestion de prêt de livres (base de données).</p>
+              <a class="btn-proj-view" href="projet-biblio.html">
+                Voir le projet ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Site web -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/mockup-dev-web.jpg" alt="Site web Full-stack" loading="lazy">
+            </div>
+            <div class="proj-v3-body">
+              <h3 class="proj-v3-title">Site web</h3>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">HTML</span>
+                <span class="proj-tag-badge">CSS</span>
+                <span class="proj-tag-badge">JavaScript</span>
+              </div>
+              <p class="proj-v3-desc">Site web moderne et responsive.</p>
+              <a class="btn-proj-view" href="projet-vitrine.html">
+                Voir le projet ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Application Java -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/mockup-code-java.jpg" alt="Application Java Planification" loading="lazy">
+            </div>
+            <div class="proj-v3-body">
+              <h3 class="proj-v3-title">Application Java</h3>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">Java</span>
+                <span class="proj-tag-badge">Planning</span>
+              </div>
+              <p class="proj-v3-desc">Planification des cours et gestion des ressources.</p>
+              <a class="btn-proj-view" href="projet-java.html">
+                Voir le projet ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Design graphique -->
+          <div class="proj-v3-card">
+            <div class="proj-v3-image-box">
+              <img src="assets/illustration-formation.jpg" alt="Design graphique publicitaire" loading="lazy">
+            </div>
+            <div class="proj-v3-body">
+              <h3 class="proj-v3-title">Design graphique</h3>
+              <div class="proj-v3-tags">
+                <span class="proj-tag-badge">Canva</span>
+                <span class="proj-tag-badge">Photoshop</span>
+              </div>
+              <p class="proj-v3-desc">Affiches publicitaires et visuels pour projets.</p>
+              <a class="btn-proj-view" href="projet-affiches.html">
+                Voir le projet ➔
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= 8. FOOTER / BANNIÈRE CALL-TO-ACTION (PANEL 8) ================= -->
-    <section class="footer-cta-sec">
+    <!-- ================= 6. PAGE CONTACT (APERÇU ÉCRAN 6) ================= -->
+    <section class="contact-v3-sec" id="contact">
       <div class="wrap">
-        <div class="footer-banner-card">
-          <img class="footer-banner-bg-img" src="assets/footer-workspace.jpg" alt="Fond d'écran développeur" loading="lazy">
-          <div class="footer-banner-overlay" aria-hidden="true"></div>
-
-          <div class="footer-banner-content" style="max-width: 900px;">
-            <!-- Haut du footer : Logo + Présentation + Réseaux sociaux -->
-            <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 8px;">
-              <div class="brand-badge" style="width: 38px; height: 38px; font-size: 1rem;" aria-hidden="true">MK</div>
-              <h2 style="font-size: 1.6rem; font-weight: 800; color: #FFFFFF;">
-                Kaire <span class="purple-gradient-text">Mame Faty</span>
+        <div class="contact-2col-layout">
+          <!-- Colonne Gauche : Coordonnées -->
+          <div class="contact-info-col">
+            <div>
+              <div class="eyebrow-tag">
+                <span>💬</span> Restons en contact
+              </div>
+              <h2 class="sec-title-main" style="margin-bottom: 8px;">
+                Une question, un projet,<br>une opportunité ?
               </h2>
-            </div>
-            
-            <div class="footer-banner-tag" style="margin-bottom: 10px;">DÉVELOPPEUSE FULLSTACK</div>
-            <p class="footer-banner-sub" style="margin-bottom: 20px;">
-              Ensemble, construisons des solutions numériques qui font la différence.
-            </p>
-
-            <!-- 4 Badges de spécialités -->
-            <div class="footer-services-row">
-              <div class="footer-service-pill">💬 Développement web</div>
-              <div class="footer-service-pill">📱 Applications</div>
-              <div class="footer-service-pill">🎨 Design</div>
-              <div class="footer-service-pill">💡 Innovation</div>
+              <p class="sec-desc-main" style="margin-bottom: 24px;">
+                N'hésitez pas à me contacter, je serai ravie d'échanger avec vous !
+              </p>
             </div>
 
-            <!-- Réseaux sociaux -->
-            <div class="footer-social-strip" style="margin: 20px 0;">
-              <a class="social-circle-link" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                </svg>
+            <div class="contact-items-list">
+              <a class="contact-link-row" href="tel:+221784081210">
+                <div class="contact-bubble-icon">📞</div>
+                <span>+221 78 408 12 10</span>
               </a>
-              <a class="social-circle-link" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
+              <a class="contact-link-row" href="mailto:mfaty.kaire@univ-thies.sn">
+                <div class="contact-bubble-icon">✉️</div>
+                <span>mfaty.kaire@univ-thies.sn</span>
               </a>
-              <a class="social-circle-link" href="https://x.com" target="_blank" rel="noopener" aria-label="X / Twitter">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
+              <a class="contact-link-row" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">
+                <div class="contact-bubble-icon">🐙</div>
+                <span>github.com/kairetyma440-wq</span>
               </a>
+              <a class="contact-link-row" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">
+                <div class="contact-bubble-icon">💼</div>
+                <span>linkedin.com/in/mamefatykaire</span>
+              </a>
+              <div class="contact-link-row">
+                <div class="contact-bubble-icon">📍</div>
+                <span>Touba, Sénégal</span>
+              </div>
             </div>
 
-            <!-- Liens de navigation du footer -->
-            <nav style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; font-size: 0.92rem; color: var(--text-sub);" aria-label="Liens rapides footer">
-              <a href="#accueil">Accueil</a>
-              <a href="#apropos">À propos</a>
-              <a href="#competences">Compétences</a>
-              <a href="#projets">Projets</a>
-              <a href="#parcours">Parcours</a>
-              <a href="#contact">Contact</a>
-            </nav>
-
-            <div class="footer-bottom-bar">
-              <p>© 2025 Kaire Mame Faty. Tous droits réservés.</p>
-              <div class="footer-merci-note">Le meilleur reste à venir... ♡</div>
+            <div class="contact-thanks-note">
+              Merci pour votre visite ! ♡
             </div>
+
+            <div class="contact-photo-desk">
+              <img src="assets/footer-workspace.jpg" alt="Espace de travail et code" width="420" height="200" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Colonne Droite : Formulaire -->
+          <div class="contact-form-card">
+            <h3 class="contact-form-title">Envoyez-moi un message</h3>
+            <form id="contact-form" novalidate>
+              <div class="form-group-item">
+                <label for="contact-name">Nom complet *</label>
+                <input class="form-field-input" type="text" id="contact-name" name="name" placeholder="Votre nom" required>
+              </div>
+
+              <div class="form-group-item">
+                <label for="contact-email">Email *</label>
+                <input class="form-field-input" type="email" id="contact-email" name="email" placeholder="Votre email" required>
+              </div>
+
+              <div class="form-group-item">
+                <label for="contact-subject">Objet *</label>
+                <select class="form-field-input" id="contact-subject" name="subject" required>
+                  <option value="" disabled selected>Sélectionner un sujet</option>
+                  <option value="opportunite">Opportunité d'emploi / Stage</option>
+                  <option value="projet">Collaboration sur un projet</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+              </div>
+
+              <div class="form-group-item">
+                <label for="contact-message">Message *</label>
+                <textarea class="form-field-input" id="contact-message" name="message" placeholder="Votre message..." required></textarea>
+              </div>
+
+              <button class="btn-submit-contact" type="submit" id="btn-submit">
+                Envoyer ✈
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Toast de notification -->
+  <!-- ================= PIED DE PAGE / FOOTER (BLEU NUIT #0B1733) ================= -->
+  <footer class="site-footer">
+    <div class="wrap foot-in">
+      <div class="foot-left">
+        <span class="foot-brand-mono">KM</span>
+        <span class="foot-copy">© 2025 Kaire Mame Faty. Tous droits réservés.</span>
+      </div>
+
+      <div class="foot-socials">
+        <a class="foot-social-link" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="https://x.com" target="_blank" rel="noopener" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a class="foot-social-link" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <!-- Bouton flottant Retour en haut -->
-  <button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut de page">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut de page" style="display: none;">
+    ↑
   </button>
 </body>
 </html>
