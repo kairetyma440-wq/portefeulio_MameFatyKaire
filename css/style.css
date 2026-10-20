@@ -3020,4 +3020,271 @@ textarea.form-input-field {
   }
 }
 
+/* ==========================================================================
+   DESIGN HYBRIDE : SECTIONS ET PAGES SUR FOND CLAIR
+   Alternance Bleu Nuit & Fond Clair (Profondeur, lisibilité & élégance)
+   ========================================================================== */
+
+/* 1. SECTIONS SUR FOND CLAIR DANS INDEX.HTML */
+.light-section {
+  background-color: #F8FAFC !important;
+  color: #0F172A;
+  position: relative;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.light-section .sec-heading {
+  color: #0F172A !important;
+}
+
+.light-section .sec-sub {
+  color: #475569 !important;
+}
+
+.light-section .eyebrow-tag {
+  background: rgba(124, 58, 237, 0.08) !important;
+  border-color: rgba(124, 58, 237, 0.22) !important;
+  color: #7C3AED !important;
+}
+
+/* Carte À Propos dans section claire */
+.light-section .about-card-container {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.06), 0 0 1px 1px rgba(15, 23, 42, 0.04) !important;
+}
+
+.light-section .about-bio-text {
+  color: #334155 !important;
+}
+
+.light-section .about-contact-row {
+  color: #334155 !important;
+}
+
+.light-section .about-contact-row:hover {
+  color: #7C3AED !important;
+}
+
+.light-section .about-contact-ico {
+  background: rgba(124, 58, 237, 0.08) !important;
+  border-color: rgba(124, 58, 237, 0.2) !important;
+  color: #7C3AED !important;
+}
+
+.light-section .about-quote-card {
+  background: #F8FAFC !important;
+  border: 1px solid rgba(124, 58, 237, 0.25) !important;
+  color: #475569 !important;
+}
+
+.light-section .handwritten-sig {
+  color: #0F172A !important;
+  text-shadow: none !important;
+}
+
+.light-section .about-stat-pill {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04) !important;
+}
+
+.light-section .about-stat-pill:hover {
+  background: #F1F5F9 !important;
+  border-color: #CBD5E1 !important;
+}
+
+.light-section .about-stat-pill .stat-label {
+  color: #1E293B !important;
+}
+
+.light-section .about-mockup-frame {
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 15px 30px -5px rgba(15, 23, 42, 0.1) !important;
+}
+
+/* Carte Projets dans section claire */
+.light-section .project-mockup-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04) !important;
+}
+
+.light-section .project-mockup-card:hover {
+  background: #FFFFFF !important;
+  border-color: #A855F7 !important;
+  box-shadow: 0 20px 35px -10px rgba(124, 58, 237, 0.18), 0 0 1px 1px rgba(124, 58, 237, 0.1) !important;
+  transform: translateY(-5px);
+}
+
+.light-section .project-title {
+  color: #0F172A !important;
+}
+
+.light-section .project-desc {
+  color: #475569 !important;
+}
+
+.light-section .tag-badge {
+  background: rgba(2, 132, 199, 0.08) !important;
+  border-color: rgba(2, 132, 199, 0.22) !important;
+  color: #0284C7 !important;
+}
+
+.light-section .tag-badge.purple {
+  background: rgba(124, 58, 237, 0.08) !important;
+  border-color: rgba(124, 58, 237, 0.22) !important;
+  color: #7C3AED !important;
+}
+
+.light-section .btn-arrow-circle {
+  background: #F1F5F9 !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #0F172A !important;
+}
+
+.light-section .project-mockup-card:hover .btn-arrow-circle {
+  background: var(--purple-gradient) !important;
+  border-color: transparent !important;
+  color: #FFFFFF !important;
+}
+
+/* Filtres de projets dans section claire */
+.light-section .footer-service-pill.filter {
+  background: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #334155 !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04) !important;
+}
+
+.light-section .footer-service-pill.filter:hover {
+  background: #F1F5F9 !important;
+  border-color: #94A3B8 !important;
+  color: #0F172A !important;
+}
+
+.light-section .footer-service-pill.filter[aria-pressed="true"],
+.light-section .footer-service-pill.filter.active {
+  background: var(--purple-gradient) !important;
+  border-color: transparent !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35) !important;
+}
+
+/* Informations complémentaires dans section claire */
+.light-section .info-glass-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04) !important;
+}
+
+.light-section .info-glass-card:hover {
+  background: #FFFFFF !important;
+  border-color: #38BDF8 !important;
+  box-shadow: 0 15px 30px -5px rgba(56, 189, 248, 0.16) !important;
+  transform: translateY(-3px);
+}
+
+.light-section .info-card-header {
+  border-bottom: 1px solid #F1F5F9 !important;
+}
+
+.light-section .info-card-title {
+  color: #0F172A !important;
+}
+
+.light-section .info-item {
+  color: #334155 !important;
+}
+
+.light-section .handwritten-quote {
+  color: #7C3AED !important;
+  text-shadow: none !important;
+}
+
+/* 2. PAGES ENTIÈRES DÉDIÉES SUR FOND CLAIR (.page-light) */
+body.page-light {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+
+body.page-light::before,
+body.page-light::after {
+  display: none !important;
+}
+
+body.page-light .site-head {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04) !important;
+}
+
+body.page-light .nav-link {
+  color: #334155 !important;
+}
+
+body.page-light .nav-link:hover,
+body.page-light .nav-link.active {
+  color: #7C3AED !important;
+}
+
+body.page-light .brand-badge {
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3) !important;
+}
+
+body.page-light .btn-cv-pill {
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25) !important;
+}
+
+body.page-light .btn-theme-toggle,
+body.page-light .btn-menu-mobile {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #334155 !important;
+}
+
+body.page-light .site-footer {
+  background: #0B132B !important;
+  color: #E2E8F0 !important;
+}
+
+/* Page de détail de projet en mode clair */
+body.page-light .back-link {
+  color: #7C3AED !important;
+}
+
+body.page-light .detail-img-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.08) !important;
+}
+
+body.page-light .side-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06) !important;
+}
+
+body.page-light .side-card h3 {
+  color: #0F172A !important;
+}
+
+body.page-light .side-row {
+  color: #334155 !important;
+  border-bottom-color: #F1F5F9 !important;
+}
+
+body.page-light .side-label {
+  color: #64748B !important;
+}
+
+body.page-light .side-val {
+  color: #0F172A !important;
+}
+
+body.page-light .feat-list li {
+  color: #334155 !important;
+}
+
 
