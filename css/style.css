@@ -6577,3 +6577,140 @@ textarea.form-field-input {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ==========================================================================
+   18. PIXEL-PERFECT HERO V2 (MAQUETTE MEDIA_1792597275017)
+   ========================================================================== */
+
+/* Navbar en mode Hero Sombre : Télécharger CV blanc avec texte bleu */
+.site-head.nav-hero-dark .btn-cv-pill {
+  background: #FFFFFF !important;
+  color: #1D68FF !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+  font-weight: 700 !important;
+}
+
+.site-head.nav-hero-dark .btn-cv-pill:hover {
+  background: #EBF3FF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(29, 104, 255, 0.35) !important;
+}
+
+/* Hero Section Fond Espace Profond avec Ondulations */
+.hero-v2-sec {
+  background: radial-gradient(circle at 75% 35%, rgba(56, 189, 248, 0.22) 0%, rgba(10, 24, 58, 0.96) 45%, #030712 100%) !important;
+  color: #FFFFFF;
+  padding: 55px 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-v2-glow {
+  position: absolute;
+  top: -140px;
+  right: -100px;
+  width: 680px;
+  height: 680px;
+  background: radial-gradient(circle, rgba(29, 104, 255, 0.32) 0%, transparent 68%);
+  pointer-events: none;
+}
+
+.hero-v2-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(14, 28, 62, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #BAE6FD;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 7px 18px;
+  border-radius: 9999px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 0 12px rgba(56, 189, 248, 0.2);
+}
+
+.badge-icon {
+  color: #38BDF8;
+}
+
+.highlight-cyan-inline {
+  color: #38BDF8;
+  font-weight: 600;
+}
+
+/* Composition Visuelle 3D Droite */
+.hero-v2-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-v2-composition {
+  position: relative;
+  max-width: 440px;
+  width: 100%;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(56, 189, 248, 0.3);
+  border: 2px solid rgba(56, 189, 248, 0.45);
+  background: #030712;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+}
+
+.hero-v2-composition:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.7), 0 0 50px rgba(56, 189, 248, 0.5);
+  border-color: #38BDF8;
+}
+
+.hero-v2-composition img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Barre de Stats V2 en bas du Hero */
+.hero-v2-stats-wrap {
+  margin-top: 30px;
+}
+
+.hero-v2-stats {
+  background: rgba(10, 20, 50, 0.82) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  border-radius: 22px !important;
+  padding: 18px 48px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 20px rgba(29, 104, 255, 0.15);
+}
+
+.stat-v2-icon {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background: #1D68FF !important;
+  color: #FFFFFF !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 14px rgba(29, 104, 255, 0.45);
+  border: none !important;
+}
+
+.stat-v2-number {
+  font-size: 1.65rem !important;
+  font-weight: 900 !important;
+  color: #FFFFFF !important;
+  line-height: 1.1;
+}
+
+.stat-v2-label {
+  font-size: 0.84rem !important;
+  color: #94A3B8 !important;
+  font-weight: 600 !important;
+}

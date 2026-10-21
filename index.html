@@ -30,64 +30,8 @@
 </head>
 <body>
 
-  <!-- ================= NAVBAR FIDÈLE AUX 9 ÉCRANS ================= -->
-  <header class="site-head" id="site-header">
-    <div class="wrap head-in">
-      <a class="brand" href="index.html" aria-label="Mame Faty Kaire, accueil">
-        <span class="brand-monogram">KM</span>
-        <div class="brand-info">
-          <span class="brand-name">Mame Faty Kaire</span>
-          <span class="brand-role">Développeuse Full-Stack</span>
-        </div>
-      </a>
-
-      <nav class="nav-menu" id="nav" aria-label="Navigation principale">
-        <a href="#accueil" class="nav-link active" aria-current="page">Accueil</a>
-        <a href="#apropos" class="nav-link">À propos</a>
-        <a href="#competences" class="nav-link">Compétences</a>
-        <a href="#parcours" class="nav-link">Parcours</a>
-        <a href="#projets" class="nav-link">Projets</a>
-        <a href="#experience" class="nav-link">Expérience</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-
-      <div class="head-actions">
-        <!-- Bascule Sombre/Clair -->
-        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Basculer le thème" title="Basculer le thème">
-          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1" x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-          </svg>
-        </button>
-
-        <a class="btn-cv-pill" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">
-          <span>Télécharger CV</span>
-        </a>
-
-        <!-- Bouton hamburger mobile -->
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-
-    <!-- ====================================================================
-         ÉCRAN 1 : HERO SECTION SOMBRE & LUMINESCENTE (FIDÈLE À LA V2)
+      <!-- ====================================================================
+         ÉCRAN 1 : HERO SECTION SOMBRE & LUMINESCENTE (EXACT MEDIA_1792597275017)
          ==================================================================== -->
     <section class="hero-v2-sec" id="accueil">
       <div class="hero-v2-glow"></div>
@@ -96,8 +40,12 @@
         <!-- Colonne Gauche : Textes & CTA -->
         <div class="hero-v2-content">
           <div class="hero-v2-badge">
-            <span class="badge-wave">👋</span>
-            <span>Bienvenue sur mon portfolio</span>
+            <svg class="badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+            <span>Bienvenue sur mon portfolio 👋</span>
           </div>
 
           <h1 class="hero-v2-title">
@@ -106,18 +54,21 @@
           <h2 class="hero-v2-role">Développeuse Full-Stack</h2>
 
           <p class="hero-v2-desc">
-            Étudiante en Licence 3 Génie Logiciel, passionnée par le développement web et les technologies numériques. Je conçois des solutions digitales innovantes et performantes pour répondre aux besoins réels des utilisateurs.
+            Étudiante en Licence 3 Génie Logiciel, passionnée par le <span class="highlight-cyan-inline">développement</span> web et les technologies numériques.<br>
+            Je conçois des solutions digitales innovantes et <span class="highlight-cyan-inline">performantes</span> pour répondre aux besoins réels des utilisateurs.
           </p>
 
           <div class="hero-v2-actions">
             <a class="btn-hero-primary" href="#projets">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                <circle cx="12" cy="12" r="3"/>
+              <!-- GitHub Octocat Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
               </svg>
               <span>Voir mes projets</span>
             </a>
+            
             <a class="btn-hero-secondary" href="#contact">
+              <!-- Contact Paperplane / Mail Icon -->
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                 <polyline points="22,6 12,13 2,6"/>
@@ -127,30 +78,24 @@
           </div>
         </div>
 
-        <!-- Colonne Droite : Portrait avec arche lumineuse et écriture cursive -->
+        <!-- Colonne Droite : Composition 3D Futuriste & Cursive -->
         <div class="hero-v2-visual">
-          <div class="hero-v2-photo-arch">
-            <img src="assets/avatar-hero.jpg" alt="Mame Faty Kaire — Développeuse Full-Stack" loading="eager">
-          </div>
-          
-          <div class="hero-v2-script-note" aria-hidden="true">
-            <span>Rêver</span>
-            <span>Coder</span>
-            <span>Créer</span>
-            <span>Demain</span>
-            <span class="script-heart">♡</span>
+          <div class="hero-v2-composition">
+            <img src="assets/hero-composition-hd.jpg" alt="Mame Faty Kaire — Développeuse Full-Stack" loading="eager">
           </div>
         </div>
 
       </div>
 
-      <!-- Bandeau de Statistiques en bas du Hero sombre avec icônes SVG vectorielles -->
+      <!-- Bandeau de Statistiques en bas du Hero sombre (Fidèle à media_1792597275017) -->
       <div class="wrap hero-v2-stats-wrap">
         <div class="hero-v2-stats">
+          
+          <!-- Stat 1 : Projets avec icône GitHub -->
           <div class="stat-v2-item">
             <div class="stat-v2-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
               </svg>
             </div>
             <div class="stat-v2-info">
@@ -161,11 +106,15 @@
 
           <div class="stat-v2-divider"></div>
 
+          <!-- Stat 2 : Expérience avec ampoule / idée / code -->
           <div class="stat-v2-item">
             <div class="stat-v2-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"/>
-                <polyline points="8 6 2 12 8 18"/>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18h6"/>
+                <path d="M10 22h4"/>
+                <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/>
+                <line x1="10" y1="11" x2="14" y2="11"/>
               </svg>
             </div>
             <div class="stat-v2-info">
@@ -176,12 +125,12 @@
 
           <div class="stat-v2-divider"></div>
 
+          <!-- Stat 3 : Passion avec caméra / photo / target -->
           <div class="stat-v2-item">
             <div class="stat-v2-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <circle cx="12" cy="12" r="6"/>
-                <circle cx="12" cy="12" r="2"/>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                <circle cx="12" cy="13" r="4"/>
               </svg>
             </div>
             <div class="stat-v2-info">
