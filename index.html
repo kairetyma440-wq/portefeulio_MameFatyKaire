@@ -3,707 +3,1055 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kaire Mame Faty — Développeuse Fullstack</title>
-  <meta name="description" content="Portfolio officiel de Kaire Mame Faty, Développeuse Fullstack : projets, compétences, parcours académique et contact.">
+  <meta name="color-scheme" content="light dark">
+  <title>Mame Faty Kaire — Développeuse Full-Stack</title>
+  <meta name="description" content="Portfolio officiel de Mame Faty Kaire, Développeuse Full-Stack : projets réels, compétences solides, parcours académique et contact.">
+  
+  <!-- Prévention du flash de thème -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('kmf_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800;1,900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
 
-  <!-- ================= HEADER (NAVBAR COMMUNE) ================= -->
+  <!-- ================= NAVBAR FIDÈLE AUX 9 ÉCRANS ================= -->
   <header class="site-head" id="site-header">
     <div class="wrap head-in">
-      <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
+      <a class="brand" href="index.html" aria-label="Mame Faty Kaire, accueil">
         <span class="brand-monogram">KM</span>
         <div class="brand-info">
-          <span class="brand-name">Kaire Mame Faty</span>
-          <span class="brand-role">Développeuse Fullstack</span>
+          <span class="brand-name">Mame Faty Kaire</span>
+          <span class="brand-role">Développeuse Full-Stack</span>
         </div>
       </a>
 
       <nav class="nav-menu" id="nav" aria-label="Navigation principale">
-        <a href="index.html" class="nav-link active" aria-current="page">Accueil</a>
-        <a href="apropos.html" class="nav-link">À propos</a>
-        <a href="competences.html" class="nav-link">Compétences</a>
-        <a href="parcours.html" class="nav-link">Parcours</a>
-        <a href="projets.html" class="nav-link">Projets</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#accueil" class="nav-link active" aria-current="page">Accueil</a>
+        <a href="#apropos" class="nav-link">À propos</a>
+        <a href="#competences" class="nav-link">Compétences</a>
+        <a href="#parcours" class="nav-link">Parcours</a>
+        <a href="#projets" class="nav-link">Projets</a>
+        <a href="#experience" class="nav-link">Expérience</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <div class="head-actions">
-        <a class="btn-cv-pill btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
-          Télécharger CV
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        <!-- Bascule Sombre/Clair -->
+        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Basculer le thème" title="Basculer le thème">
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+
+        <a class="btn-cv-pill" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+          <span>Télécharger CV</span>
         </a>
-        <button class="btn-menu-mobile" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 7h16M4 12h16M4 17h16"/>
-          </svg>
+
+        <!-- Bouton hamburger mobile -->
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- ================= 1. PAGE D'ACCUEIL / HERO SECTION (SCREEN 1) ================= -->
-    <section class="hero-v3-sec" id="accueil">
+  <main id="main">
+
+    <!-- ====================================================================
+         ÉCRAN 1 : HERO SECTION SOMBRE & LUMINESCENTE (FIDÈLE À LA V2)
+         ==================================================================== -->
+    <section class="hero-v2-sec" id="accueil">
+      <div class="hero-v2-glow"></div>
+      <div class="wrap hero-v2-wrap">
+        
+        <!-- Colonne Gauche : Textes & CTA -->
+        <div class="hero-v2-content">
+          <div class="hero-v2-badge">
+            <span class="badge-wave">👋</span>
+            <span>Bienvenue sur mon portfolio</span>
+          </div>
+
+          <h1 class="hero-v2-title">
+            Mame Faty <span class="highlight-cyan">Kaire</span>
+          </h1>
+          <h2 class="hero-v2-role">Développeuse Full-Stack</h2>
+
+          <p class="hero-v2-desc">
+            Étudiante en Licence 3 Génie Logiciel, passionnée par le développement web et les technologies numériques. Je conçois des solutions digitales innovantes et performantes pour répondre aux besoins réels des utilisateurs.
+          </p>
+
+          <div class="hero-v2-actions">
+            <a class="btn-hero-primary" href="#projets">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <span>Voir mes projets</span>
+            </a>
+            <a class="btn-hero-secondary" href="#contact">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <span>Me contacter</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonne Droite : Portrait avec arche lumineuse et écriture cursive -->
+        <div class="hero-v2-visual">
+          <div class="hero-v2-photo-arch">
+            <img src="assets/avatar-hero.jpg" alt="Mame Faty Kaire — Développeuse Full-Stack" loading="eager">
+          </div>
+          
+          <div class="hero-v2-script-note" aria-hidden="true">
+            <span>Rêver</span>
+            <span>Coder</span>
+            <span>Créer</span>
+            <span>Demain</span>
+            <span class="script-heart">♡</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bandeau de Statistiques en bas du Hero sombre avec icônes SVG vectorielles -->
+      <div class="wrap hero-v2-stats-wrap">
+        <div class="hero-v2-stats">
+          <div class="stat-v2-item">
+            <div class="stat-v2-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </div>
+            <div class="stat-v2-info">
+              <strong class="stat-v2-number">+3</strong>
+              <span class="stat-v2-label">Projets réalisés</span>
+            </div>
+          </div>
+
+          <div class="stat-v2-divider"></div>
+
+          <div class="stat-v2-item">
+            <div class="stat-v2-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="stat-v2-info">
+              <strong class="stat-v2-number">+2</strong>
+              <span class="stat-v2-label">Années d'expérience</span>
+            </div>
+          </div>
+
+          <div class="stat-v2-divider"></div>
+
+          <div class="stat-v2-item">
+            <div class="stat-v2-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <div class="stat-v2-info">
+              <strong class="stat-v2-number">100%</strong>
+              <span class="stat-v2-label">Passionnée</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ÉCRAN 2 : QUI SUIS-JE ? (À PROPOS)
+         ==================================================================== -->
+    <section class="about-v9-sec" id="apropos">
       <div class="wrap">
-        <div class="hero-v3-grid">
-          <!-- Colonne Gauche -->
-          <div class="hero-v3-content">
-            <div class="hero-v3-greeting">
-              <span class="hero-greeting-line" aria-hidden="true"></span>
-              <span class="hero-greeting-text">Bonjour, je suis</span>
+        
+        <div class="about-v9-grid">
+          <!-- Gauche : Bio & coordonnées avec pastilles bleues -->
+          <div class="about-v9-left">
+            <div class="pill-badge-v9">
+              <span class="pill-badge-icon">👤</span>
+              <span>À propos de moi</span>
             </div>
 
-            <h1 class="hero-v3-title">
-              Mame Faty <span>Kaire</span>
-            </h1>
+            <h2 class="about-v9-title">Qui suis-je ?</h2>
 
-            <div class="hero-v3-role">Développeuse Full-Stack</div>
-
-            <p class="hero-v3-bio">
-              Étudiante en Licence 3 Génie Logiciel, passionnée par le développement logiciel et les technologies numériques. Je conçois des solutions innovantes pour répondre à des besoins concrets.
+            <p class="about-v9-bio">
+              Je suis Mame Faty Kaire, étudiante en Licence 3 Génie Logiciel à l'UIDT. Passionnée par le développement logiciel et les technologies numériques, je m'intéresse particulièrement à l'intelligence artificielle et à la conception de solutions digitales répondant à des besoins concrets.
             </p>
 
-            <!-- Boutons avec changement de couleur dynamique au survol et au clic -->
-            <div class="hero-v3-buttons">
-              <a class="btn-hero-primary" href="projets.html">
-                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
-                </svg>
-                <span>Voir mes projets</span>
-                <span class="btn-arrow" aria-hidden="true">→</span>
-              </a>
-              <a class="btn-hero-secondary" href="contact.html">
-                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
-                <span>Me contacter</span>
-              </a>
-            </div>
-
-            <!-- Réseaux sociaux circulaires avec changement de couleur au survol -->
-            <div class="hero-v3-socials">
-              <a class="hero-social-circle" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                </svg>
-              </a>
-              <a class="hero-social-circle" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-              </a>
-              <a class="hero-social-circle" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-              </a>
-              <a class="hero-social-circle" href="tel:+221784081210" aria-label="Téléphone">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-                </svg>
-              </a>
-            </div>
-
-            <!-- Badges technologiques officiels avec logos SVG colorés -->
-            <div class="hero-tech-pills">
-              <div class="tech-pill tech-pill-py" title="Python">
-                <svg width="18" height="18" viewBox="0 0 128 128" aria-hidden="true">
-                  <path fill="#3776AB" d="M63.7 3.5c-15.6 0-25 6.7-25 15.6v11.4h25v3.6H25.3C11 34.1 0 45.3 0 59.8c0 14.4 11.8 24.3 26.2 24.3h8.3v-12c0-12.8 11-23.7 23.8-23.7h25V35.6c0-9.2-8.5-15.6-24-15.6zm-10.4 7.6c2.4 0 4.4 2 4.4 4.4s-2 4.4-4.4 4.4-4.4-2-4.4-4.4 2-4.4 4.4-4.4z"/>
-                  <path fill="#FFD43B" d="M64.3 124.5c15.6 0 25-6.7 25-15.6v-11.4h-25v-3.6h38.4c14.3 0 25.3-11.2 25.3-25.7 0-14.4-11.8-24.3-26.2-24.3h-8.3v12c0 12.8-11 23.7-23.8 23.7h-25v12.8c0 9.2 8.5 15.6 24 15.6zm10.4-7.6c-2.4 0-4.4-2-4.4-4.4s2-4.4 4.4-4.4 4.4 2 4.4 4.4-4.4 2-4.4 4.4-4.4 4.4z"/>
-                </svg>
-                <span>Python</span>
-              </div>
-              <div class="tech-pill tech-pill-js" title="JavaScript">
-                <svg width="18" height="18" viewBox="0 0 128 128" aria-hidden="true">
-                  <path fill="#F7DF1E" d="M0 0h128v128H0z"/>
-                  <path d="M67.3 100.8c3.2 5.2 7.7 8.7 15.1 8.7 6.4 0 10.4-3.1 10.4-7.4 0-5.1-4.1-7-11-10l-3.8-1.6c-10.8-4.6-18-10.5-18-23 0-11.5 8.9-20.2 22.8-20.2 9.8 0 16.9 3.5 21.6 11.9l-11.3 7.3c-2.5-4.4-5.2-6.2-10.3-6.2-4.7 0-7.8 3-7.8 6.7 0 4.6 3.1 6.5 9.7 9.3l3.8 1.6c12.7 5.5 19.5 11.2 19.5 23.8 0 13.6-10.7 21.1-24.8 21.1-13.8 0-22.9-6.7-27.2-15.6zm-41.5 2.1c2.4 4.1 5.6 7.4 11.1 7.4 5.7 0 9.3-2.3 9.3-11.2V48.7h14.5v50.6c0 16.5-9.7 23.7-23.4 23.7-12.7 0-20.3-6.4-24.2-15.8z"/>
-                </svg>
-                <span>JavaScript</span>
-              </div>
-              <div class="tech-pill tech-pill-dj" title="Django">
-                <svg width="18" height="18" viewBox="0 0 128 128" aria-hidden="true">
-                  <rect width="128" height="128" rx="20" fill="#092E20"/>
-                  <path fill="#FFFFFF" d="M68.7 20h22.7v62.4c-6.8 1.4-13.2 2-19.1 2-18.7 0-27.7-8.3-27.7-25.5 0-16.7 9.5-26.4 24.1-26.4 6 0 11.4 1.2 15.4 3.1V20h-15.4c-28.7 0-45.7 16.6-45.7 44.5 0 27.6 16.8 43.5 45.7 43.5 8.1 0 16.7-1.2 22.7-3.2v23.2h22.7V20H68.7z"/>
-                </svg>
-                <span>Django</span>
-              </div>
-              <div class="tech-pill tech-pill-lv" title="Laravel">
-                <svg width="18" height="18" viewBox="0 0 128 128" aria-hidden="true">
-                  <path fill="#FF2D20" d="M112.5 35.8L66.7 9.5a5.5 5.5 0 00-5.5 0L15.5 35.8a5.5 5.5 0 00-2.8 4.8v52.8a5.5 5.5 0 002.8 4.8l45.7 26.3a5.5 5.5 0 005.5 0l45.7-26.3a5.5 5.5 0 002.8-4.8V40.6a5.5 5.5 0 00-2.7-4.8zm-48.5-16l37.9 21.8-15.8 9.1-37.9-21.8 15.8-9.1zm-4.4 7.6v27.2L21.7 43.2l37.9-21.8zm-39.7 64.9V49.9l37.9 21.8v42.4L19.9 92.3zm44.1 20.6V70.5l16.3-9.4v19.4a5.5 5.5 0 002.8 4.8l18.8 10.8-37.9 21.8zm44.1-25.4l-15.8-9.1v-17l15.8-9.1v35.2z"/>
-                </svg>
-                <span>Laravel</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Colonne Droite : Cadre circulaire néon avec anneau et formes douces -->
-          <div class="hero-v3-visual">
-            <div class="hero-circle-container">
-              <!-- Formes douces d'arrière-plan -->
-              <div class="hero-soft-card-tr" aria-hidden="true"></div>
-              <div class="hero-soft-card-bl" aria-hidden="true"></div>
-
-              <!-- Anneau circulaire bleu lumineux -->
-              <div class="hero-circle-outer-ring" aria-hidden="true"></div>
-
-              <!-- Cadre circulaire principal avec la photo de Mame Faty Kaire au bureau avec PC -->
-              <div class="hero-circle-frame">
-                <img src="assets/mamefaty-desk.jpg" alt="Mame Faty Kaire, Développeuse Fullstack" width="460" height="460">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Signature Vague dynamique ondulée en bas du Hero -->
-      <div class="hero-wave-divider">
-        <svg viewBox="0 0 1440 90" fill="none" preserveAspectRatio="none">
-          <path d="M0,35 C280,85 520,5 780,55 C1040,105 1280,25 1440,45 L1440,90 L0,90 Z" fill="rgba(37, 99, 235, 0.2)"></path>
-          <path d="M0,50 C320,100 560,20 860,65 C1120,110 1320,38 1440,58 L1440,90 L0,90 Z" fill="#2563EB"></path>
-          <path d="M0,72 C360,110 640,55 960,85 C1200,115 1380,72 1440,80 L1440,90 L0,90 Z" fill="#FFFFFF"></path>
-        </svg>
-      </div>
-    </section>
-
-    <!-- BANDEAU DES 4 CARTES CLÉS (BAS DE L'ÉCRAN 1) -->
-    <section class="hero-strip-section">
-      <div class="wrap">
-        <div class="hero-strip-grid">
-          <div class="hero-strip-card">
-            <div class="hero-strip-icon-box">💻</div>
-            <div class="hero-strip-title">Développement<br>Web &amp; Mobile</div>
-          </div>
-          <div class="hero-strip-card">
-            <div class="hero-strip-icon-box">🧠</div>
-            <div class="hero-strip-title">Intelligence<br>Artificielle</div>
-          </div>
-          <div class="hero-strip-card">
-            <div class="hero-strip-icon-box">⚙️</div>
-            <div class="hero-strip-title">Gestion<br>de projets</div>
-          </div>
-          <div class="hero-strip-card">
-            <div class="hero-strip-icon-box">📊</div>
-            <div class="hero-strip-title">Esprit<br>d'analyse</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 2. PAGE À PROPOS (APERÇU ÉCRAN 2) ================= -->
-    <section class="about-v3-sec" id="apropos">
-      <div class="wrap">
-        <div class="about-top-grid">
-          <div>
-            <div class="eyebrow-tag">
-              <span>👤</span> À propos de moi
-            </div>
-            <h2 class="sec-title-main">
-              Une étudiante passionnée<br>par la tech et l'innovation
-            </h2>
-            <p class="sec-desc-main" style="margin-bottom: 20px;">
-              Je suis Kaire Mame Faty, étudiante en Licence 3 Génie Logiciel, passionnée par le développement logiciel et les technologies numériques. Rigoureuse, autonome et curieuse, dotée d'un bon esprit d'analyse, je m'intéresse particulièrement à l'intelligence artificielle et à la conception de solutions numériques répondant à des besoins concrets.
-            </p>
-
-            <div class="about-tags-row">
-              <span class="about-tag-pill">📊 Analyse</span>
-              <span class="about-tag-pill">💡 Innovation</span>
-              <span class="about-tag-pill">🎯 Apprentissage</span>
-              <span class="about-tag-pill">⚡ Impact</span>
-            </div>
-          </div>
-
-          <div class="about-visual-box">
-            <div class="about-portrait-card">
-              <img src="assets/photo.jpg" alt="Kaire Mame Faty" width="340" height="380" loading="lazy">
-              <div class="about-hand-doodle" aria-hidden="true">
-                Rêver<br>Apprendre<br>Réussir ♡
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mes objectifs -->
-        <div class="objectives-heading">
-          <span>🎯</span> Mes objectifs
-        </div>
-        <div class="objectives-4grid">
-          <div class="objective-card">
-            <div class="objective-icon-bubble">&lt;/&gt;</div>
-            <p class="objective-text">Développer mes compétences et acquérir plus d'expérience</p>
-          </div>
-          <div class="objective-card">
-            <div class="objective-icon-bubble">💡</div>
-            <p class="objective-text">Contribuer à des projets à fort impact</p>
-          </div>
-          <div class="objective-card">
-            <div class="objective-icon-bubble">🎓</div>
-            <p class="objective-text">Poursuivre mes études en master</p>
-          </div>
-          <div class="objective-card">
-            <div class="objective-icon-bubble">🎯</div>
-            <p class="objective-text">Devenir une experte dans l'IA et l'innovation</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 3. PAGE COMPÉTENCES (APERÇU ÉCRAN 3) ================= -->
-    <section class="skills-v3-sec" id="competences" style="background: var(--white);">
-      <div class="wrap">
-        <div class="skills-top-grid">
-          <div>
-            <div class="eyebrow-tag">
-              <span>🛠️</span> Mes compétences
-            </div>
-            <h2 class="sec-title-main">
-              Des compétences variées<br>au service <span style="color: var(--blue-electric);">de</span> vos projets
-            </h2>
-            <p class="sec-desc-main" style="margin-bottom: 0;">
-              Je mets mes connaissances et mon savoir-faire au service de vos idées, avec rigueur, créativité et engagement.
-            </p>
-          </div>
-
-          <div class="skills-laptop-frame">
-            <img src="assets/about-desk.jpg" alt="Ordinateur avec code" width="480" height="240" loading="lazy">
-          </div>
-        </div>
-
-        <div class="skills-2col-layout">
-          <!-- Colonne Gauche : Compétences Techniques (Jauges Circulaires) -->
-          <div>
-            <h3 class="skills-block-title">Compétences techniques</h3>
-            <div class="tech-gauges-list">
-              <!-- 90% Dévelopement Web -->
-              <div class="gauge-row-item">
-                <div class="circular-gauge-box">
-                  <svg viewBox="0 0 36 36">
-                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                    <path class="circle-fill-bar" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            <div class="about-v9-contact-list">
+              <a class="contact-pill-v9" href="tel:+221784081210">
+                <div class="contact-pill-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                   </svg>
-                  <span class="gauge-pct-text">90%</span>
                 </div>
-                <div class="gauge-detail">
-                  <h4>Développement Web</h4>
-                  <p>HTML5, CSS3, JavaScript, React, Django, Laravel</p>
-                </div>
-              </div>
+                <span>78 408 12 10</span>
+              </a>
 
-              <!-- 85% Programmation -->
-              <div class="gauge-row-item">
-                <div class="circular-gauge-box">
-                  <svg viewBox="0 0 36 36">
-                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                    <path class="circle-fill-bar" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <a class="contact-pill-v9" href="mailto:mfaty.kaire@univ-thies.sn">
+                <div class="contact-pill-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
                   </svg>
-                  <span class="gauge-pct-text">85%</span>
                 </div>
-                <div class="gauge-detail">
-                  <h4>Programmation</h4>
-                  <p>Java, Python, PHP</p>
-                </div>
-              </div>
-
-              <!-- 80% Gestion de projets -->
-              <div class="gauge-row-item">
-                <div class="circular-gauge-box">
-                  <svg viewBox="0 0 36 36">
-                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                    <path class="circle-fill-bar" stroke-dasharray="80, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                  </svg>
-                  <span class="gauge-pct-text">80%</span>
-                </div>
-                <div class="gauge-detail">
-                  <h4>Gestion de projets</h4>
-                  <p>Organisation, Planification, Méthodologies agile</p>
-                </div>
-              </div>
-
-              <!-- 75% Bases de données -->
-              <div class="gauge-row-item">
-                <div class="circular-gauge-box">
-                  <svg viewBox="0 0 36 36">
-                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                    <path class="circle-fill-bar" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                  </svg>
-                  <span class="gauge-pct-text">75%</span>
-                </div>
-                <div class="gauge-detail">
-                  <h4>Bases de données</h4>
-                  <p>MySQL, PostgreSQL</p>
-                </div>
-              </div>
-
-              <!-- 70% Outils & Environnements -->
-              <div class="gauge-row-item">
-                <div class="circular-gauge-box">
-                  <svg viewBox="0 0 36 36">
-                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                    <path class="circle-fill-bar" stroke-dasharray="70, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                  </svg>
-                  <span class="gauge-pct-text">70%</span>
-                </div>
-                <div class="gauge-detail">
-                  <h4>Outils &amp; Environnements</h4>
-                  <p>Git, GitHub, GitLab, VS Code, Docker</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Colonne Droite : Compétences Personnelles -->
-          <div>
-            <div class="soft-skills-card">
-              <h3 class="skills-block-title" style="margin-bottom: 24px;">Compétences personnelles</h3>
-              <div class="soft-skills-list">
-                <div class="soft-skill-row">
-                  <div class="soft-skill-icon-circle">👥</div>
-                  <div class="soft-skill-text">
-                    <h4>Esprit d'équipe</h4>
-                    <p>Facilité à travailler en groupe</p>
-                  </div>
-                </div>
-                <div class="soft-skill-row">
-                  <div class="soft-skill-icon-circle">🏆</div>
-                  <div class="soft-skill-text">
-                    <h4>Leadership</h4>
-                    <p>Prise d'initiative et responsabilité</p>
-                  </div>
-                </div>
-                <div class="soft-skill-row">
-                  <div class="soft-skill-icon-circle">💬</div>
-                  <div class="soft-skill-text">
-                    <h4>Communication</h4>
-                    <p>Écoute active et expression claire</p>
-                  </div>
-                </div>
-                <div class="soft-skill-row">
-                  <div class="soft-skill-icon-circle">🔄</div>
-                  <div class="soft-skill-text">
-                    <h4>Adaptabilité</h4>
-                    <p>S'adapter rapidement aux changements</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 4. PAGE PARCOURS (APERÇU ÉCRAN 4) ================= -->
-    <section class="parcours-v3-sec" id="parcours">
-      <div class="wrap">
-        <div class="parcours-header-row">
-          <div>
-            <div class="eyebrow-tag">
-              <span>🎓</span> Mon parcours
-            </div>
-            <h2 class="sec-title-main">
-              Une évolution guidée<br>par la passion et la persévérance
-            </h2>
-            <p class="sec-desc-main" style="margin-bottom: 0;">
-              Chaque étape de mon parcours m'a permis d'acquérir de nouvelles compétences et de renforcer ma détermination.
-            </p>
-          </div>
-
-          <!-- Illustration végétale cyan/bleu raffinée -->
-          <div class="parcours-botanical-decor" aria-hidden="true">
-            <svg viewBox="0 0 120 120" fill="none">
-              <path d="M20 100 Q 55 60 95 20" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M95 20 C105 12 115 22 108 32 C100 40 92 30 95 20 Z" fill="rgba(56, 189, 248, 0.45)" stroke="#38BDF8" stroke-width="1.2"/>
-              <path d="M78 38 C90 32 96 46 88 54 C80 60 72 48 78 38 Z" fill="rgba(37, 99, 235, 0.35)" stroke="#2563EB" stroke-width="1.2"/>
-              <path d="M60 56 C70 50 78 62 68 72 C58 78 52 66 60 56 Z" fill="rgba(56, 189, 248, 0.45)" stroke="#38BDF8" stroke-width="1.2"/>
-              <path d="M42 74 C52 68 60 80 50 90 C40 96 34 84 42 74 Z" fill="rgba(37, 99, 235, 0.35)" stroke="#2563EB" stroke-width="1.2"/>
-              <path d="M70 42 C60 30 72 20 82 28 C90 36 80 46 70 42 Z" fill="rgba(56, 189, 248, 0.35)" stroke="#38BDF8" stroke-width="1.2"/>
-              <path d="M52 60 C42 48 54 38 64 46 C72 54 62 64 52 60 Z" fill="rgba(37, 99, 235, 0.25)" stroke="#2563EB" stroke-width="1.2"/>
-            </svg>
-          </div>
-        </div>
-
-        <div class="parcours-2col-layout">
-          <!-- Parcours Académique -->
-          <div class="parcours-white-card">
-            <div class="parcours-card-title">
-              <span>🎓</span> Parcours académique
-            </div>
-            <ol class="timeline-track-v3">
-              <li class="timeline-step-v3">
-                <div class="timeline-step-year">2025 — 2026</div>
-                <h4 class="timeline-step-title">Licence 3 — Génie Logiciel</h4>
-                <p class="timeline-step-desc">UIDT - UFR SET - Département Informatique</p>
-              </li>
-              <li class="timeline-step-v3">
-                <div class="timeline-step-year">2024 — 2025</div>
-                <h4 class="timeline-step-title">Licence 2 — Informatique</h4>
-                <p class="timeline-step-desc">UIDT - UFR SET - Département Informatique</p>
-              </li>
-              <li class="timeline-step-v3">
-                <div class="timeline-step-year">2023 — 2024</div>
-                <h4 class="timeline-step-title">Licence 1 — Informatique</h4>
-                <p class="timeline-step-desc">UIDT - UFR SET - Département Informatique</p>
-              </li>
-              <li class="timeline-step-v3">
-                <div class="timeline-step-year">2022 — 2023</div>
-                <h4 class="timeline-step-title">Baccalauréat Scientifique — Série S2</h4>
-                <p class="timeline-step-desc">Lycée de Mbacké</p>
-              </li>
-            </ol>
-          </div>
-
-          <!-- Expériences / Projets -->
-          <div class="parcours-white-card">
-            <div class="parcours-card-title">
-              <span>💼</span> Expériences / Projets
-            </div>
-            <div class="exp-v3-list">
-              <div class="exp-v3-item">
-                <div class="exp-v3-icon">🏢</div>
-                <div class="exp-v3-info">
-                  <h4>Chef de projet — Gestion des locaux</h4>
-                  <p>Conception d'une application de gestion des locaux avec Flask et MySQL.</p>
-                </div>
-              </div>
-              <div class="exp-v3-item">
-                <div class="exp-v3-icon">🚚</div>
-                <div class="exp-v3-info">
-                  <h4>Chef de projet — Système de livraisons</h4>
-                  <p>Pilotage d'un système de suivi des livraisons (PHP).</p>
-                </div>
-              </div>
-              <div class="exp-v3-item">
-                <div class="exp-v3-icon">🏛️</div>
-                <div class="exp-v3-info">
-                  <h4>Stage — Point de transaction</h4>
-                  <p>Gestion d'un point de transaction.</p>
-                </div>
-              </div>
-              <div class="exp-v3-item">
-                <div class="exp-v3-icon">👥</div>
-                <div class="exp-v3-info">
-                  <h4>Travail collaboratif en équipe</h4>
-                  <p>Projets académiques en groupe.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3 Cartes Inférieures : Langues, Permis, Centres d'intérêt -->
-        <div class="parcours-bottom-3grid">
-          <div class="parcours-bottom-card">
-            <h4 class="parcours-subcard-title">🌐 Langues</h4>
-            <ul class="lang-list">
-              <li>🇫🇷 Français : Courant</li>
-              <li>🇬🇧 Anglais : Intermédiaire</li>
-              <li>🇸🇳 Wolof : Langue maternelle</li>
-              <li>🇸🇦 Arabe : Intermédiaire</li>
-            </ul>
-          </div>
-
-          <div class="parcours-bottom-card">
-            <h4 class="parcours-subcard-title">🚗 Permis</h4>
-            <div class="permis-row">
-              <span class="permis-ico">🚘</span>
-              <span>Permis B — Véhicule léger</span>
-            </div>
-          </div>
-
-          <div class="parcours-bottom-card">
-            <h4 class="parcours-subcard-title">💡 Centres d'intérêt</h4>
-            <div class="interests-chips-wrap">
-              <span class="interest-chip">🤖 IA</span>
-              <span class="interest-chip">💻 Développement logiciel</span>
-              <span class="interest-chip">📊 Data</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 5. PAGE PROJETS (APERÇU ÉCRAN 5) ================= -->
-    <section class="projects-v3-sec" id="projets" style="background: var(--white);">
-      <div class="wrap">
-        <div style="margin-bottom: 36px;">
-          <h2 class="sec-title-main" style="margin-bottom: 6px;">Mes projets &amp; réalisations</h2>
-          <p class="sec-desc-main" style="margin-bottom: 0;">Des idées concrètes, des solutions digitales</p>
-        </div>
-
-        <div class="projects-6grid">
-          <!-- 1. Gestion des locaux -->
-          <div class="proj-v3-card">
-            <div class="proj-v3-image-box">
-              <img src="assets/mockup-locaux.jpg" alt="Gestion des locaux" loading="lazy">
-            </div>
-            <div class="proj-v3-body">
-              <h3 class="proj-v3-title">Gestion des locaux</h3>
-              <div class="proj-v3-tags">
-                <span class="proj-tag-badge">Flask</span>
-                <span class="proj-tag-badge">Python</span>
-                <span class="proj-tag-badge">MySQL</span>
-              </div>
-              <p class="proj-v3-desc">Application de gestion des locaux avec Flask et MySQL.</p>
-              <a class="btn-proj-view" href="projet-locaux.html">
-                Voir le projet ➔
-              </a>
-            </div>
-          </div>
-
-          <!-- 2. Système de livraisons -->
-          <div class="proj-v3-card">
-            <div class="proj-v3-image-box">
-              <img src="assets/mockup-livraisons-van.jpg" alt="Système de livraisons" loading="lazy">
-            </div>
-            <div class="proj-v3-body">
-              <h3 class="proj-v3-title">Système de livraisons</h3>
-              <div class="proj-v3-tags">
-                <span class="proj-tag-badge">PHP</span>
-                <span class="proj-tag-badge">Web</span>
-              </div>
-              <p class="proj-v3-desc">Suivi des livraisons locales.</p>
-              <a class="btn-proj-view" href="projet-livraisons.html">
-                Voir le projet ➔
-              </a>
-            </div>
-          </div>
-
-          <!-- 3. Bibliothèque -->
-          <div class="proj-v3-card">
-            <div class="proj-v3-image-box">
-              <img src="assets/mockup-biblio-shelves.jpg" alt="Bibliothèque universitaire" loading="lazy">
-            </div>
-            <div class="proj-v3-body">
-              <h3 class="proj-v3-title">Bibliothèque</h3>
-              <div class="proj-v3-tags">
-                <span class="proj-tag-badge">Java</span>
-                <span class="proj-tag-badge">MySQL</span>
-              </div>
-              <p class="proj-v3-desc">Gestion de prêt de livres (base de données).</p>
-              <a class="btn-proj-view" href="projet-biblio.html">
-                Voir le projet ➔
-              </a>
-            </div>
-          </div>
-
-          <!-- 4. Site web -->
-          <div class="proj-v3-card">
-            <div class="proj-v3-image-box">
-              <img src="assets/mockup-dev-web.jpg" alt="Site web Full-stack" loading="lazy">
-            </div>
-            <div class="proj-v3-body">
-              <h3 class="proj-v3-title">Site web</h3>
-              <div class="proj-v3-tags">
-                <span class="proj-tag-badge">HTML</span>
-                <span class="proj-tag-badge">CSS</span>
-                <span class="proj-tag-badge">JavaScript</span>
-              </div>
-              <p class="proj-v3-desc">Site web moderne et responsive.</p>
-              <a class="btn-proj-view" href="projet-vitrine.html">
-                Voir le projet ➔
-              </a>
-            </div>
-          </div>
-
-          <!-- 5. Application Java -->
-          <div class="proj-v3-card">
-            <div class="proj-v3-image-box">
-              <img src="assets/mockup-code-java.jpg" alt="Application Java Planification" loading="lazy">
-            </div>
-            <div class="proj-v3-body">
-              <h3 class="proj-v3-title">Application Java</h3>
-              <div class="proj-v3-tags">
-                <span class="proj-tag-badge">Java</span>
-                <span class="proj-tag-badge">Planning</span>
-              </div>
-              <p class="proj-v3-desc">Planification des cours et gestion des ressources.</p>
-              <a class="btn-proj-view" href="projet-java.html">
-                Voir le projet ➔
-              </a>
-            </div>
-          </div>
-
-          <!-- 6. Design graphique -->
-          <div class="proj-v3-card">
-            <div class="proj-v3-image-box">
-              <img src="assets/illustration-formation.jpg" alt="Design graphique publicitaire" loading="lazy">
-            </div>
-            <div class="proj-v3-body">
-              <h3 class="proj-v3-title">Design graphique</h3>
-              <div class="proj-v3-tags">
-                <span class="proj-tag-badge">Canva</span>
-                <span class="proj-tag-badge">Photoshop</span>
-              </div>
-              <p class="proj-v3-desc">Affiches publicitaires et visuels pour projets.</p>
-              <a class="btn-proj-view" href="projet-affiches.html">
-                Voir le projet ➔
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 6. PAGE CONTACT (APERÇU ÉCRAN 6) ================= -->
-    <section class="contact-v3-sec" id="contact">
-      <div class="wrap">
-        <div class="contact-2col-layout">
-          <!-- Colonne Gauche : Coordonnées -->
-          <div class="contact-info-col">
-            <div>
-              <div class="eyebrow-tag">
-                <span>💬</span> Restons en contact
-              </div>
-              <h2 class="sec-title-main" style="margin-bottom: 8px;">
-                Une question, un projet,<br>une opportunité ?
-              </h2>
-              <p class="sec-desc-main" style="margin-bottom: 24px;">
-                N'hésitez pas à me contacter, je serai ravie d'échanger avec vous !
-              </p>
-            </div>
-
-            <div class="contact-items-list">
-              <a class="contact-link-row" href="tel:+221784081210">
-                <div class="contact-bubble-icon">📞</div>
-                <span>+221 78 408 12 10</span>
-              </a>
-              <a class="contact-link-row" href="mailto:mfaty.kaire@univ-thies.sn">
-                <div class="contact-bubble-icon">✉️</div>
                 <span>mfaty.kaire@univ-thies.sn</span>
               </a>
-              <a class="contact-link-row" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener">
-                <div class="contact-bubble-icon">🐙</div>
+
+              <a class="contact-pill-v9" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener noreferrer">
+                <div class="contact-pill-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </div>
                 <span>github.com/kairetyma440-wq</span>
               </a>
-              <a class="contact-link-row" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener">
-                <div class="contact-bubble-icon">💼</div>
+
+              <a class="contact-pill-v9" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener noreferrer">
+                <div class="contact-pill-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </div>
                 <span>linkedin.com/in/mamefatykaire</span>
               </a>
-              <div class="contact-link-row">
-                <div class="contact-bubble-icon">📍</div>
+
+              <div class="contact-pill-v9">
+                <div class="contact-pill-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
                 <span>Touba, Sénégal</span>
               </div>
             </div>
+          </div>
 
-            <div class="contact-thanks-note">
-              Merci pour votre visite ! ♡
+          <!-- Droite : Photo carte arrondie + Note manuscrite "La tech au service de l'humain ♡" -->
+          <div class="about-v9-right">
+            <div class="about-photo-card">
+              <img src="assets/avatar-kaire.jpg" alt="Mame Faty Kaire" loading="lazy">
             </div>
 
-            <div class="contact-photo-desk">
-              <img src="assets/footer-workspace.jpg" alt="Espace de travail et code" width="420" height="200" loading="lazy">
+            <div class="script-note-v9" aria-hidden="true">
+              <span>La tech</span>
+              <span>au service</span>
+              <span>de l'humain</span>
+              <span class="script-heart">♡</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citation pleine largeur en bas fidèlement positionnée -->
+        <div class="quote-card-v9">
+          <div class="quote-card-icon">“</div>
+          <p class="quote-card-text">
+            « Chaque ligne de code est une opportunité de créer un impact positif. »
+          </p>
+          <span class="quote-card-author">— Mame Faty Kaire</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ÉCRAN 3 : COMPÉTENCES AVEC 3 CARTES & DOUBLE JAUGES EN BAS (V2)
+         ==================================================================== -->
+    <section class="skills-v10-sec" id="competences">
+      <div class="wrap">
+        
+        <div class="skills-v10-header-row">
+          <div>
+            <h2 class="sec-title-v9">Compétences</h2>
+            <p class="sec-sub-v9">Des compétences solides pour construire le futur</p>
+          </div>
+
+          <!-- Note cursive discrète à droite -->
+          <div class="skills-v10-cursive-note" aria-hidden="true">
+            <span>La technologie</span>
+            <span>est une clé,</span>
+            <span>pas une limite</span>
+            <span class="script-heart">♡</span>
+          </div>
+        </div>
+
+        <!-- 3 Cartes de Compétences avec double jauge circulaire par carte -->
+        <div class="skills-v10-3grid">
+          
+          <!-- 1. Développement Web -->
+          <div class="skill-card-v10">
+            <div class="skill-card-v10-top">
+              <div class="skill-card-v10-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <h3 class="skill-card-v10-title">Développement Web</h3>
+            </div>
+            
+            <ul class="skill-card-v10-list">
+              <li><span class="check-blue">✓</span><span>HTML5 / CSS3</span></li>
+              <li><span class="check-blue">✓</span><span>JavaScript</span></li>
+              <li><span class="check-blue">✓</span><span>Django</span></li>
+              <li><span class="check-blue">✓</span><span>Laravel</span></li>
+            </ul>
+
+            <div class="skill-card-v10-bottom">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <div class="skill-gauge-radial">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3.5" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3.5" stroke-dasharray="90, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span>90%</span>
+                </div>
+                <div class="skill-gauge-lbl">HTML/CSS</div>
+              </div>
+
+              <div style="display:flex; align-items:center; gap:8px;">
+                <div class="skill-gauge-radial">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3.5" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3.5" stroke-dasharray="85, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span>85%</span>
+                </div>
+                <div class="skill-gauge-lbl">JavaScript</div>
+              </div>
             </div>
           </div>
 
-          <!-- Colonne Droite : Formulaire -->
-          <div class="contact-form-card">
-            <h3 class="contact-form-title">Envoyez-moi un message</h3>
+          <!-- 2. Programmation -->
+          <div class="skill-card-v10">
+            <div class="skill-card-v10-top">
+              <div class="skill-card-v10-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <h3 class="skill-card-v10-title">Programmation</h3>
+            </div>
+            
+            <ul class="skill-card-v10-list">
+              <li><span class="check-blue">✓</span><span>Java</span></li>
+              <li><span class="check-blue">✓</span><span>Python / Flask</span></li>
+              <li><span class="check-blue">✓</span><span>PHP</span></li>
+            </ul>
+
+            <div class="skill-card-v10-bottom">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <div class="skill-gauge-radial">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3.5" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3.5" stroke-dasharray="85, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span>85%</span>
+                </div>
+                <div class="skill-gauge-lbl">Python</div>
+              </div>
+
+              <div style="display:flex; align-items:center; gap:8px;">
+                <div class="skill-gauge-radial">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3.5" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3.5" stroke-dasharray="80, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span>80%</span>
+                </div>
+                <div class="skill-gauge-lbl">Java</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Bases de données & Outils -->
+          <div class="skill-card-v10">
+            <div class="skill-card-v10-top">
+              <div class="skill-card-v10-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                </svg>
+              </div>
+              <h3 class="skill-card-v10-title">Bases de données &amp; Outils</h3>
+            </div>
+            
+            <ul class="skill-card-v10-list">
+              <li><span class="check-blue">✓</span><span>SQL / MySQL</span></li>
+              <li><span class="check-blue">✓</span><span>Git / GitHub / GitLab</span></li>
+              <li><span class="check-blue">✓</span><span>Google Docs, Sheets, Drive</span></li>
+            </ul>
+
+            <div class="skill-card-v10-bottom">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <div class="skill-gauge-radial">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3.5" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3.5" stroke-dasharray="90, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span>90%</span>
+                </div>
+                <div class="skill-gauge-lbl">SQL</div>
+              </div>
+
+              <div style="display:flex; align-items:center; gap:8px;">
+                <div class="skill-gauge-radial">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3.5" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3.5" stroke-dasharray="90, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span>90%</span>
+                </div>
+                <div class="skill-gauge-lbl">Git</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Autres compétences (5 pastilles avec icônes vectorielles) -->
+        <h3 class="skills-v10-other-title">Autres compétences</h3>
+        <div class="skills-v10-other-chips">
+          <span class="other-chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            </svg>
+            AI &amp; Data
+          </span>
+          <span class="other-chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+            Gestion de projets
+          </span>
+          <span class="other-chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" y1="9" x2="9.01" y2="9"/>
+              <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+            UI/UX
+          </span>
+          <span class="other-chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            Anglais
+          </span>
+          <span class="other-chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Travail en équipe
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ÉCRAN 4 : MON PARCOURS ACADÉMIQUE AVEC "MON OBJECTIF" (V2)
+         ==================================================================== -->
+    <section class="parcours-v9-sec" id="parcours">
+      <div class="wrap">
+        <h2 class="sec-title-v9">Mon parcours académique</h2>
+        <p class="sec-sub-v9">Une formation solide pour construire mon avenir</p>
+
+        <div class="parcours-v9-grid">
+          <!-- Timeline gauche avec ligne verticale bleue -->
+          <div class="timeline-v9">
+            <div class="timeline-v9-item">
+              <div class="timeline-v9-node">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <div class="timeline-v9-content">
+                <span class="timeline-v9-year">2025 — 2026</span>
+                <h3 class="timeline-v9-title">Licence 3 — Génie Logiciel</h3>
+                <p class="timeline-v9-sub">UIDT - UFR SET - Département Informatique</p>
+              </div>
+            </div>
+
+            <div class="timeline-v9-item">
+              <div class="timeline-v9-node">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <div class="timeline-v9-content">
+                <span class="timeline-v9-year">2024 — 2025</span>
+                <h3 class="timeline-v9-title">Licence 2 — Informatique</h3>
+                <p class="timeline-v9-sub">UIDT - UFR SET - Département Informatique</p>
+              </div>
+            </div>
+
+            <div class="timeline-v9-item">
+              <div class="timeline-v9-node">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 17 10 11 4 5"/>
+                  <line x1="12" y1="19" x2="20" y2="19"/>
+                </svg>
+              </div>
+              <div class="timeline-v9-content">
+                <span class="timeline-v9-year">2023 — 2024</span>
+                <h3 class="timeline-v9-title">Licence 1 — Informatique</h3>
+                <p class="timeline-v9-sub">UIDT - UFR SET - Département Informatique</p>
+              </div>
+            </div>
+
+            <div class="timeline-v9-item">
+              <div class="timeline-v9-node">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+              <div class="timeline-v9-content">
+                <span class="timeline-v9-year">2022 — 2023</span>
+                <h3 class="timeline-v9-title">Baccalauréat Scientifique — Série S2</h3>
+                <p class="timeline-v9-sub">Lycée de Mbacké</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Droite : Illustration 3D & Manuscrit "Chaque étape compte ! ♡" -->
+          <div class="academic-v9-visual">
+            <div class="academic-3d-card">
+              <img src="assets/grad-cap-books-3d.jpg" alt="Diplôme et études 3D" loading="lazy">
+            </div>
+
+            <div class="script-note-v9" style="text-align: center; align-items: center;" aria-hidden="true">
+              <span>Chaque étape</span>
+              <span>compte !</span>
+              <span class="script-heart">♡</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte "Mon objectif" fidèle à l'écran 4 -->
+        <div class="objective-v10-card">
+          <div class="objective-v10-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+            </svg>
+          </div>
+          <div>
+            <div class="objective-v10-title">Mon objectif</div>
+            <div class="objective-v10-text">
+              Devenir une développeuse full-stack, contribuer à des projets innovants et évoluer dans un environnement professionnel stimulant.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ÉCRAN 5 : MES PROJETS AVEC 6 MAQUETTES & CTA BANNER (V2)
+         ==================================================================== -->
+    <section class="projects-v9-sec" id="projets">
+      <div class="wrap">
+        <h2 class="sec-title-v9">Mes projets</h2>
+        <p class="sec-sub-v9">Des idées en code, des solutions pour demain</p>
+
+        <div class="projects-v9-grid">
+          
+          <!-- Projet 1 : Gestion des locaux -->
+          <div class="project-card-v9">
+            <div class="project-card-thumb">
+              <img src="assets/mockup-locaux.jpg" alt="Système de gestion des locaux" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Système de gestion des locaux</h3>
+              <div class="project-tags-row">
+                <span class="proj-tag">Python</span>
+                <span class="proj-tag">Flask</span>
+                <span class="proj-tag">MySQL</span>
+              </div>
+              <a class="btn-proj-circle" href="projet-locaux.html" aria-label="Voir le projet Système de gestion des locaux">
+                ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- Projet 2 : Système de livraison -->
+          <div class="project-card-v9">
+            <div class="project-card-thumb">
+              <img src="assets/mockup-livraisons.jpg" alt="Système de livraison" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Système de livraison</h3>
+              <div class="project-tags-row">
+                <span class="proj-tag">PHP</span>
+                <span class="proj-tag">MySQL</span>
+                <span class="proj-tag">Laravel</span>
+              </div>
+              <a class="btn-proj-circle" href="projet-livraisons.html" aria-label="Voir le projet Système de livraison">
+                ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- Projet 3 : Bibliothèque numérique -->
+          <div class="project-card-v9">
+            <div class="project-card-thumb">
+              <img src="assets/mockup-biblio.jpg" alt="Bibliothèque numérique" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Bibliothèque numérique</h3>
+              <div class="project-tags-row">
+                <span class="proj-tag">Java</span>
+                <span class="proj-tag">MySQL</span>
+                <span class="proj-tag">Swing</span>
+              </div>
+              <a class="btn-proj-circle" href="projet-biblio.html" aria-label="Voir le projet Bibliothèque numérique">
+                ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- Projet 4 : Application de cours -->
+          <div class="project-card-v9">
+            <div class="project-card-thumb">
+              <img src="assets/mockup-code-java.jpg" alt="Application de cours" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Application de cours</h3>
+              <div class="project-tags-row">
+                <span class="proj-tag">Java</span>
+                <span class="proj-tag">MySQL</span>
+              </div>
+              <a class="btn-proj-circle" href="projet-java.html" aria-label="Voir le projet Application de cours">
+                ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- Projet 5 : Portfolio personnel -->
+          <div class="project-card-v9">
+            <div class="project-card-thumb">
+              <img src="assets/mockup-vitrine.jpg" alt="Portfolio personnel" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Portfolio personnel</h3>
+              <div class="project-tags-row">
+                <span class="proj-tag">HTML</span>
+                <span class="proj-tag">CSS</span>
+                <span class="proj-tag">JavaScript</span>
+              </div>
+              <a class="btn-proj-circle" href="projet-vitrine.html" aria-label="Voir le projet Portfolio personnel">
+                ➔
+              </a>
+            </div>
+          </div>
+
+          <!-- Projet 6 : Création graphique -->
+          <div class="project-card-v9">
+            <div class="project-card-thumb">
+              <img src="assets/mockup-planification.jpg" alt="Création graphique" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Création graphique</h3>
+              <div class="project-tags-row">
+                <span class="proj-tag">Photoshop</span>
+                <span class="proj-tag">Illustrator</span>
+              </div>
+              <a class="btn-proj-circle" href="projet-affiches.html" aria-label="Voir le projet Création graphique">
+                ➔
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bannière CTA "Vous avez un projet ?" (Écran 5 de la maquette) -->
+        <div class="cta-banner-v9">
+          <div class="cta-banner-left">
+            <div class="cta-banner-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="cta-banner-title">Vous avez un projet ?</div>
+              <div class="cta-banner-sub">Je suis disponible pour le réaliser avec vous.</div>
+            </div>
+          </div>
+
+          <a class="btn-cta-banner" href="#contact">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>Me contacter</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ÉCRAN 6 : EXPÉRIENCE & PROJETS (AVEC LISTE CHECKLIST & VISUEL) (V2)
+         ==================================================================== -->
+    <section class="experience-v9-sec" id="experience">
+      <div class="wrap">
+        <h2 class="sec-title-v9">Expérience &amp; Projets</h2>
+        <p class="sec-sub-v9">Des expériences qui renforcent mes compétences</p>
+
+        <div class="exp-v10-grid">
+          <!-- Colonne Gauche : Étapes avec icônes SVG et checklist -->
+          <div class="exp-v10-steps">
+            
+            <!-- 1 -->
+            <div class="exp-step-v10">
+              <div class="exp-step-node">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4"/>
+                  <line x1="9" y1="11" x2="9" y2="11.01"/>
+                  <line x1="15" y1="11" x2="15" y2="11.01"/>
+                  <line x1="9" y1="15" x2="9" y2="15.01"/>
+                  <line x1="15" y1="15" x2="15" y2="15.01"/>
+                </svg>
+              </div>
+              <div class="exp-step-card">
+                <h3 class="exp-step-title">Cheffe de projet — Gestion des locaux (2024)</h3>
+                <ul class="exp-step-bullets">
+                  <li><span class="check-icon">✓</span><span>Conception et développement d'une application de gestion des locaux avec Flask (Python) et MySQL.</span></li>
+                  <li><span class="check-icon">✓</span><span>Tests sur environnement Google Colab.</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="exp-step-v10">
+              <div class="exp-step-node">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1" y="3" width="15" height="13"/>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                  <circle cx="5.5" cy="18.5" r="2.5"/>
+                  <circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+              </div>
+              <div class="exp-step-card">
+                <h3 class="exp-step-title">Cheffe de projet — Système de livraisons (2024)</h3>
+                <ul class="exp-step-bullets">
+                  <li><span class="check-icon">✓</span><span>Pilotage du projet de conception d'un système de suivi des livraisons locales.</span></li>
+                  <li><span class="check-icon">✓</span><span>Développement en PHP.</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="exp-step-v10">
+              <div class="exp-step-node">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+              </div>
+              <div class="exp-step-card">
+                <h3 class="exp-step-title">Stage — Point de transaction (2023)</h3>
+                <ul class="exp-step-bullets">
+                  <li><span class="check-icon">✓</span><span>Gestion d'un point de transaction.</span></li>
+                  <li><span class="check-icon">✓</span><span>Stage pratique.</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="exp-step-v10">
+              <div class="exp-step-node">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div class="exp-step-card">
+                <h3 class="exp-step-title">Travail collaboratif en équipe (2023)</h3>
+                <ul class="exp-step-bullets">
+                  <li><span class="check-icon">✓</span><span>Participation à des projets académiques en groupe.</span></li>
+                  <li><span class="check-icon">✓</span><span>Esprit d'équipe et organisation.</span></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Colonne Droite : Carte "Expérience qui fait la différence" & Visuel bureau avec note manuscrite -->
+          <div class="exp-v10-visual-col">
+            <div class="exp-diff-card">
+              <h4 class="exp-diff-title">Expérience qui fait la différence</h4>
+              <p class="exp-diff-text">
+                Chaque projet m'a permis de développer des compétences concrètes et de relever de nouveaux défis.
+              </p>
+            </div>
+
+            <div class="exp-desk-photo-card">
+              <img src="assets/workspace-desk-clean.jpg" alt="Environnement de travail" loading="lazy">
+              
+              <div class="exp-desk-script-overlay" aria-hidden="true">
+                <span>Apprendre</span>
+                <span>Créer</span>
+                <span>Avancer.</span>
+                <span class="script-heart">♡</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ÉCRAN 7 : LANGUES, CENTRES D'INTÉRÊT & CITATION NUIT ÉTOILÉE (V2)
+         ==================================================================== -->
+    <section class="qualites-v9-sec" id="qualites">
+      <div class="wrap">
+        
+        <div class="qualites-v9-3col">
+          
+          <!-- Col 1 : Langues -->
+          <div class="qualite-card-v9">
+            <h3 class="qualite-card-title">Langues</h3>
+            <div class="langues-list-v9">
+              <div class="langue-item-v9">
+                <span class="langue-flag">🇫🇷</span>
+                <div class="langue-info">
+                  <span class="langue-name">Français</span>
+                  <span class="langue-level">Courant</span>
+                </div>
+              </div>
+
+              <div class="langue-item-v9">
+                <span class="langue-flag">🇬🇧</span>
+                <div class="langue-info">
+                  <span class="langue-name">Anglais</span>
+                  <span class="langue-level">Intermédiaire</span>
+                </div>
+              </div>
+
+              <div class="langue-item-v9">
+                <span class="langue-flag">🇸🇳</span>
+                <div class="langue-info">
+                  <span class="langue-name">Wolof</span>
+                  <span class="langue-level">Langue maternelle</span>
+                </div>
+              </div>
+
+              <div class="langue-item-v9">
+                <span class="langue-flag">🇸🇦</span>
+                <div class="langue-info">
+                  <span class="langue-name">Arabe</span>
+                  <span class="langue-level">Intermédiaire</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 2 : Centres d'intérêt -->
+          <div class="qualite-card-v9">
+            <h3 class="qualite-card-title">Centres d'intérêt</h3>
+            <div class="interets-list-v9">
+              <div class="interet-pill-v9">
+                <div class="interet-pill-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="10" rx="2"/>
+                    <circle cx="12" cy="5" r="2"/>
+                    <path d="M12 7v4"/>
+                    <line x1="8" y1="16" x2="8" y2="16"/>
+                    <line x1="16" y1="16" x2="16" y2="16"/>
+                  </svg>
+                </div>
+                <span>Intelligence artificielle</span>
+              </div>
+
+              <div class="interet-pill-v9">
+                <div class="interet-pill-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                  </svg>
+                </div>
+                <span>Développement logiciel</span>
+              </div>
+
+              <div class="interet-pill-v9">
+                <div class="interet-pill-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                  </svg>
+                </div>
+                <span>Lecture</span>
+              </div>
+
+              <div class="interet-pill-v9">
+                <div class="interet-pill-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+                  </svg>
+                </div>
+                <span>Voyage</span>
+              </div>
+
+              <div class="interet-pill-v9">
+                <div class="interet-pill-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                    <path d="M2 12h20"/>
+                  </svg>
+                </div>
+                <span>Sport</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 3 : Carte Nuit Étoilée avec citation manuscrite (Écran 7) -->
+          <div class="quote-starry-card-v9">
+            <img class="quote-starry-bg" src="assets/quote-night-sky.jpg" alt="Fond nuit étoilée" loading="lazy">
+            <div class="quote-starry-overlay">
+              <span class="quote-starry-symbol">“</span>
+              <p class="quote-starry-text">
+                Apprendre aujourd'hui, créer demain.
+              </p>
+              <span class="quote-starry-symbol-close">”</span>
+              <div class="quote-starry-author">Mame Faty Kaire ♡</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ÉCRAN 8 : CONTACT (FIDÈLE À L'ÉCRAN 8 DE LA MAQUETTE)
+         ==================================================================== -->
+    <section class="contact-v10-sec" id="contact">
+      <div class="wrap">
+        <div class="contact-v10-badge-row">
+          <div class="contact-v10-brand">
+            <span class="brand-monogram" style="width:36px; height:36px; font-size:0.95rem;">KM</span>
+            <div>
+              <div class="contact-v10-name">Mame Faty Kaire</div>
+              <div class="contact-v10-sub">Une question ? Une opportunité ? Écrivez-moi !</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-v10-3col">
+          <!-- Col 1 : Contact Titre & 5 items épurés -->
+          <div class="contact-v10-left">
+            <h2 class="contact-v10-title">Contact</h2>
+
+            <div class="contact-v10-items-list">
+              <a class="contact-v10-item" href="tel:+221784081210">
+                <div class="contact-v10-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <span>78 408 12 10</span>
+              </a>
+
+              <a class="contact-v10-item" href="mailto:mfaty.kaire@univ-thies.sn">
+                <div class="contact-v10-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <span>mfaty.kaire@univ-thies.sn</span>
+              </a>
+
+              <a class="contact-v10-item" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener noreferrer">
+                <div class="contact-v10-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </div>
+                <span>github.com/kairetyma440-wq</span>
+              </a>
+
+              <a class="contact-v10-item" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener noreferrer">
+                <div class="contact-v10-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </div>
+                <span>linkedin.com/in/mamefatykaire</span>
+              </a>
+
+              <div class="contact-v10-item">
+                <div class="contact-v10-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <span>Touba, Sénégal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 2 : Formulaire carte blanche -->
+          <div class="contact-v10-card">
             <form id="contact-form" novalidate>
               <div class="form-group-item">
                 <label for="contact-name">Nom complet *</label>
@@ -716,9 +1064,9 @@
               </div>
 
               <div class="form-group-item">
-                <label for="contact-subject">Objet *</label>
+                <label for="contact-subject">Sujet *</label>
                 <select class="form-field-input" id="contact-subject" name="subject" required>
-                  <option value="" disabled selected>Sélectionner un sujet</option>
+                  <option value="" disabled selected>Choisissez un sujet</option>
                   <option value="opportunite">Opportunité d'emploi / Stage</option>
                   <option value="projet">Collaboration sur un projet</option>
                   <option value="autre">Autre demande</option>
@@ -727,57 +1075,129 @@
 
               <div class="form-group-item">
                 <label for="contact-message">Message *</label>
-                <textarea class="form-field-input" id="contact-message" name="message" placeholder="Votre message..." required></textarea>
+                <textarea class="form-field-input" id="contact-message" name="message" placeholder="Votre message..." rows="4" required></textarea>
               </div>
 
-              <button class="btn-submit-contact" type="submit" id="btn-submit">
-                Envoyer ✈
+              <button class="btn-submit-v9" type="submit" id="btn-submit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+                <span>Envoyer le message</span>
               </button>
             </form>
+          </div>
+
+          <!-- Col 3 : Photo bureau avec note manuscrite "Je suis là pour vous ! ♡" -->
+          <div class="contact-v10-visual">
+            <div class="contact-v10-photo-wrap">
+              <img src="assets/workspace-desk-clean.jpg" alt="Espace de travail et plante" loading="lazy">
+              <div class="contact-v10-overlay-note" aria-hidden="true">
+                <span>Je suis là</span>
+                <span>pour vous !</span>
+                <span class="script-heart">♡</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- ================= PIED DE PAGE / FOOTER (BLEU NUIT #0B1733) ================= -->
-  <footer class="site-footer">
-    <div class="wrap foot-in">
-      <div class="foot-left">
-        <span class="foot-brand-mono">KM</span>
-        <span class="foot-copy">© 2025 Kaire Mame Faty. Tous droits réservés.</span>
+  <!-- ====================================================================
+       ÉCRAN 9 : FOOTER BLEU NUIT AVEC LIENS RAPIDES & MES PROJETS (V2)
+       ==================================================================== -->
+  <footer class="footer-v9-sec">
+    <div class="wrap">
+      <div class="footer-v9-grid">
+        
+        <!-- Col 1 : Identité & réseaux -->
+        <div class="footer-col-brand">
+          <div class="footer-brand-header">
+            <span class="brand-monogram" style="background:#1D68FF; color:#fff;">KM</span>
+            <div>
+              <div class="footer-brand-name">Mame Faty Kaire</div>
+              <div class="footer-brand-role">Développeuse Full-Stack</div>
+            </div>
+          </div>
+          <p class="footer-brand-bio">
+            Passionnée par la technologie, je transforme les idées en solutions digitales.
+          </p>
+
+          <div class="footer-social-row">
+            <a href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Mame Faty Kaire">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Mame Faty Kaire">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Envoyer un email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+            <a href="tel:+221784081210" aria-label="Appeler par téléphone">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2 : Liens rapides -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-title">Liens rapides</h4>
+          <ul class="footer-links-list">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 : Mes projets -->
+        <div class="footer-col-nav">
+          <h4 class="footer-col-title">Mes projets</h4>
+          <ul class="footer-links-list">
+            <li><a href="projet-locaux.html">Gestion des locaux</a></li>
+            <li><a href="projet-livraisons.html">Système de livraisons</a></li>
+            <li><a href="projet-biblio.html">Bibliothèque numérique</a></li>
+            <li><a href="projet-java.html">Application de cours</a></li>
+            <li><a href="projet-vitrine.html">Portfolio</a></li>
+            <li><a href="projet-affiches.html">Création graphique</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 : Newsletter -->
+        <div class="footer-newsletter">
+          <h4 class="footer-col-title">Newsletter</h4>
+          <p>Restez informé(e) de mes actualités et projets.</p>
+          <form class="newsletter-form-v9" onsubmit="event.preventDefault(); alert('Merci pour votre inscription à la newsletter !');">
+            <input type="email" placeholder="Votre email" required aria-label="Votre email pour la newsletter">
+            <button type="submit" aria-label="S'inscrire">➔</button>
+          </form>
+        </div>
       </div>
 
-      <div class="foot-socials">
-        <a class="foot-social-link" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-          </svg>
-        </a>
-        <a class="foot-social-link" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-          </svg>
-        </a>
-        <a class="foot-social-link" href="https://x.com" target="_blank" rel="noopener" aria-label="X / Twitter">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </a>
-        <a class="foot-social-link" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-          </svg>
-        </a>
+      <div class="footer-v9-bottom">
+        <div>© 2025 Mame Faty Kaire. Tous droits réservés.</div>
+        <div>Conçu avec ❤️ par Mame Faty Kaire.</div>
       </div>
     </div>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut de page" style="display: none;">
-    ↑
-  </button>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Retour en haut de page" style="display: none;">↑</button>
 </body>
 </html>

@@ -14,13 +14,13 @@
 <body>
 
   <!-- ================= HEADER ================= -->
-  <header class="site-head" id="site-header">
+    <header class="site-head" id="site-header">
     <div class="wrap head-in">
-      <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
+      <a class="brand" href="index.html" aria-label="Mame Faty Kaire, accueil">
         <span class="brand-monogram">KM</span>
         <div class="brand-info">
-          <span class="brand-name">Kaire Mame Faty</span>
-          <span class="brand-role">Développeuse Fullstack</span>
+          <span class="brand-name">Mame Faty Kaire</span>
+          <span class="brand-role">Développeuse Full-Stack</span>
         </div>
       </a>
 
@@ -29,17 +29,42 @@
         <a href="apropos.html" class="nav-link">À propos</a>
         <a href="competences.html" class="nav-link">Compétences</a>
         <a href="parcours.html" class="nav-link">Parcours</a>
-        <a href="projets.html" class="nav-link active" aria-current="page">Projets</a>
+        <a href="projets.html" class="nav-link active">Projets</a>
+        <a href="experience.html" class="nav-link">Expérience</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="head-actions">
-        <a class="btn-cv-pill btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
-          Télécharger CV
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Basculer le thème" title="Basculer le thème">
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+
+        <a class="btn-nav-phone" href="tel:+221784081210" aria-label="Appeler Mame Faty Kaire" title="+221 78 408 12 10">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
           </svg>
         </a>
+
+        <a class="btn-nav-cv" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          <span>Télécharger CV</span>
+        </a>
+
         <button class="btn-menu-mobile" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 7h16M4 12h16M4 17h16"/>

@@ -3,43 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mes compétences — Kaire Mame Faty</title>
-  <meta name="description" content="Compétences techniques et qualités personnelles de Kaire Mame Faty, Développeuse Fullstack.">
+  <meta name="color-scheme" content="light dark">
+  <title>Compétences — Mame Faty Kaire</title>
+  <meta name="description" content="Compétences techniques, langages, frameworks et outils de Mame Faty Kaire.">
+  
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('kmf_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800;1,900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
 
-  <!-- ================= HEADER ================= -->
   <header class="site-head" id="site-header">
     <div class="wrap head-in">
-      <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
+      <a class="brand" href="index.html" aria-label="Mame Faty Kaire, accueil">
         <span class="brand-monogram">KM</span>
         <div class="brand-info">
-          <span class="brand-name">Kaire Mame Faty</span>
-          <span class="brand-role">Développeuse Fullstack</span>
+          <span class="brand-name">Mame Faty Kaire</span>
+          <span class="brand-role">Développeuse Full-Stack</span>
         </div>
       </a>
 
       <nav class="nav-menu" id="nav" aria-label="Navigation principale">
-        <a href="index.html" class="nav-link">Accueil</a>
-        <a href="apropos.html" class="nav-link">À propos</a>
-        <a href="competences.html" class="nav-link active" aria-current="page">Compétences</a>
-        <a href="parcours.html" class="nav-link">Parcours</a>
-        <a href="projets.html" class="nav-link">Projets</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="index.html" class="nav-link ">Accueil</a>
+        <a href="apropos.html" class="nav-link ">À propos</a>
+        <a href="competences.html" class="nav-link active">Compétences</a>
+        <a href="parcours.html" class="nav-link ">Parcours</a>
+        <a href="projets.html" class="nav-link ">Projets</a>
+        <a href="experience.html" class="nav-link ">Expérience</a>
+        <a href="contact.html" class="nav-link ">Contact</a>
       </nav>
 
       <div class="head-actions">
-        <a class="btn-cv-pill btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
-          Télécharger CV
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Basculer le thème" title="Basculer le thème">
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+
+        <a class="btn-nav-phone" href="tel:+221784081210" aria-label="Appeler Mame Faty Kaire" title="+221 78 408 12 10">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
           </svg>
         </a>
+
+        <a class="btn-nav-cv" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          <span>Télécharger CV</span>
+        </a>
+
         <button class="btn-menu-mobile" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 7h16M4 12h16M4 17h16"/>
@@ -50,183 +90,280 @@
   </header>
 
   <main>
-    <!-- ================= SCREEN 3 : PAGE COMPÉTENCES ================= -->
-    <section class="skills-v3-sec">
+    <section class="skills-v10-sec" style="padding-top: 50px; padding-bottom: 70px;">
       <div class="wrap">
-        <div class="skills-top-grid">
+        <div class="skills-v10-header-row">
           <div>
-            <div class="eyebrow-tag">
-              <span>🛠️</span> Mes compétences
-            </div>
-            <h1 class="sec-title-main">
-              Des compétences variées<br>au service <span style="color: var(--blue-electric);">de</span> vos projets
-            </h1>
-            <p class="sec-desc-main" style="margin-bottom: 0;">
-              Je mets mes connaissances et mon savoir-faire au service de vos idées, avec rigueur, créativité et engagement.
-            </p>
+            <h1 class="sec-title-v9">Compétences</h1>
+            <p class="sec-sub-v9">Des compétences solides pour construire le futur</p>
           </div>
-
-          <div class="skills-laptop-frame">
-            <img src="assets/about-desk.jpg" alt="Espace de travail et code" width="480" height="240" loading="lazy">
+          <div class="skills-v10-cursive-note" aria-hidden="true">
+            <span>La technologie</span>
+            <span>est une clé,</span>
+            <span>pas une limite</span>
+            <span class="cursive-heart">♡</span>
           </div>
         </div>
 
-        <div class="skills-2col-layout">
-          <!-- Colonne Gauche : Compétences Techniques (Jauges Circulaires) -->
-          <div>
-            <h2 class="skills-block-title">Compétences techniques</h2>
-            <div class="tech-gauges-list">
-              <!-- 90% Dévelopement Web -->
-              <div class="gauge-row-item">
-                <div class="circular-gauge-box">
-                  <svg viewBox="0 0 36 36">
-                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                    <path class="circle-fill-bar" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                  </svg>
-                  <span class="gauge-pct-text">90%</span>
-                </div>
-                <div class="gauge-detail">
-                  <h4>Développement Web</h4>
-                  <p>HTML5, CSS3, JavaScript, React, Django, Laravel</p>
-                </div>
+        <div class="skills-v10-3grid">
+          <!-- Carte 1 : Dév Web -->
+          <div class="skill-card-v10">
+            <div class="skill-card-v10-top">
+              <div class="skill-card-v10-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
               </div>
-
-              <!-- 85% Programmation -->
-              <div class="gauge-row-item">
-                <div class="circular-gauge-box">
+              <h3 class="skill-card-v10-title">Développement Web</h3>
+            </div>
+            <ul class="skill-card-v10-list">
+              <li><span class="check-icon">✓</span> HTML5 / CSS3</li>
+              <li><span class="check-icon">✓</span> JavaScript</li>
+              <li><span class="check-icon">✓</span> Django</li>
+              <li><span class="check-icon">✓</span> Laravel</li>
+            </ul>
+            <div class="skill-card-v10-bottom">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <div class="skill-gauge-radial">
                   <svg viewBox="0 0 36 36">
-                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                    <path class="circle-fill-bar" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3" stroke-dasharray="90, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
                   </svg>
-                  <span class="gauge-pct-text">85%</span>
+                  <span>90%</span>
                 </div>
-                <div class="gauge-detail">
-                  <h4>Programmation</h4>
-                  <p>Java, Python, PHP</p>
-                </div>
+                <div class="skill-gauge-lbl">HTML/CSS</div>
               </div>
-
-              <!-- 80% Gestion de projets -->
-              <div class="gauge-row-item">
-                <div class="circular-gauge-box">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <div class="skill-gauge-radial">
                   <svg viewBox="0 0 36 36">
-                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                    <path class="circle-fill-bar" stroke-dasharray="80, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3" stroke-dasharray="85, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
                   </svg>
-                  <span class="gauge-pct-text">80%</span>
+                  <span>85%</span>
                 </div>
-                <div class="gauge-detail">
-                  <h4>Gestion de projets</h4>
-                  <p>Organisation, Planification, Méthodologies agile</p>
-                </div>
-              </div>
-
-              <!-- 75% Bases de données -->
-              <div class="gauge-row-item">
-                <div class="circular-gauge-box">
-                  <svg viewBox="0 0 36 36">
-                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                    <path class="circle-fill-bar" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                  </svg>
-                  <span class="gauge-pct-text">75%</span>
-                </div>
-                <div class="gauge-detail">
-                  <h4>Bases de données</h4>
-                  <p>MySQL, PostgreSQL</p>
-                </div>
-              </div>
-
-              <!-- 70% Outils & Environnements -->
-              <div class="gauge-row-item">
-                <div class="circular-gauge-box">
-                  <svg viewBox="0 0 36 36">
-                    <path class="circle-track" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                    <path class="circle-fill-bar" stroke-dasharray="70, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                  </svg>
-                  <span class="gauge-pct-text">70%</span>
-                </div>
-                <div class="gauge-detail">
-                  <h4>Outils &amp; Environnements</h4>
-                  <p>Git, GitHub, GitLab, VS Code, Docker</p>
-                </div>
+                <div class="skill-gauge-lbl">JavaScript</div>
               </div>
             </div>
           </div>
 
-          <!-- Colonne Droite : Compétences Personnelles -->
-          <div>
-            <div class="soft-skills-card">
-              <h2 class="skills-block-title" style="margin-bottom: 24px;">Compétences personnelles</h2>
-              <div class="soft-skills-list">
-                <div class="soft-skill-row">
-                  <div class="soft-skill-icon-circle">👥</div>
-                  <div class="soft-skill-text">
-                    <h4>Esprit d'équipe</h4>
-                    <p>Facilité à travailler en groupe</p>
-                  </div>
+          <!-- Carte 2 : Programmation -->
+          <div class="skill-card-v10">
+            <div class="skill-card-v10-top">
+              <div class="skill-card-v10-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <h3 class="skill-card-v10-title">Programmation</h3>
+            </div>
+            <ul class="skill-card-v10-list">
+              <li><span class="check-icon">✓</span> Java</li>
+              <li><span class="check-icon">✓</span> Python / Flask</li>
+              <li><span class="check-icon">✓</span> PHP</li>
+            </ul>
+            <div class="skill-card-v10-bottom">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <div class="skill-gauge-radial">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3" stroke-dasharray="85, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span>85%</span>
                 </div>
-                <div class="soft-skill-row">
-                  <div class="soft-skill-icon-circle">🏆</div>
-                  <div class="soft-skill-text">
-                    <h4>Leadership</h4>
-                    <p>Prise d'initiative et responsabilité</p>
-                  </div>
+                <div class="skill-gauge-lbl">Python</div>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px;">
+                <div class="skill-gauge-radial">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3" stroke-dasharray="80, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span>80%</span>
                 </div>
-                <div class="soft-skill-row">
-                  <div class="soft-skill-icon-circle">💬</div>
-                  <div class="soft-skill-text">
-                    <h4>Communication</h4>
-                    <p>Écoute active et expression claire</p>
-                  </div>
-                </div>
-                <div class="soft-skill-row">
-                  <div class="soft-skill-icon-circle">🔄</div>
-                  <div class="soft-skill-text">
-                    <h4>Adaptabilité</h4>
-                    <p>S'adapter rapidement aux changements</p>
-                  </div>
-                </div>
+                <div class="skill-gauge-lbl">Java</div>
               </div>
             </div>
+          </div>
+
+          <!-- Carte 3 : Bases de données & Outils -->
+          <div class="skill-card-v10">
+            <div class="skill-card-v10-top">
+              <div class="skill-card-v10-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                </svg>
+              </div>
+              <h3 class="skill-card-v10-title">Bases de données &amp; Outils</h3>
+            </div>
+            <ul class="skill-card-v10-list">
+              <li><span class="check-icon">✓</span> SQL / MySQL</li>
+              <li><span class="check-icon">✓</span> Git / GitHub / GitLab</li>
+              <li><span class="check-icon">✓</span> Google Docs, Sheets, Drive</li>
+            </ul>
+            <div class="skill-card-v10-bottom">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <div class="skill-gauge-radial">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3" stroke-dasharray="90, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span>90%</span>
+                </div>
+                <div class="skill-gauge-lbl">SQL</div>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px;">
+                <div class="skill-gauge-radial">
+                  <svg viewBox="0 0 36 36">
+                    <path class="circle-bg" stroke="#E2E8F0" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    <path class="circle" stroke="#1D68FF" stroke-width="3" stroke-dasharray="90, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  </svg>
+                  <span>90%</span>
+                </div>
+                <div class="skill-gauge-lbl">Git / GitHub</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 40px;">
+          <h3 class="skills-v10-other-title">Autres compétences</h3>
+          <div class="skills-v10-other-chips">
+            <span class="other-chip">
+              <svg class="chip-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
+                <rect x="3" y="11" width="18" height="11" rx="3"/>
+                <circle cx="8.5" cy="16.5" r="1.5" fill="currentColor"/>
+                <circle cx="15.5" cy="16.5" r="1.5" fill="currentColor"/>
+              </svg>
+              <span>IA &amp; Data</span>
+            </span>
+            <span class="other-chip">
+              <svg class="chip-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span>Gestion de projets</span>
+            </span>
+            <span class="other-chip">
+              <svg class="chip-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/>
+              </svg>
+              <span>UI/UX</span>
+            </span>
+            <span class="other-chip">
+              <svg class="chip-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span>Anglais</span>
+            </span>
+            <span class="other-chip">
+              <svg class="chip-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              <span>Travail en équipe</span>
+            </span>
           </div>
         </div>
       </div>
     </section>
   </main>
+  <footer class="footer-v9-sec">
+    <div class="wrap">
+      <div class="footer-v9-top">
+        <div class="footer-v9-brand">
+          <div class="footer-brand-header">
+            <span class="footer-monogram">KM</span>
+            <div>
+              <div class="footer-brand-title">Mame Faty Kaire</div>
+              <div class="footer-brand-sub">Développeuse Full-Stack</div>
+            </div>
+          </div>
+          
+          <p class="footer-v9-tagline">
+            Passionnée par la technologie, je transforme les idées en solutions digitales.
+          </p>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="wrap foot-in">
-      <div class="foot-left">
-        <span class="foot-brand-mono">KM</span>
-        <span class="foot-copy">© 2025 Kaire Mame Faty. Tous droits réservés.</span>
+          <div class="footer-social-circles">
+            <a class="footer-circle-btn" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+            <a class="footer-circle-btn" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a class="footer-circle-btn" href="https://x.com" target="_blank" rel="noopener" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a class="footer-circle-btn" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-v9-links-cols">
+          <div class="footer-v9-col">
+            <h4 class="footer-v9-title">Liens rapides</h4>
+            <ul class="footer-v9-list">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="apropos.html">À propos</a></li>
+              <li><a href="competences.html">Compétences</a></li>
+              <li><a href="parcours.html">Parcours</a></li>
+              <li><a href="projets.html">Projets</a></li>
+              <li><a href="experience.html">Expérience</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-v9-col">
+            <h4 class="footer-v9-title">Mes projets</h4>
+            <ul class="footer-v9-list">
+              <li><a href="projet-locaux.html">Gestion des locaux</a></li>
+              <li><a href="projet-livraisons.html">Système de livraisons</a></li>
+              <li><a href="projet-biblio.html">Bibliothèque numérique</a></li>
+              <li><a href="projet-cours.html">Application de cours</a></li>
+              <li><a href="index.html#projets">Portfolio personnel</a></li>
+              <li><a href="projet-affiches.html">Création graphique</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-v9-col">
+            <h4 class="footer-v9-title">Newsletter</h4>
+            <p class="footer-news-text">Restez informé(e) de mes actualités et projets.</p>
+            <form class="footer-news-form" onsubmit="event.preventDefault(); alert('Merci pour votre inscription !');">
+              <input type="email" placeholder="Votre email" required aria-label="Votre adresse email">
+              <button type="submit" aria-label="S'inscrire">➔</button>
+            </form>
+          </div>
+        </div>
       </div>
 
-      <div class="foot-socials">
-        <a class="foot-social-link" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-          </svg>
-        </a>
-        <a class="foot-social-link" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-          </svg>
-        </a>
-        <a class="foot-social-link" href="https://x.com" target="_blank" rel="noopener" aria-label="X / Twitter">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </a>
-        <a class="foot-social-link" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-          </svg>
-        </a>
+      <div class="footer-v9-bottom">
+        <div>&copy; 2025 Mame Faty Kaire. Tous droits réservés.</div>
+        <div class="footer-credit">Conçu avec <span style="color:#ef4444;">❤️</span> par Mame Faty Kaire</div>
       </div>
     </div>
   </footer>
-
 </body>
 </html>
+

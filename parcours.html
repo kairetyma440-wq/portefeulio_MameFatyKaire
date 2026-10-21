@@ -3,43 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mon parcours — Kaire Mame Faty</title>
-  <meta name="description" content="Parcours académique et expériences professionnelles de Kaire Mame Faty, Développeuse Fullstack : UIDT, Génie Logiciel, projets informatiques.">
+  <meta name="color-scheme" content="light dark">
+  <title>Parcours Académique — Mame Faty Kaire</title>
+  <meta name="description" content="Le cursus et les formations universitaires de Mame Faty Kaire.">
+  
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('kmf_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800;1,900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
 
-  <!-- ================= HEADER ================= -->
   <header class="site-head" id="site-header">
     <div class="wrap head-in">
-      <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
+      <a class="brand" href="index.html" aria-label="Mame Faty Kaire, accueil">
         <span class="brand-monogram">KM</span>
         <div class="brand-info">
-          <span class="brand-name">Kaire Mame Faty</span>
-          <span class="brand-role">Développeuse Fullstack</span>
+          <span class="brand-name">Mame Faty Kaire</span>
+          <span class="brand-role">Développeuse Full-Stack</span>
         </div>
       </a>
 
       <nav class="nav-menu" id="nav" aria-label="Navigation principale">
-        <a href="index.html" class="nav-link">Accueil</a>
-        <a href="apropos.html" class="nav-link">À propos</a>
-        <a href="competences.html" class="nav-link">Compétences</a>
-        <a href="parcours.html" class="nav-link active" aria-current="page">Parcours</a>
-        <a href="projets.html" class="nav-link">Projets</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="index.html" class="nav-link ">Accueil</a>
+        <a href="apropos.html" class="nav-link ">À propos</a>
+        <a href="competences.html" class="nav-link ">Compétences</a>
+        <a href="parcours.html" class="nav-link active">Parcours</a>
+        <a href="projets.html" class="nav-link ">Projets</a>
+        <a href="experience.html" class="nav-link ">Expérience</a>
+        <a href="contact.html" class="nav-link ">Contact</a>
       </nav>
 
       <div class="head-actions">
-        <a class="btn-cv-pill btn-cv-desk" href="assets/cv.pdf" target="_blank" rel="noopener">
-          Télécharger CV
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Basculer le thème" title="Basculer le thème">
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+
+        <a class="btn-nav-phone" href="tel:+221784081210" aria-label="Appeler Mame Faty Kaire" title="+221 78 408 12 10">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
           </svg>
         </a>
+
+        <a class="btn-nav-cv" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          <span>Télécharger CV</span>
+        </a>
+
         <button class="btn-menu-mobile" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 7h16M4 12h16M4 17h16"/>
@@ -50,170 +90,159 @@
   </header>
 
   <main>
-    <!-- ================= SCREEN 4 : PAGE PARCOURS ================= -->
-    <section class="parcours-v3-sec">
+    <section class="parcours-v9-sec" style="padding-top: 50px; padding-bottom: 70px;">
       <div class="wrap">
-        <div class="parcours-header-row">
+        <h1 class="sec-title-v9">Mon parcours académique</h1>
+        <p class="sec-sub-v9">Une formation solide pour construire mon avenir</p>
+
+        <div class="parcours-v9-grid">
+          <div class="timeline-v9">
+            <div class="timeline-v9-item">
+              <div class="timeline-v9-node">🎓</div>
+              <div class="timeline-v9-content">
+                <span class="timeline-v9-year">2025 — 2026</span>
+                <h3 class="timeline-v9-title">Licence 3 — Génie Logiciel</h3>
+                <p class="timeline-v9-sub">UIDT - UFR SET - Département Informatique</p>
+              </div>
+            </div>
+
+            <div class="timeline-v9-item">
+              <div class="timeline-v9-node">💻</div>
+              <div class="timeline-v9-content">
+                <span class="timeline-v9-year">2024 — 2025</span>
+                <h3 class="timeline-v9-title">Licence 2 — Informatique</h3>
+                <p class="timeline-v9-sub">UIDT - UFR SET - Département Informatique</p>
+              </div>
+            </div>
+
+            <div class="timeline-v9-item">
+              <div class="timeline-v9-node">🖥️</div>
+              <div class="timeline-v9-content">
+                <span class="timeline-v9-year">2023 — 2024</span>
+                <h3 class="timeline-v9-title">Licence 1 — Informatique</h3>
+                <p class="timeline-v9-sub">UIDT - UFR SET - Département Informatique</p>
+              </div>
+            </div>
+
+            <div class="timeline-v9-item">
+              <div class="timeline-v9-node">⭐</div>
+              <div class="timeline-v9-content">
+                <span class="timeline-v9-year">2022 — 2023</span>
+                <h3 class="timeline-v9-title">Baccalauréat Scientifique — Série S2</h3>
+                <p class="timeline-v9-sub">Lycée de Mbacké</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="academic-v9-visual">
+            <div class="academic-3d-card">
+              <img src="assets/grad-cap-books-3d.jpg" alt="Diplôme et études académiques 3D" loading="lazy">
+            </div>
+            <div class="parcours-script-note script-note-v9" aria-hidden="true">
+              <span>Chaque étape</span>
+              <span>compte !</span>
+              <span class="script-heart">♡</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte Basse : Mon objectif -->
+        <div class="objective-v10-card">
+          <div class="objective-v10-icon">🎯</div>
           <div>
-            <div class="eyebrow-tag">
-              <span>🎓</span> Mon parcours
-            </div>
-            <h1 class="sec-title-main">
-              Une évolution guidée<br>par la passion et la persévérance
-            </h1>
-            <p class="sec-desc-main" style="margin-bottom: 0;">
-              Chaque étape de mon parcours m'a permis d'acquérir de nouvelles compétences et de renforcer ma détermination.
+            <div class="objective-v10-title">Mon objectif</div>
+            <p class="objective-v10-text">
+              Devenir une développeuse full-stack, contribuer à des projets innovants et évoluer dans un environnement professionnel stimulant.
             </p>
-          </div>
-
-          <!-- Illustration végétale cyan/bleu raffinée -->
-          <div class="parcours-botanical-decor" aria-hidden="true">
-            <svg viewBox="0 0 120 120" fill="none">
-              <path d="M20 100 Q 55 60 95 20" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M95 20 C105 12 115 22 108 32 C100 40 92 30 95 20 Z" fill="rgba(56, 189, 248, 0.45)" stroke="#38BDF8" stroke-width="1.2"/>
-              <path d="M78 38 C90 32 96 46 88 54 C80 60 72 48 78 38 Z" fill="rgba(37, 99, 235, 0.35)" stroke="#2563EB" stroke-width="1.2"/>
-              <path d="M60 56 C70 50 78 62 68 72 C58 78 52 66 60 56 Z" fill="rgba(56, 189, 248, 0.45)" stroke="#38BDF8" stroke-width="1.2"/>
-              <path d="M42 74 C52 68 60 80 50 90 C40 96 34 84 42 74 Z" fill="rgba(37, 99, 235, 0.35)" stroke="#2563EB" stroke-width="1.2"/>
-              <path d="M70 42 C60 30 72 20 82 28 C90 36 80 46 70 42 Z" fill="rgba(56, 189, 248, 0.35)" stroke="#38BDF8" stroke-width="1.2"/>
-              <path d="M52 60 C42 48 54 38 64 46 C72 54 62 64 52 60 Z" fill="rgba(37, 99, 235, 0.25)" stroke="#2563EB" stroke-width="1.2"/>
-            </svg>
-          </div>
-        </div>
-
-        <div class="parcours-2col-layout">
-          <!-- Parcours Académique -->
-          <div class="parcours-white-card">
-            <h2 class="parcours-card-title">
-              <span>🎓</span> Parcours académique
-            </h2>
-            <ol class="timeline-track-v3">
-              <li class="timeline-step-v3">
-                <div class="timeline-step-year">2025 — 2026</div>
-                <h3 class="timeline-step-title">Licence 3 — Génie Logiciel</h3>
-                <p class="timeline-step-desc">UIDT - UFR SET - Département Informatique</p>
-              </li>
-              <li class="timeline-step-v3">
-                <div class="timeline-step-year">2024 — 2025</div>
-                <h3 class="timeline-step-title">Licence 2 — Informatique</h3>
-                <p class="timeline-step-desc">UIDT - UFR SET - Département Informatique</p>
-              </li>
-              <li class="timeline-step-v3">
-                <div class="timeline-step-year">2023 — 2024</div>
-                <h3 class="timeline-step-title">Licence 1 — Informatique</h3>
-                <p class="timeline-step-desc">UIDT - UFR SET - Département Informatique</p>
-              </li>
-              <li class="timeline-step-v3">
-                <div class="timeline-step-year">2022 — 2023</div>
-                <h3 class="timeline-step-title">Baccalauréat Scientifique — Série S2</h3>
-                <p class="timeline-step-desc">Lycée de Mbacké</p>
-              </li>
-            </ol>
-          </div>
-
-          <!-- Expériences / Projets -->
-          <div class="parcours-white-card">
-            <h2 class="parcours-card-title">
-              <span>💼</span> Expériences / Projets
-            </h2>
-            <div class="exp-v3-list">
-              <div class="exp-v3-item">
-                <div class="exp-v3-icon">🏢</div>
-                <div class="exp-v3-info">
-                  <h3>Chef de projet — Gestion des locaux</h3>
-                  <p>Conception d'une application de gestion des locaux avec Flask et MySQL.</p>
-                </div>
-              </div>
-              <div class="exp-v3-item">
-                <div class="exp-v3-icon">🚚</div>
-                <div class="exp-v3-info">
-                  <h3>Chef de projet — Système de livraisons</h3>
-                  <p>Pilotage d'un système de suivi des livraisons (PHP).</p>
-                </div>
-              </div>
-              <div class="exp-v3-item">
-                <div class="exp-v3-icon">🏛️</div>
-                <div class="exp-v3-info">
-                  <h3>Stage — Point de transaction</h3>
-                  <p>Gestion d'un point de transaction.</p>
-                </div>
-              </div>
-              <div class="exp-v3-item">
-                <div class="exp-v3-icon">👥</div>
-                <div class="exp-v3-info">
-                  <h3>Travail collaboratif en équipe</h3>
-                  <p>Projets académiques en groupe.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3 Cartes Inférieures : Langues, Permis, Centres d'intérêt -->
-        <div class="parcours-bottom-3grid">
-          <div class="parcours-bottom-card">
-            <h3 class="parcours-subcard-title">🌐 Langues</h3>
-            <ul class="lang-list">
-              <li>🇫🇷 Français : Courant</li>
-              <li>🇬🇧 Anglais : Intermédiaire</li>
-              <li>🇸🇳 Wolof : Langue maternelle</li>
-              <li>🇸🇦 Arabe : Intermédiaire</li>
-            </ul>
-          </div>
-
-          <div class="parcours-bottom-card">
-            <h3 class="parcours-subcard-title">🚗 Permis</h3>
-            <div class="permis-row">
-              <span class="permis-ico">🚘</span>
-              <span>Permis B — Véhicule léger</span>
-            </div>
-          </div>
-
-          <div class="parcours-bottom-card">
-            <h3 class="parcours-subcard-title">💡 Centres d'intérêt</h3>
-            <div class="interests-chips-wrap">
-              <span class="interest-chip">🤖 IA</span>
-              <span class="interest-chip">💻 Développement logiciel</span>
-              <span class="interest-chip">📊 Data</span>
-            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
+  <footer class="footer-v9-sec">
+    <div class="wrap">
+      <div class="footer-v9-top">
+        <div class="footer-v9-brand">
+          <div class="footer-brand-header">
+            <span class="footer-monogram">KM</span>
+            <div>
+              <div class="footer-brand-title">Mame Faty Kaire</div>
+              <div class="footer-brand-sub">Développeuse Full-Stack</div>
+            </div>
+          </div>
+          
+          <p class="footer-v9-tagline">
+            Passionnée par la technologie, je transforme les idées en solutions digitales.
+          </p>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="wrap foot-in">
-      <div class="foot-left">
-        <span class="foot-brand-mono">KM</span>
-        <span class="foot-copy">© 2025 Kaire Mame Faty. Tous droits réservés.</span>
+          <div class="footer-social-circles">
+            <a class="footer-circle-btn" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+            <a class="footer-circle-btn" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a class="footer-circle-btn" href="https://x.com" target="_blank" rel="noopener" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a class="footer-circle-btn" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-v9-links-cols">
+          <div class="footer-v9-col">
+            <h4 class="footer-v9-title">Liens rapides</h4>
+            <ul class="footer-v9-list">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="apropos.html">À propos</a></li>
+              <li><a href="competences.html">Compétences</a></li>
+              <li><a href="parcours.html">Parcours</a></li>
+              <li><a href="projets.html">Projets</a></li>
+              <li><a href="experience.html">Expérience</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-v9-col">
+            <h4 class="footer-v9-title">Mes projets</h4>
+            <ul class="footer-v9-list">
+              <li><a href="projet-locaux.html">Gestion des locaux</a></li>
+              <li><a href="projet-livraisons.html">Système de livraisons</a></li>
+              <li><a href="projet-biblio.html">Bibliothèque numérique</a></li>
+              <li><a href="projet-cours.html">Application de cours</a></li>
+              <li><a href="index.html#projets">Portfolio personnel</a></li>
+              <li><a href="projet-affiches.html">Création graphique</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-v9-col">
+            <h4 class="footer-v9-title">Newsletter</h4>
+            <p class="footer-news-text">Restez informé(e) de mes actualités et projets.</p>
+            <form class="footer-news-form" onsubmit="event.preventDefault(); alert('Merci pour votre inscription !');">
+              <input type="email" placeholder="Votre email" required aria-label="Votre adresse email">
+              <button type="submit" aria-label="S'inscrire">➔</button>
+            </form>
+          </div>
+        </div>
       </div>
 
-      <div class="foot-socials">
-        <a class="foot-social-link" href="https://github.com/kairetyma440-wq" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-          </svg>
-        </a>
-        <a class="foot-social-link" href="https://linkedin.com/in/mamefatykaire" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-          </svg>
-        </a>
-        <a class="foot-social-link" href="https://x.com" target="_blank" rel="noopener" aria-label="X / Twitter">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </a>
-        <a class="foot-social-link" href="mailto:mfaty.kaire@univ-thies.sn" aria-label="Email">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-          </svg>
-        </a>
+      <div class="footer-v9-bottom">
+        <div>&copy; 2025 Mame Faty Kaire. Tous droits réservés.</div>
+        <div class="footer-credit">Conçu avec <span style="color:#ef4444;">❤️</span> par Mame Faty Kaire</div>
       </div>
     </div>
   </footer>
-
 </body>
 </html>
+
