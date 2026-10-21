@@ -7359,3 +7359,91 @@ textarea.form-field-input {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ==========================================================================
+   20. PERFECTION ABSOLUE DU HERO SOMBRE (FIDÈLE À MEDIA_1792597275017)
+   ========================================================================== */
+
+/* Navbar nativement sombre dès le chargement sur la page avec #accueil */
+body:has(#accueil) .site-head:not(.scrolled) {
+  background: rgba(3, 7, 18, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body:has(#accueil) .site-head:not(.scrolled) .brand-name {
+  color: #FFFFFF !important;
+}
+
+body:has(#accueil) .site-head:not(.scrolled) .brand-role {
+  color: #7DD3FC !important;
+}
+
+body:has(#accueil) .site-head:not(.scrolled) .nav-link {
+  color: #E2E8F0 !important;
+}
+
+body:has(#accueil) .site-head:not(.scrolled) .nav-link:hover,
+body:has(#accueil) .site-head:not(.scrolled) .nav-link.active {
+  color: #38BDF8 !important;
+}
+
+/* Bouton Télécharger CV en pilule blanche avec texte bleu */
+body:has(#accueil) .site-head:not(.scrolled) .btn-cv-pill {
+  background: #FFFFFF !important;
+  color: #1D68FF !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+  font-weight: 800 !important;
+}
+
+body:has(#accueil) .site-head:not(.scrolled) .btn-cv-pill:hover {
+  background: #EBF3FF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(29, 104, 255, 0.4) !important;
+}
+
+/* Style de la composition exacte de l'avatar et du ruban 3D */
+.hero-v2-composition-exact {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 25px rgba(56, 189, 248, 0.35));
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-v2-composition-exact:hover {
+  transform: translateY(-4px) scale(1.02);
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 35px rgba(56, 189, 248, 0.5));
+}
+
+.hero-v2-composition-exact img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Vague organique inférieure de transition */
+.hero-v2-bottom-wave {
+  width: 100%;
+  line-height: 0;
+  margin-top: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-v2-bottom-wave svg {
+  width: 100%;
+  height: 48px;
+  display: block;
+}
+
+[data-theme="dark"] .hero-v2-bottom-wave svg path {
+  fill: #0B1733;
+}
