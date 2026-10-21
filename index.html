@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Mame Faty Kaire — Développeuse Full-Stack</title>
+  <title>Kaire Mame Faty — Développeuse Full-Stack</title>
   <meta name="description" content="Portfolio officiel de Mame Faty Kaire, Développeuse Full-Stack : projets réels, compétences solides, parcours académique et contact.">
   
   <!-- Prévention du flash de thème -->
@@ -30,6 +30,65 @@
 </head>
 <body>
 
+  <!-- ====================================================================
+       HEADER / NAVBAR UNIFIÉE (FIDÈLE À LA MAQUETTE ÉCRANS 1 & 2)
+       ==================================================================== -->
+  <header class="site-head nav-hero-dark" id="site-header">
+    <div class="wrap head-in">
+      <a class="brand" href="index.html" aria-label="Kaire Mame Faty, accueil">
+        <span class="brand-monogram">KM</span>
+        <div class="brand-info">
+          <span class="brand-name">Kaire Mame Faty</span>
+          <span class="brand-role">Développeuse Full-Stack</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav" aria-label="Navigation principale">
+        <a href="#accueil" class="nav-link active">Accueil</a>
+        <a href="#apropos" class="nav-link">À propos</a>
+        <a href="#competences" class="nav-link">Compétences</a>
+        <a href="#parcours" class="nav-link">Parcours</a>
+        <a href="#projets" class="nav-link">Projets</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="head-actions">
+        <!-- Bouton Bascule Dark / Light -->
+        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Basculer le thème" title="Basculer le thème">
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+
+        <!-- Bouton Télécharger CV (Pilule Bleue Officielle) -->
+        <a class="btn-nav-cv" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          <span>Télécharger CV</span>
+        </a>
+
+        <!-- Bouton Menu Mobile -->
+        <button class="btn-menu-mobile" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
           <!-- ====================================================================
          ÉCRAN 1 : HERO SECTION SOMBRE & LUMINESCENTE (100% FIDÈLE À L'IMAGE)
          ==================================================================== -->
@@ -41,16 +100,12 @@
         <!-- Colonne Gauche : Textes & CTA -->
         <div class="hero-v2-content">
           <div class="hero-v2-badge">
-            <svg class="badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-              <line x1="8" y1="21" x2="16" y2="21"/>
-              <line x1="12" y1="17" x2="12" y2="21"/>
-            </svg>
-            <span>Bienvenue sur mon portfolio 👋</span>
+            <span style="font-size: 1.15rem; line-height: 1;">👋</span>
+            <span>Bonjour, je suis</span>
           </div>
 
           <h1 class="hero-v2-title">
-            Mame Faty <span class="highlight-cyan">Kaire</span>
+            Kaire <span class="highlight-cyan">Mame Faty</span>
           </h1>
           <h2 class="hero-v2-role">Développeuse Full-Stack</h2>
 
@@ -60,10 +115,12 @@
           </p>
 
           <div class="hero-v2-actions">
-            <!-- Bouton 1 : Voir mes projets avec icône officielle GitHub -->
+            <!-- Bouton 1 : Voir mes projets avec icône officielle -->
             <a class="btn-hero-primary" href="#projets">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
               </svg>
               <span>Voir mes projets</span>
             </a>
@@ -77,6 +134,9 @@
               <span>Me contacter</span>
             </a>
           </div>
+
+          <!-- Symbole flottant de code </> -->
+          <div class="hero-floating-code" aria-hidden="true">&lt;/&gt;</div>
         </div>
 
         <!-- Colonne Droite : Composition Visuelle Exacte (Portrait + Ruban 3D + Rêver Coder Créer Demain) -->
@@ -145,7 +205,60 @@
           <path d="M0,0 C480,55 960,55 1440,0 L1440,60 L0,60 Z" fill="var(--bg-body, #FFFFFF)"/>
         </svg>
       </div>
-    </section>
+        </section>
+
+    <!-- ====================================================================
+         BANDEAU DES 5 DOMAINES D'EXPERTISE (FIDÈLE À L'ÉCRAN 1 DU MOCKUP)
+         ==================================================================== -->
+    <div class="wrap hero-domains-wrap">
+      <div class="hero-domains-bar">
+        <div class="hero-domain-item">
+          <div class="hero-domain-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <span>Développement Web</span>
+        </div>
+        <div class="hero-domain-item">
+          <div class="hero-domain-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+          </div>
+          <span>Applications Mobiles</span>
+        </div>
+        <div class="hero-domain-item">
+          <div class="hero-domain-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18h6"/>
+              <path d="M10 22h4"/>
+              <path d="M12 2a7 7 0 0 0-7 7c0 2.5 1.5 4.5 3 5.5.5.5 1 1.5 1 2.5h6c0-1 .5-2 1-2.5 1.5-1 3-3 3-5.5a7 7 0 0 0-7-7z"/>
+            </svg>
+          </div>
+          <span>IA &amp; Data</span>
+        </div>
+        <div class="hero-domain-item">
+          <div class="hero-domain-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <span>Gestion de projets</span>
+        </div>
+        <div class="hero-domain-item">
+          <div class="hero-domain-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </div>
+          <span>Esprit d'équipe</span>
+        </div>
+      </div>
+    </div>
 
     <!-- ====================================================================
          ÉCRAN 2 : QUI SUIS-JE ? (À PROPOS)
@@ -158,13 +271,14 @@
           <div class="about-v9-left">
             <div class="pill-badge-v9">
               <span class="pill-badge-icon">👤</span>
-              <span>À propos de moi</span>
+              <span>Mon profil</span>
             </div>
 
             <h2 class="about-v9-title">Qui suis-je ?</h2>
+            <h3 class="about-v9-subtitle">Une étudiante passionnée par le numérique et l'innovation</h3>
 
             <p class="about-v9-bio">
-              Je suis Mame Faty Kaire, étudiante en Licence 3 Génie Logiciel à l'UIDT. Passionnée par le développement logiciel et les technologies numériques, je m'intéresse particulièrement à l'intelligence artificielle et à la conception de solutions digitales répondant à des besoins concrets.
+              Je suis Kaire Mame Faty, étudiante en Licence 3 Génie Logiciel à l'UIDT. Passionnée par le développement logiciel et les technologies numériques, je m'intéresse particulièrement à l'intelligence artificielle et à la conception de solutions digitales répondant à des besoins concrets. Rigoureuse, autonome et curieuse, j'aime apprendre, relever des défis et évoluer dans un environnement collaboratif.
             </p>
 
             <div class="about-v9-contact-list">
@@ -226,9 +340,10 @@
             </div>
 
             <div class="script-note-v9" aria-hidden="true">
-              <span>La tech</span>
-              <span>au service</span>
-              <span>de l'humain</span>
+              <span>Le</span>
+              <span>code est</span>
+              <span>une forme</span>
+              <span>de liberté</span>
               <span class="script-heart">♡</span>
             </div>
           </div>
@@ -240,7 +355,7 @@
           <p class="quote-card-text">
             « Chaque ligne de code est une opportunité de créer un impact positif. »
           </p>
-          <span class="quote-card-author">— Mame Faty Kaire</span>
+          <span class="quote-card-author">— Kaire Mame Faty</span>
         </div>
 
       </div>

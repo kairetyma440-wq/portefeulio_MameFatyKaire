@@ -7447,3 +7447,224 @@ body:has(#accueil) .site-head:not(.scrolled) .btn-cv-pill:hover {
 [data-theme="dark"] .hero-v2-bottom-wave svg path {
   fill: #0B1733;
 }
+
+
+/* ==========================================================================
+   NOUVEAU DESIGN 100% FIDELE AUX ECRANS 1 & 2 (HERO, DOMAINES, HEADER)
+   ========================================================================== */
+
+/* Header dark hero (au sommet de la page d'accueil) */
+.site-head.nav-hero-dark {
+  background: rgba(6, 18, 36, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.site-head.nav-hero-dark .brand-name {
+  color: #FFFFFF !important;
+}
+
+.site-head.nav-hero-dark .brand-role {
+  color: #38BDF8 !important;
+}
+
+.site-head.nav-hero-dark .nav-link {
+  color: #E2E8F0 !important;
+}
+
+.site-head.nav-hero-dark .nav-link:hover {
+  color: #38BDF8 !important;
+}
+
+.site-head.nav-hero-dark .nav-link.active {
+  color: #38BDF8 !important;
+}
+
+.site-head.nav-hero-dark .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #38BDF8 !important;
+  border-radius: 9999px;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.8) !important;
+}
+
+.site-head.nav-hero-dark .theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: #FFFFFF !important;
+}
+
+.site-head.nav-hero-dark .btn-nav-phone {
+  background: rgba(56, 189, 248, 0.12) !important;
+  border-color: rgba(56, 189, 248, 0.3) !important;
+  color: #38BDF8 !important;
+}
+
+.site-head.nav-hero-dark .btn-menu-mobile {
+  color: #FFFFFF !important;
+}
+
+/* Bouton Telecharger CV pilule bleue officielle */
+.btn-nav-cv {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #1D68FF !important;
+  color: #FFFFFF !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  padding: 10px 22px !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 14px rgba(29, 104, 255, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.btn-nav-cv:hover {
+  background: #0052E0 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(29, 104, 255, 0.55) !important;
+}
+
+/* Floating Code tag </> dans le Hero */
+.hero-floating-code {
+  position: absolute;
+  left: 45%;
+  bottom: 20%;
+  color: #38BDF8;
+  font-family: var(--font-mono, monospace);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  opacity: 0.85;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
+  animation: floatCodeAnim 4s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes floatCodeAnim {
+  0% { transform: translateY(0) rotate(-3deg); }
+  100% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@media (max-width: 991px) {
+  .hero-floating-code {
+    display: none;
+  }
+}
+
+/* Bandeau des 5 Domaines sous le Hero sombre */
+.hero-domains-wrap {
+  position: relative;
+  margin-top: -30px;
+  z-index: 15;
+  margin-bottom: 48px;
+}
+
+.hero-domains-bar {
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 14px 35px rgba(11, 23, 51, 0.08);
+  border: 1px solid rgba(0, 98, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .hero-domains-bar {
+  background: #0E172E;
+  border-color: rgba(59, 130, 246, 0.25);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
+}
+
+.hero-domain-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.hero-domain-item:hover {
+  transform: translateY(-2px);
+  color: #0062FF;
+}
+
+.hero-domain-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(0, 98, 255, 0.08);
+  color: #0062FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.hero-domain-item:hover .hero-domain-icon {
+  background: #0062FF;
+  color: #FFFFFF;
+  transform: scale(1.08);
+}
+
+[data-theme="dark"] .hero-domain-icon {
+  background: rgba(59, 130, 246, 0.18);
+  color: #38BDF8;
+}
+
+[data-theme="dark"] .hero-domain-item:hover .hero-domain-icon {
+  background: #38BDF8;
+  color: #0B1733;
+}
+
+@media (max-width: 991px) {
+  .hero-domains-bar {
+    justify-content: center;
+    gap: 20px 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-domains-wrap {
+    margin-top: -16px;
+    margin-bottom: 32px;
+  }
+  .hero-domains-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 20px;
+  }
+}
+
+/* Sous-titre dans Qui suis-je ? (Ecran 2) */
+.about-v9-subtitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  margin-top: -8px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+[data-theme="dark"] .about-v9-subtitle {
+  color: #93C5FD;
+}
+
