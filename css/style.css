@@ -7668,3 +7668,196 @@ body:has(#accueil) .site-head:not(.scrolled) .btn-cv-pill:hover {
   color: #93C5FD;
 }
 
+
+
+/* ==========================================================================
+   ALIGNEMENT 100% FIDÈLE : ÉCRAN 1 (ACCUEIL) & ÉCRAN 2 (À PROPOS)
+   ========================================================================== */
+
+/* ÉCRAN 2 : CARTE PHOTO AVEC VRAI VISAGE & BORDURE BLEUE LUMINEUSE */
+.about-photo-card {
+  position: relative;
+  width: 290px;
+  max-width: 100%;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 3px solid #1D68FF !important;
+  box-shadow: 0 16px 36px rgba(29, 104, 255, 0.22), 0 0 20px rgba(0, 98, 255, 0.15) !important;
+  background: #0B1733;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(29, 104, 255, 0.35), 0 0 28px rgba(0, 98, 255, 0.25) !important;
+}
+
+.about-photo-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* ÉCRAN 2 : NOTE MANUSCRITE SUR LA DROITE DE LA PHOTO */
+.script-note-v9 {
+  position: absolute;
+  right: -85px;
+  top: 32%;
+  font-family: 'Caveat', cursive, sans-serif !important;
+  font-size: 1.85rem !important;
+  font-weight: 700 !important;
+  color: #1D68FF !important;
+  line-height: 1.15 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  transform: rotate(-4deg);
+  pointer-events: none;
+  z-index: 5;
+}
+
+[data-theme="dark"] .script-note-v9 {
+  color: #38BDF8 !important;
+}
+
+.script-note-v9 span {
+  display: block;
+}
+
+.script-note-v9 .script-heart {
+  font-size: 1.5rem !important;
+  margin-top: 4px;
+}
+
+@media (max-width: 991px) {
+  .script-note-v9 {
+    right: 5px;
+    top: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+}
+
+/* ÉCRAN 2 : PASTILLES DE CONTACT HORIZONTALES (FIDÈLE À LA MAQUETTE) */
+.about-v9-contact-list {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 12px 18px !important;
+  margin-top: 24px !important;
+}
+
+.contact-pill-v9 {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: #F1F5F9 !important;
+  border: 1px solid #E2E8F0 !important;
+  padding: 8px 16px !important;
+  border-radius: 9999px !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  color: #1E293B !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 2px 6px rgba(11, 23, 51, 0.03);
+}
+
+[data-theme="dark"] .contact-pill-v9 {
+  background: #17233E !important;
+  border-color: #243452 !important;
+  color: #E2E8F0 !important;
+}
+
+.contact-pill-v9:hover {
+  background: #EBF3FF !important;
+  border-color: #1D68FF !important;
+  color: #1D68FF !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(29, 104, 255, 0.15) !important;
+}
+
+[data-theme="dark"] .contact-pill-v9:hover {
+  background: rgba(29, 104, 255, 0.25) !important;
+  border-color: #38BDF8 !important;
+  color: #38BDF8 !important;
+}
+
+.contact-pill-icon {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  background: rgba(29, 104, 255, 0.12) !important;
+  color: #1D68FF !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+[data-theme="dark"] .contact-pill-icon {
+  background: rgba(56, 189, 248, 0.18) !important;
+  color: #38BDF8 !important;
+}
+
+/* CITATION EN BAS DE L'ÉCRAN 2 (QUI SUIS-JE ?) */
+.quote-card-v9 {
+  margin-top: 48px !important;
+  background: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 18px !important;
+  padding: 24px 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  position: relative !important;
+  box-shadow: 0 6px 20px rgba(11, 23, 51, 0.03) !important;
+}
+
+[data-theme="dark"] .quote-card-v9 {
+  background: #0E172E !important;
+  border-color: #1E293B !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.quote-card-icon {
+  font-family: Georgia, serif !important;
+  font-size: 3.5rem !important;
+  color: #1D68FF !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+}
+
+[data-theme="dark"] .quote-card-icon {
+  color: #38BDF8 !important;
+}
+
+.quote-card-text {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  color: var(--text-heading, #0B1733) !important;
+  font-style: italic !important;
+  flex-grow: 1 !important;
+  margin: 0 !important;
+  line-height: 1.6 !important;
+}
+
+[data-theme="dark"] .quote-card-text {
+  color: #F8FAFC !important;
+}
+
+.quote-card-author {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  color: #1D68FF !important;
+  white-space: nowrap !important;
+}
+
+[data-theme="dark"] .quote-card-author {
+  color: #38BDF8 !important;
+}
+
