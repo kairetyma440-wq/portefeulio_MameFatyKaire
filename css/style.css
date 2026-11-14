@@ -4398,12 +4398,12 @@ textarea.form-field-input {
    ÉCRAN 3 : COMPÉTENCES AVEC 3 CARTES & JAUGES EN BAS (V2)
    ------------------------------------------------------------- */
 .skills-v10-sec {
-  padding: 60px 0;
-  background: #FFFFFF;
+  padding: 70px 0 80px;
+  background: #EEF3FF;
 }
 
 [data-theme="dark"] .skills-v10-sec {
-  background: #070D1E;
+  background: #060B1A;
 }
 
 .skills-v10-header-row {
@@ -5462,7 +5462,7 @@ textarea.form-field-input {
    RENFORCEMENT VISUEL V2 : CONTACT SCREEN 8 & TIMELINE SCREEN 6
    ------------------------------------------------------------- */
 .contact-v10-sec {
-  padding: 60px 0 80px;
+  padding: 70px 0 90px;
   background: #FFFFFF;
 }
 
@@ -7406,27 +7406,69 @@ body:has(#accueil) .site-head:not(.scrolled) .btn-cv-pill:hover {
   box-shadow: 0 8px 24px rgba(29, 104, 255, 0.4) !important;
 }
 
-/* Style de la composition exacte de l'avatar et du ruban 3D */
-.hero-v2-composition-exact {
+/* ====================================================
+   NOUVEAU CADRE PHOTO HERO — Arche fidèle à la maquette
+   ==================================================== */
+
+/* Conteneur wrapper */
+.hero-v2-photo-wrap {
   position: relative;
-  max-width: 420px;
-  width: 100%;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  align-items: center;
-  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 25px rgba(56, 189, 248, 0.35));
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: flex-end;
 }
 
-.hero-v2-composition-exact:hover {
-  transform: translateY(-4px) scale(1.02);
-  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 35px rgba(56, 189, 248, 0.5));
+/* Halo lumineux bleu derrière la photo (comme sur la maquette) */
+.hero-v2-photo-glow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(56, 189, 248, 0.38) 0%, rgba(14, 165, 233, 0.18) 45%, transparent 75%);
+  filter: blur(28px);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.hero-v2-composition-exact img {
+/* Forme en arche — identique à la maquette */
+.hero-v2-photo-arch {
+  position: relative;
+  z-index: 1;
+  width: 370px;
+  height: 470px;
+  border-radius: 190px 190px 24px 24px;
+  overflow: hidden;
+  border: 2px solid rgba(56, 189, 248, 0.55);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(56, 189, 248, 0.32),
+    0 0 0 6px rgba(56, 189, 248, 0.07);
+  background: #0A142A;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+}
+
+.hero-v2-photo-wrap:hover .hero-v2-photo-arch {
+  transform: translateY(-5px);
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, 0.7),
+    0 0 55px rgba(56, 189, 248, 0.45),
+    0 0 0 8px rgba(56, 189, 248, 0.11);
+}
+
+.hero-v2-photo-arch img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.hero-v2-photo-wrap:hover .hero-v2-photo-arch img {
+  transform: scale(1.03);
 }
 
 /* Vague organique inférieure de transition */
@@ -7699,7 +7741,6 @@ body:has(#accueil) .site-head:not(.scrolled) .btn-cv-pill:hover {
   object-position: top center;
   display: block;
 }
-
 /* ÉCRAN 2 : NOTE MANUSCRITE SUR LA DROITE DE LA PHOTO */
 .script-note-v9 {
   position: absolute;
@@ -7861,3 +7902,627 @@ body:has(#accueil) .site-head:not(.scrolled) .btn-cv-pill:hover {
   color: #38BDF8 !important;
 }
 
+
+/* ==========================================================================
+   COMPÉTENCES & CONTACT — DESIGN 100% FIDÈLE AUX IMAGES MAQUETTES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. SECTION COMPÉTENCES (Style Carte Dashboard)
+   -------------------------------------------------------------------------- */
+.skills-card-container {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 26px;
+  padding: 36px 40px 32px;
+  box-shadow: 0 10px 32px rgba(29, 104, 255, 0.06);
+  width: 100%;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.skills-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.skills-card-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #EDF4FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.skills-card-header-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1D68FF;
+  margin: 0;
+  line-height: 1;
+}
+
+.skills-grid-exact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skill-item-exact {
+  background: #EEF3FF;
+  border: 1.5px solid #D6E4FF;
+  border-radius: 22px;
+  padding: 30px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: default;
+}
+
+.skill-item-exact:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(29, 104, 255, 0.12);
+  border-color: rgba(29, 104, 255, 0.35);
+}
+
+.skill-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  box-shadow: 0 2px 8px rgba(29, 104, 255, 0.10);
+}
+
+.skill-item-exact:hover .skill-icon-circle {
+  transform: scale(1.08);
+}
+
+/* Badge JS Bleu carré avec coins arrondis (exact comme maquette) */
+.js-blue-badge {
+  width: 30px;
+  height: 30px;
+  background: #1D68FF;
+  color: #FFFFFF;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 0.88rem;
+  letter-spacing: -0.5px;
+}
+
+.skill-label-exact {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1E293B;
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   2. SECTION CONTACT (Style Carte Dashboard avec Formulaire & Plante Arrière-Plan)
+   -------------------------------------------------------------------------- */
+.contact-card-exact {
+  background: #FFFFFF;
+  border: 1px solid #E2EDF8;
+  border-radius: 28px;
+  padding: 38px 44px;
+  box-shadow: 0 14px 40px rgba(29, 104, 255, 0.08);
+  display: grid;
+  grid-template-columns: 1fr 1.65fr;
+  gap: 36px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Colonne Gauche : Infos & Réseaux */
+.contact-exact-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-exact-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.contact-exact-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #EDF4FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-exact-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1D68FF;
+  margin: 0;
+  line-height: 1;
+}
+
+.contact-exact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.contact-exact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #1E293B;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-exact-item:hover {
+  color: #1D68FF;
+  transform: translateX(3px);
+}
+
+.contact-item-icon {
+  flex-shrink: 0;
+}
+
+/* Réseaux Sociaux Circulaires */
+.contact-exact-socials {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.social-circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-circle-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.social-in {
+  background: #0077B5;
+}
+
+.social-dark {
+  background: #181717;
+}
+
+.social-mail {
+  background: #EA4335;
+}
+
+.social-wa {
+  background: #25D366;
+}
+
+/* Colonne Droite : Formulaire avec Plante en arrière-plan */
+.contact-exact-center-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 290px;
+  display: flex;
+  align-items: center;
+}
+
+/* Plante positionnée en arrière-plan à droite du formulaire */
+.contact-plant-bg {
+  position: absolute;
+  right: -24px;
+  top: -24px;
+  bottom: -24px;
+  width: 50%;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contact-plant-bg .contact-plant-img {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  object-position: right bottom;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.08));
+}
+
+/* Formulaire occupant la partie gauche du panneau */
+.contact-exact-form {
+  position: relative;
+  z-index: 2;
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-field-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.contact-exact-input,
+.contact-exact-textarea {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1.5px solid #D6E4FF;
+  padding: 12px 18px;
+  font-size: 0.91rem;
+  color: #1E293B;
+  font-family: inherit;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(29, 104, 255, 0.03);
+  transition: all 0.2s ease;
+}
+
+.contact-exact-input {
+  border-radius: 9999px;
+  padding-right: 44px;
+}
+
+.contact-exact-textarea {
+  border-radius: 18px;
+  resize: none;
+  min-height: 72px;
+}
+
+.contact-exact-input::placeholder,
+.contact-exact-textarea::placeholder {
+  color: #64748B;
+  font-weight: 500;
+}
+
+.contact-exact-input:focus,
+.contact-exact-textarea:focus {
+  background: #FFFFFF;
+  border-color: #1D68FF;
+  box-shadow: 0 0 0 3px rgba(29, 104, 255, 0.15);
+}
+
+.contact-input-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Bouton Pill "Me contacter" */
+.btn-me-contacter-pill {
+  background: #0062FF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 9999px;
+  padding: 13px 32px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(0, 98, 255, 0.35);
+  margin-top: 4px;
+  width: fit-content;
+}
+
+.btn-me-contacter-pill:hover {
+  background: #0050D8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 98, 255, 0.45);
+}
+
+/* Titre de section harmonisé */
+.skills-v10-sec .sec-title-v9,
+.contact-v10-sec .sec-title-v9 {
+  margin-bottom: 8px;
+}
+
+.skills-v10-sec .sec-sub-v9,
+.contact-v10-sec .sec-sub-v9 {
+  margin-bottom: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   3. MODE SOMBRE (Adaptation Écran Sombre)
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .skills-card-container,
+[data-theme="dark"] .contact-card-exact {
+  background: #0D1A36;
+  border-color: #1E2E52;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .skills-card-header-icon,
+[data-theme="dark"] .contact-exact-icon-circle {
+  background: rgba(56, 189, 248, 0.15);
+}
+
+[data-theme="dark"] .skills-card-header-title,
+[data-theme="dark"] .contact-exact-title {
+  color: #38BDF8;
+}
+
+[data-theme="dark"] .skill-item-exact {
+  background: #112142;
+  border-color: #1E335D;
+}
+
+[data-theme="dark"] .skill-item-exact:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.12);
+}
+
+[data-theme="dark"] .skill-icon-circle {
+  background: #172B52;
+}
+
+[data-theme="dark"] .skill-label-exact {
+  color: #E2E8F0;
+}
+
+[data-theme="dark"] .contact-exact-item {
+  color: #E2E8F0;
+}
+
+[data-theme="dark"] .contact-exact-item:hover {
+  color: #38BDF8;
+}
+
+[data-theme="dark"] .contact-exact-input,
+[data-theme="dark"] .contact-exact-textarea {
+  background: #112142;
+  border-color: #1E335D;
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .contact-exact-input::placeholder,
+[data-theme="dark"] .contact-exact-textarea::placeholder {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .contact-exact-input:focus,
+[data-theme="dark"] .contact-exact-textarea:focus {
+  background: #16284F;
+  border-color: #38BDF8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
+}
+
+/* --------------------------------------------------------------------------
+   4. RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .contact-card-exact {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 30px 24px;
+  }
+  .contact-exact-form {
+    width: 65%;
+  }
+  .contact-plant-bg {
+    width: 45%;
+  }
+}
+
+@media (max-width: 680px) {
+  .skills-card-container {
+    padding: 24px 18px;
+  }
+  .skills-grid-exact {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .contact-exact-form {
+    width: 100%;
+  }
+  .contact-plant-bg {
+    display: none;
+  }
+  .btn-me-contacter-pill {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   CARROUSEL INTERACTIF DE BALAYAGE SUR LES CARTES DE PROJETS
+   ========================================================================== */
+.project-card-thumb,
+.proj-img-wrap {
+  position: relative !important;
+  overflow: hidden !important;
+  height: 195px !important;
+  background: #0A142A;
+  border-radius: 16px 16px 0 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.project-card-thumb.is-dragging,
+.proj-img-wrap.is-dragging {
+  cursor: grabbing;
+}
+
+.project-slider-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.project-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.project-card-v9:hover .project-slide img,
+.proj-card-v9:hover .project-slide img {
+  transform: scale(1.03);
+}
+
+.slide-caption-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(11, 23, 51, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+  z-index: 4;
+  letter-spacing: 0.2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slider-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #0B1733;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 6;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  font-size: 0.85rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.project-card-thumb:hover .slider-arrow-btn,
+.proj-img-wrap:hover .slider-arrow-btn {
+  opacity: 1;
+}
+
+@media (hover: none), (max-width: 768px) {
+  .slider-arrow-btn {
+    opacity: 0.92 !important;
+  }
+}
+
+.slider-arrow-btn:hover {
+  background: #1D68FF;
+  color: #FFFFFF;
+  border-color: #1D68FF;
+  transform: translateY(-50%) scale(1.12);
+}
+
+.slider-arrow-btn:active {
+  transform: translateY(-50%) scale(0.92);
+}
+
+.slider-arrow-prev {
+  left: 8px;
+}
+
+.slider-arrow-next {
+  right: 8px;
+}
+
+.slider-dots-bar {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(11, 23, 51, 0.68);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 4px 10px;
+  border-radius: 999px;
+  z-index: 6;
+}
+
+.slider-dot-item {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.slider-dot-item.active {
+  background: #38BDF8;
+  width: 18px;
+  border-radius: 999px;
+}
+
+.slider-dot-item:hover {
+  background: #FFFFFF;
+}

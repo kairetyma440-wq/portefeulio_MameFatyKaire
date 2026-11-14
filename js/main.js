@@ -292,5 +292,117 @@
         }
       });
     });
+
+    // 8. Sliders interactifs de balayage sur les cartes de projets
+    function initProjectSliders() {
+      var thumbs = document.querySelectorAll('.project-card-thumb, .proj-img-wrap');
+      thumbs.forEach(function (thumb) {
+        var track = thumb.querySelector('.project-slider-track');
+        if (!track) return;
+
+        var slides = track.querySelectorAll('.project-slide');
+        if (slides.length <= 1) return;
+
+        var prevBtn = thumb.querySelector('.slider-arrow-prev');
+        var nextBtn = thumb.querySelector('.slider-arrow-next');
+        var dots = thumb.querySelectorAll('.slider-dot-item');
+        var currentIndex = 0;
+
+        function goToSlide(index) {
+          if (index < 0) index = slides.length - 1;
+          if (index >= slides.length) index = 0;
+          currentIndex = index;
+          track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+          dots.forEach(function (dot, i) {
+            if (i === currentIndex) dot.classList.add('active');
+            else dot.classList.remove('active');
+          });
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            goToSlide(currentIndex - 1);
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            goToSlide(currentIndex + 1);
+          });
+        }
+
+        dots.forEach(function (dot, idx) {
+          dot.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            goToSlide(idx);
+          });
+        });
+
+        // Balayage tactile (Touch Swipe sur smartphone / tablette)
+        var touchStartX = 0;
+        var touchStartY = 0;
+        var touchEndX = 0;
+
+        thumb.addEventListener('touchstart', function (e) {
+          touchStartX = e.changedTouches[0].screenX;
+          touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        thumb.addEventListener('touchend', function (e) {
+          touchEndX = e.changedTouches[0].screenX;
+          var diffX = touchEndX - touchStartX;
+          var diffY = e.changedTouches[0].screenY - touchStartY;
+          if (Math.abs(diffX) > 35 && Math.abs(diffX) > Math.abs(diffY)) {
+            if (diffX < 0) goToSlide(currentIndex + 1);
+            else goToSlide(currentIndex - 1);
+          }
+        }, { passive: true });
+
+        // Balayage à la souris (Mouse Drag / Swipe)
+        var isDragging = false;
+        var mouseStartX = 0;
+        var hasMoved = false;
+
+        thumb.addEventListener('mousedown', function (e) {
+          if (e.target.closest('.slider-arrow-btn') || e.target.closest('.slider-dot-item')) return;
+          isDragging = true;
+          hasMoved = false;
+          mouseStartX = e.clientX;
+          thumb.classList.add('is-dragging');
+        });
+
+        window.addEventListener('mousemove', function (e) {
+          if (!isDragging) return;
+          var diff = e.clientX - mouseStartX;
+          if (Math.abs(diff) > 10) hasMoved = true;
+        });
+
+        window.addEventListener('mouseup', function (e) {
+          if (!isDragging) return;
+          isDragging = false;
+          thumb.classList.remove('is-dragging');
+          var diff = e.clientX - mouseStartX;
+          if (Math.abs(diff) > 40) {
+            if (diff < 0) goToSlide(currentIndex + 1);
+            else goToSlide(currentIndex - 1);
+          }
+        });
+
+        // Empêcher l'ouverture de la page de détail si l'utilisateur balaye les images
+        thumb.addEventListener('click', function (e) {
+          if (hasMoved || e.target.closest('.slider-arrow-btn') || e.target.closest('.slider-dot-item')) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        });
+      });
+    }
+
+    initProjectSliders();
   });
 })();
